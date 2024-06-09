@@ -1,0 +1,997 @@
+{
+  "resourceType": "Bundle",
+  "id": "ceca4b06-b313-4d6e-a58c-a664cc5c725e",
+  "meta": {
+    "lastUpdated": "2024-06-09T03:32:44.077+00:00"
+  },
+  "type": "searchset",
+  "total": 129,
+  "link": [
+    {
+      "relation": "self",
+      "url": "https://dev3.openmrs.org/openmrs/ws/fhir2/R4/Observation?subject=025b4433-efa2-4eab-9473-748a1cf34222"
+    },
+    {
+      "relation": "next",
+      "url": "https://dev3.openmrs.org/openmrs/ws/fhir2/R4?_getpages=4c99541b-3f70-4b04-95ac-29c0eb9786cf&_getpagesoffset=10&_count=10&_bundletype=searchset"
+    }
+  ],
+  "entry": [
+    {
+      "fullUrl": "https://dev3.openmrs.org/openmrs/ws/fhir2/R4/Observation/b6e38a13-1607-463f-a1eb-1a1c7f633816",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "b6e38a13-1607-463f-a1eb-1a1c7f633816",
+        "meta": {
+          "versionId": "1715638958000",
+          "lastUpdated": "2024-05-13T22:22:38.000+00:00"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"hapiPropertyTable\"><tbody><tr><td>Id:</td><td>b6e38a13-1607-463f-a1eb-1a1c7f633816</td></tr><tr><td>Status:</td><td>FINAL</td></tr><tr><td>Category:</td><td> Exam </td></tr><tr><td>Code:</td><td>Temperature (c)</td></tr><tr><td>Subject:</td><td><a href=\"http://localhost:8080/openmrs/ws/fhir2/R4/Patient/025b4433-efa2-4eab-9473-748a1cf34222\">Betty Williams (OpenMRS ID: 100000Y)</a></td></tr><tr><td>Encounter:</td><td><a href=\"http://localhost:8080/openmrs/ws/fhir2/R4/Encounter/614da57d-20fa-4bfd-a922-fb5b8684cdf0\">Encounter/614da57d-20fa-4bfd-a922-fb5b8684cdf0</a></td></tr><tr><td>Effective:</td><td> 30 August 2020 05:50:38 </td></tr><tr><td>Issued:</td><td>13/05/2024 10:22:38 PM</td></tr><tr><td>Value:</td><td>36.5 DEG C </td></tr><tr><td>Reference Ranges:</td><td><table class=\"subPropertyTable\"><tbody><tr><th>-</th><th>Low</th><th>High</th><th>Type</th><th>Applies To</th><th>Age</th></tr><tr><td>1</td><td>35.0 </td><td>37.7 </td><td> normal </td><td/><td> - </td></tr><tr><td>2</td><td/><td>39.0 </td><td> treatment </td><td/><td> - </td></tr><tr><td>3</td><td>25.0 </td><td>43.0 </td><td> absolute </td><td/><td> - </td></tr></tbody></table></td></tr></tbody></table></div>"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "5088AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "display": "Temperature (c)"
+            },
+            {
+              "system": "https://cielterminology.org",
+              "code": "5088"
+            }
+          ],
+          "text": "Temperature (c)"
+        },
+        "subject": {
+          "reference": "Patient/025b4433-efa2-4eab-9473-748a1cf34222",
+          "type": "Patient",
+          "display": "Betty Williams (OpenMRS ID: 100000Y)"
+        },
+        "encounter": {
+          "reference": "Encounter/614da57d-20fa-4bfd-a922-fb5b8684cdf0",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2020-08-30T05:50:38+00:00",
+        "issued": "2024-05-13T22:22:38.000+00:00",
+        "valueQuantity": {
+          "value": 36.5,
+          "unit": "DEG C"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 35.0
+            },
+            "high": {
+              "value": 37.7
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                  "code": "normal"
+                }
+              ]
+            }
+          },
+          {
+            "high": {
+              "value": 39.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                  "code": "treatment"
+                }
+              ]
+            }
+          },
+          {
+            "low": {
+              "value": 25.0
+            },
+            "high": {
+              "value": 43.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://fhir.openmrs.org/ext/obs/reference-range",
+                  "code": "absolute"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://dev3.openmrs.org/openmrs/ws/fhir2/R4/Observation/555baed6-b605-4491-84a6-2b59023a0960",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "555baed6-b605-4491-84a6-2b59023a0960",
+        "meta": {
+          "versionId": "1715638958000",
+          "lastUpdated": "2024-05-13T22:22:38.000+00:00"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"hapiPropertyTable\"><tbody><tr><td>Id:</td><td>555baed6-b605-4491-84a6-2b59023a0960</td></tr><tr><td>Status:</td><td>FINAL</td></tr><tr><td>Category:</td><td> Exam </td></tr><tr><td>Code:</td><td>Arterial blood oxygen saturation (pulse oximeter)</td></tr><tr><td>Subject:</td><td><a href=\"http://localhost:8080/openmrs/ws/fhir2/R4/Patient/025b4433-efa2-4eab-9473-748a1cf34222\">Betty Williams (OpenMRS ID: 100000Y)</a></td></tr><tr><td>Encounter:</td><td><a href=\"http://localhost:8080/openmrs/ws/fhir2/R4/Encounter/614da57d-20fa-4bfd-a922-fb5b8684cdf0\">Encounter/614da57d-20fa-4bfd-a922-fb5b8684cdf0</a></td></tr><tr><td>Effective:</td><td> 30 August 2020 05:50:38 </td></tr><tr><td>Issued:</td><td>13/05/2024 10:22:38 PM</td></tr><tr><td>Value:</td><td>99.5 % </td></tr><tr><td>Reference Ranges:</td><td><table class=\"subPropertyTable\"><tbody><tr><th>-</th><th>Low</th><th>High</th><th>Type</th><th>Applies To</th><th>Age</th></tr><tr><td>1</td><td>95.0 </td><td/><td> normal </td><td/><td> - </td></tr><tr><td>2</td><td>90.0 </td><td/><td> treatment </td><td/><td> - </td></tr><tr><td>3</td><td>0.0 </td><td>100.0 </td><td> absolute </td><td/><td> - </td></tr></tbody></table></td></tr></tbody></table></div>"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "5092AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "display": "Arterial blood oxygen saturation (pulse oximeter)"
+            },
+            {
+              "system": "https://cielterminology.org",
+              "code": "5092"
+            },
+            {
+              "system": "http://snomed.info/sct/",
+              "code": "431314004"
+            }
+          ],
+          "text": "Arterial blood oxygen saturation (pulse oximeter)"
+        },
+        "subject": {
+          "reference": "Patient/025b4433-efa2-4eab-9473-748a1cf34222",
+          "type": "Patient",
+          "display": "Betty Williams (OpenMRS ID: 100000Y)"
+        },
+        "encounter": {
+          "reference": "Encounter/614da57d-20fa-4bfd-a922-fb5b8684cdf0",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2020-08-30T05:50:38+00:00",
+        "issued": "2024-05-13T22:22:38.000+00:00",
+        "valueQuantity": {
+          "value": 99.5,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 95.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                  "code": "normal"
+                }
+              ]
+            }
+          },
+          {
+            "low": {
+              "value": 90.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                  "code": "treatment"
+                }
+              ]
+            }
+          },
+          {
+            "low": {
+              "value": 0.0
+            },
+            "high": {
+              "value": 100.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://fhir.openmrs.org/ext/obs/reference-range",
+                  "code": "absolute"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://dev3.openmrs.org/openmrs/ws/fhir2/R4/Observation/62f4ed5f-20be-4cd5-ac00-6de4f485b3a6",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "62f4ed5f-20be-4cd5-ac00-6de4f485b3a6",
+        "meta": {
+          "versionId": "1715638958000",
+          "lastUpdated": "2024-05-13T22:22:38.000+00:00"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"hapiPropertyTable\"><tbody><tr><td>Id:</td><td>62f4ed5f-20be-4cd5-ac00-6de4f485b3a6</td></tr><tr><td>Status:</td><td>FINAL</td></tr><tr><td>Category:</td><td> Exam </td></tr><tr><td>Code:</td><td>Diastolic blood pressure</td></tr><tr><td>Subject:</td><td><a href=\"http://localhost:8080/openmrs/ws/fhir2/R4/Patient/025b4433-efa2-4eab-9473-748a1cf34222\">Betty Williams (OpenMRS ID: 100000Y)</a></td></tr><tr><td>Encounter:</td><td><a href=\"http://localhost:8080/openmrs/ws/fhir2/R4/Encounter/614da57d-20fa-4bfd-a922-fb5b8684cdf0\">Encounter/614da57d-20fa-4bfd-a922-fb5b8684cdf0</a></td></tr><tr><td>Effective:</td><td> 30 August 2020 05:50:38 </td></tr><tr><td>Issued:</td><td>13/05/2024 10:22:38 PM</td></tr><tr><td>Value:</td><td>41.0 mmHg </td></tr><tr><td>Reference Ranges:</td><td><table class=\"subPropertyTable\"><tbody><tr><th>-</th><th>Low</th><th>High</th><th>Type</th><th>Applies To</th><th>Age</th></tr><tr><td>1</td><td>55.0 </td><td>90.0 </td><td> normal </td><td/><td> - </td></tr><tr><td>2</td><td>40.0 </td><td>120.0 </td><td> treatment </td><td/><td> - </td></tr><tr><td>3</td><td>0.0 </td><td>150.0 </td><td> absolute </td><td/><td> - </td></tr></tbody></table></td></tr></tbody></table></div>"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "5086AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "display": "Diastolic blood pressure"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "35094-2"
+            },
+            {
+              "system": "https://cielterminology.org",
+              "code": "5086"
+            },
+            {
+              "system": "http://snomed.info/sct/",
+              "code": "271650006"
+            }
+          ],
+          "text": "Diastolic blood pressure"
+        },
+        "subject": {
+          "reference": "Patient/025b4433-efa2-4eab-9473-748a1cf34222",
+          "type": "Patient",
+          "display": "Betty Williams (OpenMRS ID: 100000Y)"
+        },
+        "encounter": {
+          "reference": "Encounter/614da57d-20fa-4bfd-a922-fb5b8684cdf0",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2020-08-30T05:50:38+00:00",
+        "issued": "2024-05-13T22:22:38.000+00:00",
+        "valueQuantity": {
+          "value": 41.0,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mmHg"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 55.0
+            },
+            "high": {
+              "value": 90.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                  "code": "normal"
+                }
+              ]
+            }
+          },
+          {
+            "low": {
+              "value": 40.0
+            },
+            "high": {
+              "value": 120.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                  "code": "treatment"
+                }
+              ]
+            }
+          },
+          {
+            "low": {
+              "value": 0.0
+            },
+            "high": {
+              "value": 150.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://fhir.openmrs.org/ext/obs/reference-range",
+                  "code": "absolute"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://dev3.openmrs.org/openmrs/ws/fhir2/R4/Observation/2ed921af-bf47-4008-a667-ab66ef18603e",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "2ed921af-bf47-4008-a667-ab66ef18603e",
+        "meta": {
+          "versionId": "1715638958000",
+          "lastUpdated": "2024-05-13T22:22:38.000+00:00"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"hapiPropertyTable\"><tbody><tr><td>Id:</td><td>2ed921af-bf47-4008-a667-ab66ef18603e</td></tr><tr><td>Status:</td><td>FINAL</td></tr><tr><td>Category:</td><td> Exam </td></tr><tr><td>Code:</td><td>Weight (kg)</td></tr><tr><td>Subject:</td><td><a href=\"http://localhost:8080/openmrs/ws/fhir2/R4/Patient/025b4433-efa2-4eab-9473-748a1cf34222\">Betty Williams (OpenMRS ID: 100000Y)</a></td></tr><tr><td>Encounter:</td><td><a href=\"http://localhost:8080/openmrs/ws/fhir2/R4/Encounter/614da57d-20fa-4bfd-a922-fb5b8684cdf0\">Encounter/614da57d-20fa-4bfd-a922-fb5b8684cdf0</a></td></tr><tr><td>Effective:</td><td> 30 August 2020 05:50:38 </td></tr><tr><td>Issued:</td><td>13/05/2024 10:22:38 PM</td></tr><tr><td>Value:</td><td>58.0 kg </td></tr><tr><td>Reference Ranges:</td><td><table class=\"subPropertyTable\"><tbody><tr><th>-</th><th>Low</th><th>High</th><th>Type</th><th>Applies To</th><th>Age</th></tr><tr><td>1</td><td>0.0 </td><td>250.0 </td><td> absolute </td><td/><td> - </td></tr></tbody></table></td></tr></tbody></table></div>"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "5089AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "display": "Weight (kg)"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "3141-9"
+            },
+            {
+              "system": "https://cielterminology.org",
+              "code": "5089"
+            },
+            {
+              "system": "http://snomed.info/sct/",
+              "code": "27113001"
+            },
+            {
+              "system": "http://fhir.org/guides/who/anc-cds/CodeSystem/anc-custom-codes",
+              "code": "ANC.B8.DE3"
+            }
+          ],
+          "text": "Weight (kg)"
+        },
+        "subject": {
+          "reference": "Patient/025b4433-efa2-4eab-9473-748a1cf34222",
+          "type": "Patient",
+          "display": "Betty Williams (OpenMRS ID: 100000Y)"
+        },
+        "encounter": {
+          "reference": "Encounter/614da57d-20fa-4bfd-a922-fb5b8684cdf0",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2020-08-30T05:50:38+00:00",
+        "issued": "2024-05-13T22:22:38.000+00:00",
+        "valueQuantity": {
+          "value": 58.0,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 0.0
+            },
+            "high": {
+              "value": 250.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://fhir.openmrs.org/ext/obs/reference-range",
+                  "code": "absolute"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://dev3.openmrs.org/openmrs/ws/fhir2/R4/Observation/520a9e7a-8ec5-49e0-8184-7358561a90a0",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "520a9e7a-8ec5-49e0-8184-7358561a90a0",
+        "meta": {
+          "versionId": "1715638958000",
+          "lastUpdated": "2024-05-13T22:22:38.000+00:00"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"hapiPropertyTable\"><tbody><tr><td>Id:</td><td>520a9e7a-8ec5-49e0-8184-7358561a90a0</td></tr><tr><td>Status:</td><td>FINAL</td></tr><tr><td>Category:</td><td> Exam </td></tr><tr><td>Code:</td><td>Height (cm)</td></tr><tr><td>Subject:</td><td><a href=\"http://localhost:8080/openmrs/ws/fhir2/R4/Patient/025b4433-efa2-4eab-9473-748a1cf34222\">Betty Williams (OpenMRS ID: 100000Y)</a></td></tr><tr><td>Encounter:</td><td><a href=\"http://localhost:8080/openmrs/ws/fhir2/R4/Encounter/614da57d-20fa-4bfd-a922-fb5b8684cdf0\">Encounter/614da57d-20fa-4bfd-a922-fb5b8684cdf0</a></td></tr><tr><td>Effective:</td><td> 30 August 2020 05:50:38 </td></tr><tr><td>Issued:</td><td>13/05/2024 10:22:38 PM</td></tr><tr><td>Value:</td><td>178.0 cm </td></tr><tr><td>Reference Ranges:</td><td><table class=\"subPropertyTable\"><tbody><tr><th>-</th><th>Low</th><th>High</th><th>Type</th><th>Applies To</th><th>Age</th></tr><tr><td>1</td><td>10.0 </td><td>272.0 </td><td> absolute </td><td/><td> - </td></tr></tbody></table></td></tr></tbody></table></div>"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "5090AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "display": "Height (cm)"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "8302-2"
+            },
+            {
+              "system": "https://cielterminology.org",
+              "code": "5090"
+            },
+            {
+              "system": "http://snomed.info/sct/",
+              "code": "50373000"
+            },
+            {
+              "system": "http://fhir.org/guides/who/anc-cds/CodeSystem/anc-custom-codes",
+              "code": "ANC.B8.DE1"
+            }
+          ],
+          "text": "Height (cm)"
+        },
+        "subject": {
+          "reference": "Patient/025b4433-efa2-4eab-9473-748a1cf34222",
+          "type": "Patient",
+          "display": "Betty Williams (OpenMRS ID: 100000Y)"
+        },
+        "encounter": {
+          "reference": "Encounter/614da57d-20fa-4bfd-a922-fb5b8684cdf0",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2020-08-30T05:50:38+00:00",
+        "issued": "2024-05-13T22:22:38.000+00:00",
+        "valueQuantity": {
+          "value": 178.0,
+          "unit": "cm",
+          "system": "http://unitsofmeasure.org",
+          "code": "cm"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 10.0
+            },
+            "high": {
+              "value": 272.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://fhir.openmrs.org/ext/obs/reference-range",
+                  "code": "absolute"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://dev3.openmrs.org/openmrs/ws/fhir2/R4/Observation/0ed8a1d6-e290-4d59-98d3-53aed5df61c1",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0ed8a1d6-e290-4d59-98d3-53aed5df61c1",
+        "meta": {
+          "versionId": "1715638958000",
+          "lastUpdated": "2024-05-13T22:22:38.000+00:00"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"hapiPropertyTable\"><tbody><tr><td>Id:</td><td>0ed8a1d6-e290-4d59-98d3-53aed5df61c1</td></tr><tr><td>Status:</td><td>FINAL</td></tr><tr><td>Category:</td><td> Exam </td></tr><tr><td>Code:</td><td>Systolic blood pressure</td></tr><tr><td>Subject:</td><td><a href=\"http://localhost:8080/openmrs/ws/fhir2/R4/Patient/025b4433-efa2-4eab-9473-748a1cf34222\">Betty Williams (OpenMRS ID: 100000Y)</a></td></tr><tr><td>Encounter:</td><td><a href=\"http://localhost:8080/openmrs/ws/fhir2/R4/Encounter/614da57d-20fa-4bfd-a922-fb5b8684cdf0\">Encounter/614da57d-20fa-4bfd-a922-fb5b8684cdf0</a></td></tr><tr><td>Effective:</td><td> 30 August 2020 05:50:38 </td></tr><tr><td>Issued:</td><td>13/05/2024 10:22:38 PM</td></tr><tr><td>Value:</td><td>144.0 mmHg </td></tr><tr><td>Reference Ranges:</td><td><table class=\"subPropertyTable\"><tbody><tr><th>-</th><th>Low</th><th>High</th><th>Type</th><th>Applies To</th><th>Age</th></tr><tr><td>1</td><td>100.0 </td><td>140.0 </td><td> normal </td><td/><td> - </td></tr><tr><td>2</td><td>90.0 </td><td>180.0 </td><td> treatment </td><td/><td> - </td></tr><tr><td>3</td><td>0.0 </td><td>250.0 </td><td> absolute </td><td/><td> - </td></tr></tbody></table></td></tr></tbody></table></div>"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "5085AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "display": "Systolic blood pressure"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6"
+            },
+            {
+              "system": "https://cielterminology.org",
+              "code": "5085"
+            },
+            {
+              "system": "http://snomed.info/sct/",
+              "code": "271649006"
+            },
+            {
+              "system": "http://fhir.org/guides/who/anc-cds/CodeSystem/anc-custom-codes",
+              "code": "ANC.B8.DE17"
+            }
+          ],
+          "text": "Systolic blood pressure"
+        },
+        "subject": {
+          "reference": "Patient/025b4433-efa2-4eab-9473-748a1cf34222",
+          "type": "Patient",
+          "display": "Betty Williams (OpenMRS ID: 100000Y)"
+        },
+        "encounter": {
+          "reference": "Encounter/614da57d-20fa-4bfd-a922-fb5b8684cdf0",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2020-08-30T05:50:38+00:00",
+        "issued": "2024-05-13T22:22:38.000+00:00",
+        "valueQuantity": {
+          "value": 144.0,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mmHg"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 100.0
+            },
+            "high": {
+              "value": 140.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                  "code": "normal"
+                }
+              ]
+            }
+          },
+          {
+            "low": {
+              "value": 90.0
+            },
+            "high": {
+              "value": 180.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                  "code": "treatment"
+                }
+              ]
+            }
+          },
+          {
+            "low": {
+              "value": 0.0
+            },
+            "high": {
+              "value": 250.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://fhir.openmrs.org/ext/obs/reference-range",
+                  "code": "absolute"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://dev3.openmrs.org/openmrs/ws/fhir2/R4/Observation/a304e230-4571-412a-9699-67421a84f996",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "a304e230-4571-412a-9699-67421a84f996",
+        "meta": {
+          "versionId": "1715638958000",
+          "lastUpdated": "2024-05-13T22:22:38.000+00:00"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"hapiPropertyTable\"><tbody><tr><td>Id:</td><td>a304e230-4571-412a-9699-67421a84f996</td></tr><tr><td>Status:</td><td>FINAL</td></tr><tr><td>Category:</td><td> Exam </td></tr><tr><td>Code:</td><td>Pulse</td></tr><tr><td>Subject:</td><td><a href=\"http://localhost:8080/openmrs/ws/fhir2/R4/Patient/025b4433-efa2-4eab-9473-748a1cf34222\">Betty Williams (OpenMRS ID: 100000Y)</a></td></tr><tr><td>Encounter:</td><td><a href=\"http://localhost:8080/openmrs/ws/fhir2/R4/Encounter/614da57d-20fa-4bfd-a922-fb5b8684cdf0\">Encounter/614da57d-20fa-4bfd-a922-fb5b8684cdf0</a></td></tr><tr><td>Effective:</td><td> 30 August 2020 05:50:38 </td></tr><tr><td>Issued:</td><td>13/05/2024 10:22:38 PM</td></tr><tr><td>Value:</td><td>75.0 beats/min </td></tr><tr><td>Reference Ranges:</td><td><table class=\"subPropertyTable\"><tbody><tr><th>-</th><th>Low</th><th>High</th><th>Type</th><th>Applies To</th><th>Age</th></tr><tr><td>1</td><td>55.0 </td><td>100.0 </td><td> normal </td><td/><td> - </td></tr><tr><td>2</td><td>49.0 </td><td>130.0 </td><td> treatment </td><td/><td> - </td></tr><tr><td>3</td><td>0.0 </td><td>230.0 </td><td> absolute </td><td/><td> - </td></tr></tbody></table></td></tr></tbody></table></div>"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "5087AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "display": "Pulse"
+            },
+            {
+              "system": "https://cielterminology.org",
+              "code": "5087"
+            },
+            {
+              "system": "http://snomed.info/sct/",
+              "code": "78564009"
+            }
+          ],
+          "text": "Pulse"
+        },
+        "subject": {
+          "reference": "Patient/025b4433-efa2-4eab-9473-748a1cf34222",
+          "type": "Patient",
+          "display": "Betty Williams (OpenMRS ID: 100000Y)"
+        },
+        "encounter": {
+          "reference": "Encounter/614da57d-20fa-4bfd-a922-fb5b8684cdf0",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2020-08-30T05:50:38+00:00",
+        "issued": "2024-05-13T22:22:38.000+00:00",
+        "valueQuantity": {
+          "value": 75.0,
+          "unit": "beats/min"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 55.0
+            },
+            "high": {
+              "value": 100.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                  "code": "normal"
+                }
+              ]
+            }
+          },
+          {
+            "low": {
+              "value": 49.0
+            },
+            "high": {
+              "value": 130.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                  "code": "treatment"
+                }
+              ]
+            }
+          },
+          {
+            "low": {
+              "value": 0.0
+            },
+            "high": {
+              "value": 230.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://fhir.openmrs.org/ext/obs/reference-range",
+                  "code": "absolute"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://dev3.openmrs.org/openmrs/ws/fhir2/R4/Observation/a7095e6b-39f2-492a-9c85-d62f225a70b1",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "a7095e6b-39f2-492a-9c85-d62f225a70b1",
+        "meta": {
+          "versionId": "1715638958000",
+          "lastUpdated": "2024-05-13T22:22:38.000+00:00"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"hapiPropertyTable\"><tbody><tr><td>Id:</td><td>a7095e6b-39f2-492a-9c85-d62f225a70b1</td></tr><tr><td>Status:</td><td>FINAL</td></tr><tr><td>Category:</td><td> Exam </td></tr><tr><td>Code:</td><td>Respiratory rate</td></tr><tr><td>Subject:</td><td><a href=\"http://localhost:8080/openmrs/ws/fhir2/R4/Patient/025b4433-efa2-4eab-9473-748a1cf34222\">Betty Williams (OpenMRS ID: 100000Y)</a></td></tr><tr><td>Encounter:</td><td><a href=\"http://localhost:8080/openmrs/ws/fhir2/R4/Encounter/614da57d-20fa-4bfd-a922-fb5b8684cdf0\">Encounter/614da57d-20fa-4bfd-a922-fb5b8684cdf0</a></td></tr><tr><td>Effective:</td><td> 30 August 2020 05:50:38 </td></tr><tr><td>Issued:</td><td>13/05/2024 10:22:38 PM</td></tr><tr><td>Value:</td><td>10.0 breaths/min </td></tr><tr><td>Reference Ranges:</td><td><table class=\"subPropertyTable\"><tbody><tr><th>-</th><th>Low</th><th>High</th><th>Type</th><th>Applies To</th><th>Age</th></tr><tr><td>1</td><td>12.0 </td><td>18.0 </td><td> normal </td><td/><td> - </td></tr><tr><td>2</td><td>8.0 </td><td>26.0 </td><td> treatment </td><td/><td> - </td></tr><tr><td>3</td><td>0.0 </td><td>999.0 </td><td> absolute </td><td/><td> - </td></tr></tbody></table></td></tr></tbody></table></div>"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "5242AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "display": "Respiratory rate"
+            },
+            {
+              "system": "https://cielterminology.org",
+              "code": "5242"
+            },
+            {
+              "system": "http://snomed.info/sct/",
+              "code": "86290005"
+            }
+          ],
+          "text": "Respiratory rate"
+        },
+        "subject": {
+          "reference": "Patient/025b4433-efa2-4eab-9473-748a1cf34222",
+          "type": "Patient",
+          "display": "Betty Williams (OpenMRS ID: 100000Y)"
+        },
+        "encounter": {
+          "reference": "Encounter/614da57d-20fa-4bfd-a922-fb5b8684cdf0",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2020-08-30T05:50:38+00:00",
+        "issued": "2024-05-13T22:22:38.000+00:00",
+        "valueQuantity": {
+          "value": 10.0,
+          "unit": "breaths/min"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 12.0
+            },
+            "high": {
+              "value": 18.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                  "code": "normal"
+                }
+              ]
+            }
+          },
+          {
+            "low": {
+              "value": 8.0
+            },
+            "high": {
+              "value": 26.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                  "code": "treatment"
+                }
+              ]
+            }
+          },
+          {
+            "low": {
+              "value": 0.0
+            },
+            "high": {
+              "value": 999.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://fhir.openmrs.org/ext/obs/reference-range",
+                  "code": "absolute"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://dev3.openmrs.org/openmrs/ws/fhir2/R4/Observation/d7ec82d6-23ac-4c86-9ecf-9596e72f0468",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "d7ec82d6-23ac-4c86-9ecf-9596e72f0468",
+        "meta": {
+          "versionId": "1715638958000",
+          "lastUpdated": "2024-05-13T22:22:38.000+00:00"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"hapiPropertyTable\"><tbody><tr><td>Id:</td><td>d7ec82d6-23ac-4c86-9ecf-9596e72f0468</td></tr><tr><td>Status:</td><td>FINAL</td></tr><tr><td>Code:</td><td>Text of encounter note</td></tr><tr><td>Subject:</td><td><a href=\"http://localhost:8080/openmrs/ws/fhir2/R4/Patient/025b4433-efa2-4eab-9473-748a1cf34222\">Betty Williams (OpenMRS ID: 100000Y)</a></td></tr><tr><td>Encounter:</td><td><a href=\"http://localhost:8080/openmrs/ws/fhir2/R4/Encounter/cf3cb0a4-4e33-40b6-b768-344772da1fb6\">Encounter/cf3cb0a4-4e33-40b6-b768-344772da1fb6</a></td></tr><tr><td>Effective:</td><td> 30 August 2020 06:06:38 </td></tr><tr><td>Issued:</td><td>13/05/2024 10:22:38 PM</td></tr><tr><td>Value:</td><td>Eget aliquet nibh praesent tristique. Lectus arcu bibendum at varius vel. Eget duis at tellus at urna condimentum mattis pellentesque. Quisque egestas diam in arcu cursus euismod quis viverra. Tellus orci ac auctor augue mauris augue. Id nibh tortor id aliquet lectus proin. Et ultrices neque ornare aenean euismod elementum nisi quis eleifend. Morbi leo urna molestie at elementum eu. Mauris ultrices eros in cursus turpis massa tincidunt. Arcu risus quis varius quam quisque id diam vel.Scelerisque eu ultrices vitae auctor eu augue. Sem integer vitae justo eget magna fermentum iaculis eu. Diam volutpat commodo sed egestas egestas. Sit amet facilisis magna etiam tempor orci eu lobortis. Nam aliquam sem et tortor consequat. Id cursus metus aliquam eleifend mi in nulla posuere sollicitudin. Tempus quam pellentesque nec nam aliquam sem. Odio eu feugiat pretium nibh. Elementum eu facilisis sed odio morbi quis commodo odio aenean. Sagittis orci a scelerisque purus semper eget. Duis ut diam quam nulla porttitor. Vitae auctor eu augue ut lectus. Tincidunt nunc pulvinar sapien et. Est pellentesque elit ullamcorper dignissim. Etiam non quam lacus suspendisse faucibus interdum posuere lorem ipsum. Tristique et egestas quis ipsum suspendisse. Egestas fringilla phasellus faucibus scelerisque eleifend. Sollicitudin aliquam ultrices sagittis orci a scelerisque. Semper risus in hendrerit gravida.</td></tr></tbody></table></div>"
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "code": "162169AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "display": "Text of encounter note"
+            },
+            {
+              "system": "https://cielterminology.org",
+              "code": "162169"
+            }
+          ],
+          "text": "Text of encounter note"
+        },
+        "subject": {
+          "reference": "Patient/025b4433-efa2-4eab-9473-748a1cf34222",
+          "type": "Patient",
+          "display": "Betty Williams (OpenMRS ID: 100000Y)"
+        },
+        "encounter": {
+          "reference": "Encounter/cf3cb0a4-4e33-40b6-b768-344772da1fb6",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2020-08-30T06:06:38+00:00",
+        "issued": "2024-05-13T22:22:38.000+00:00",
+        "valueString": "Eget aliquet nibh praesent tristique. Lectus arcu bibendum at varius vel. Eget duis at tellus at urna condimentum mattis pellentesque. Quisque egestas diam in arcu cursus euismod quis viverra. Tellus orci ac auctor augue mauris augue. Id nibh tortor id aliquet lectus proin. Et ultrices neque ornare aenean euismod elementum nisi quis eleifend. Morbi leo urna molestie at elementum eu. Mauris ultrices eros in cursus turpis massa tincidunt. Arcu risus quis varius quam quisque id diam vel.\n\nScelerisque eu ultrices vitae auctor eu augue. Sem integer vitae justo eget magna fermentum iaculis eu. Diam volutpat commodo sed egestas egestas. Sit amet facilisis magna etiam tempor orci eu lobortis. Nam aliquam sem et tortor consequat. Id cursus metus aliquam eleifend mi in nulla posuere sollicitudin. Tempus quam pellentesque nec nam aliquam sem. Odio eu feugiat pretium nibh. Elementum eu facilisis sed odio morbi quis commodo odio aenean. Sagittis orci a scelerisque purus semper eget. Duis ut diam quam nulla porttitor. Vitae auctor eu augue ut lectus. Tincidunt nunc pulvinar sapien et. Est pellentesque elit ullamcorper dignissim. Etiam non quam lacus suspendisse faucibus interdum posuere lorem ipsum. Tristique et egestas quis ipsum suspendisse. Egestas fringilla phasellus faucibus scelerisque eleifend. Sollicitudin aliquam ultrices sagittis orci a scelerisque. Semper risus in hendrerit gravida."
+      }
+    },
+    {
+      "fullUrl": "https://dev3.openmrs.org/openmrs/ws/fhir2/R4/Observation/a8af4557-4c8e-433d-91f8-dc046ac9a75f",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "a8af4557-4c8e-433d-91f8-dc046ac9a75f",
+        "meta": {
+          "versionId": "1715638958000",
+          "lastUpdated": "2024-05-13T22:22:38.000+00:00"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"hapiPropertyTable\"><tbody><tr><td>Id:</td><td>a8af4557-4c8e-433d-91f8-dc046ac9a75f</td></tr><tr><td>Status:</td><td>FINAL</td></tr><tr><td>Category:</td><td> Exam </td></tr><tr><td>Code:</td><td>Temperature (c)</td></tr><tr><td>Subject:</td><td><a href=\"http://localhost:8080/openmrs/ws/fhir2/R4/Patient/025b4433-efa2-4eab-9473-748a1cf34222\">Betty Williams (OpenMRS ID: 100000Y)</a></td></tr><tr><td>Encounter:</td><td><a href=\"http://localhost:8080/openmrs/ws/fhir2/R4/Encounter/309e3d07-1c28-41e5-9fd0-ad866adb01b1\">Encounter/309e3d07-1c28-41e5-9fd0-ad866adb01b1</a></td></tr><tr><td>Effective:</td><td> 14 July 2021 05:03:38 </td></tr><tr><td>Issued:</td><td>13/05/2024 10:22:38 PM</td></tr><tr><td>Value:</td><td>36.6 DEG C </td></tr><tr><td>Reference Ranges:</td><td><table class=\"subPropertyTable\"><tbody><tr><th>-</th><th>Low</th><th>High</th><th>Type</th><th>Applies To</th><th>Age</th></tr><tr><td>1</td><td>35.0 </td><td>37.7 </td><td> normal </td><td/><td> - </td></tr><tr><td>2</td><td/><td>39.0 </td><td> treatment </td><td/><td> - </td></tr><tr><td>3</td><td>25.0 </td><td>43.0 </td><td> absolute </td><td/><td> - </td></tr></tbody></table></td></tr></tbody></table></div>"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "5088AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "display": "Temperature (c)"
+            },
+            {
+              "system": "https://cielterminology.org",
+              "code": "5088"
+            }
+          ],
+          "text": "Temperature (c)"
+        },
+        "subject": {
+          "reference": "Patient/025b4433-efa2-4eab-9473-748a1cf34222",
+          "type": "Patient",
+          "display": "Betty Williams (OpenMRS ID: 100000Y)"
+        },
+        "encounter": {
+          "reference": "Encounter/309e3d07-1c28-41e5-9fd0-ad866adb01b1",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2021-07-14T05:03:38+00:00",
+        "issued": "2024-05-13T22:22:38.000+00:00",
+        "valueQuantity": {
+          "value": 36.6,
+          "unit": "DEG C"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 35.0
+            },
+            "high": {
+              "value": 37.7
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                  "code": "normal"
+                }
+              ]
+            }
+          },
+          {
+            "high": {
+              "value": 39.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                  "code": "treatment"
+                }
+              ]
+            }
+          },
+          {
+            "low": {
+              "value": 25.0
+            },
+            "high": {
+              "value": 43.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://fhir.openmrs.org/ext/obs/reference-range",
+                  "code": "absolute"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

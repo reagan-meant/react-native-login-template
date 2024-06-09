@@ -1,6 +1,6 @@
-import React from 'react'
-import { TouchableOpacity, Image, StyleSheet } from 'react-native'
-import { getStatusBarHeight } from 'react-native-status-bar-height'
+import React from 'react';
+import { TouchableOpacity, Image, StyleSheet } from 'react-native';
+import { getStatusBarHeight } from 'react-native-status-bar-height';
 
 export default function BackButton({ goBack }) {
   return (
@@ -10,7 +10,7 @@ export default function BackButton({ goBack }) {
         source={require('../assets/arrow_back.png')}
       />
     </TouchableOpacity>
-  )
+  );
 }
 
 const styles = StyleSheet.create({
@@ -23,4 +23,4 @@ const styles = StyleSheet.create({
     width: 24,
     height: 24,
   },
-})
+});
