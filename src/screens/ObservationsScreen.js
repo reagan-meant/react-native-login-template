@@ -1,48 +1,71 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, FlatList, StyleSheet } from 'react-native';
+import { View, Text, ScrollView, StyleSheet } from 'react-native';
 import patientBundle from '../assets/obsdata.json';
 
 export default function ObservationsScreen() {
   const [observations, setObservations] = useState([]);
+  const [codes, setCodes] = useState([]);
 
   useEffect(() => {
     const parseObservations = (bundle) => {
-      return bundle.entry.map((entry) => {
+      const observationMap = {};
+      const codeSet = new Set();
+
+      bundle.entry.forEach((entry) => {
         const observation = entry.resource;
-        return {
-          id: observation.id,
-          code: observation.code.text,
-          value: observation.valueQuantity?.value,
-          unit: observation.valueQuantity?.unit,
-          date: observation.effectiveDateTime,
-        };
+        const date = new Date(observation.effectiveDateTime).toLocaleDateString();
+        const code = observation.code.text;
+        const value = observation.valueQuantity?.value;
+        const unit = observation.valueQuantity?.unit;
+
+        codeSet.add(code);
+
+        if (!observationMap[date]) {
+          observationMap[date] = {};
+        }
+
+        observationMap[date][code] = `${value} ${unit}`;
       });
+
+      setCodes(Array.from(codeSet));
+      return observationMap;
     };
 
     const parsedObservations = parseObservations(patientBundle);
     setObservations(parsedObservations);
   }, []);
 
-  const renderObservation = ({ item }) => (
-    <View style={styles.observationCard}>
-      <Text style={styles.observationText}>Code: {item.code}</Text>
-      <Text style={styles.observationText}>
-        Value: {item.value} {item.unit}
-      </Text>
-      <Text style={styles.observationText}>
-        Date: {new Date(item.date).toLocaleDateString()}
-      </Text>
-    </View>
-  );
+  const renderTableHeader = () => {
+    return (
+      <View style={styles.tableRow}>
+        <Text style={[styles.tableHeader, styles.tableCell]}>Date</Text>
+        {codes.map((code) => (
+          <Text key={code} style={[styles.tableHeader, styles.tableCell]}>{code}</Text>
+        ))}
+      </View>
+    );
+  };
+
+  const renderTableRows = () => {
+    return Object.keys(observations).map((date) => (
+      <View key={date} style={styles.tableRow}>
+        <Text style={styles.tableCell}>{date}</Text>
+        {codes.map((code) => (
+          <Text key={code} style={styles.tableCell}>
+            {observations[date][code] || 'N/A'}
+          </Text>
+        ))}
+      </View>
+    ));
+  };
 
   return (
-    <View style={styles.container}>
-      <FlatList
-        data={observations}
-        keyExtractor={(item) => item.id}
-        renderItem={renderObservation}
-      />
-    </View>
+    <ScrollView style={styles.container} horizontal>
+      <View>
+        {renderTableHeader()}
+        {renderTableRows()}
+      </View>
+    </ScrollView>
   );
 }
 
@@ -52,22 +75,21 @@ const styles = StyleSheet.create({
     padding: 20,
     backgroundColor: '#f5f5f5',
   },
-  observationCard: {
-    backgroundColor: '#fff',
-    padding: 15,
-    marginVertical: 10,
-    borderRadius: 10,
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
-    elevation: 5,
+  tableRow: {
+    flexDirection: 'row',
+    borderBottomWidth: 1,
+    borderBottomColor: '#ccc',
   },
-  observationText: {
-    fontSize: 16,
-    marginBottom: 5,
+  tableHeader: {
+    fontWeight: 'bold',
+    backgroundColor: '#f0f0f0',
+  },
+  tableCell: {
+    width: 150, // Fixed width for all cells
+    textAlign: 'center',
+    borderWidth: 1,
+    borderColor: '#ccc',
+    paddingVertical: 10,
+    paddingHorizontal: 5,
   },
 });
