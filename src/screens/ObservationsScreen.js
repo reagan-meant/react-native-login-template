@@ -2,14 +2,30 @@ import React, { useEffect, useState } from 'react';
 import { View, Text, ScrollView, StyleSheet } from 'react-native';
 import patientBundle from '../assets/obsdata.json';
 
+const csvData = `
+Vital Signs,Temperature;Diastolic blood pressure;Systolic blood pressure
+Lab Values,Arterial blood oxygen saturation (pulse oximeter);Pulse;Respiratory rate
+Nutritional Values,Weight (kg);Height (cm)
+`;
+
+const parseCsv = (csv) => {
+  const lines = csv.trim().split('\n');
+  return lines.map(line => {
+    const [title, codes] = line.split(',');
+    return {
+      title,
+      codes: codes.split(';')
+    };
+  });
+};
+
 export default function ObservationsScreen() {
-  const [observations, setObservations] = useState([]);
-  const [codes, setCodes] = useState([]);
+  const [observations, setObservations] = useState({});
+  const [tables, setTables] = useState([]);
 
   useEffect(() => {
     const parseObservations = (bundle) => {
       const observationMap = {};
-      const codeSet = new Set();
 
       bundle.entry.forEach((entry) => {
         const observation = entry.resource;
@@ -18,8 +34,6 @@ export default function ObservationsScreen() {
         const value = observation.valueQuantity?.value;
         const unit = observation.valueQuantity?.unit;
 
-        codeSet.add(code);
-
         if (!observationMap[date]) {
           observationMap[date] = {};
         }
@@ -27,15 +41,17 @@ export default function ObservationsScreen() {
         observationMap[date][code] = `${value} ${unit}`;
       });
 
-      setCodes(Array.from(codeSet));
       return observationMap;
     };
 
     const parsedObservations = parseObservations(patientBundle);
     setObservations(parsedObservations);
+
+    const tablesData = parseCsv(csvData);
+    setTables(tablesData);
   }, []);
 
-  const renderTableHeader = () => {
+  const renderTableHeader = (codes) => {
     return (
       <View style={styles.tableRow}>
         <Text style={[styles.tableHeader, styles.tableCell]}>Date</Text>
@@ -46,7 +62,7 @@ export default function ObservationsScreen() {
     );
   };
 
-  const renderTableRows = () => {
+  const renderTableRows = (codes) => {
     return Object.keys(observations).map((date) => (
       <View key={date} style={styles.tableRow}>
         <Text style={styles.tableCell}>{date}</Text>
@@ -60,11 +76,18 @@ export default function ObservationsScreen() {
   };
 
   return (
-    <ScrollView style={styles.container} horizontal>
-      <View>
-        {renderTableHeader()}
-        {renderTableRows()}
-      </View>
+    <ScrollView style={styles.container}>
+      {tables.map((table, index) => (
+        <View key={index} style={styles.tableContainer}>
+          <Text style={styles.tableTitle}>{table.title}</Text>
+          <ScrollView horizontal>
+            <View>
+              {renderTableHeader(table.codes)}
+              {renderTableRows(table.codes)}
+            </View>
+          </ScrollView>
+        </View>
+      ))}
     </ScrollView>
   );
 }
@@ -74,6 +97,14 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 20,
     backgroundColor: '#f5f5f5',
+  },
+  tableContainer: {
+    marginBottom: 20,
+  },
+  tableTitle: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginBottom: 10,
   },
   tableRow: {
     flexDirection: 'row',
