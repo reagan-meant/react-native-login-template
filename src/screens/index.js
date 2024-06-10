@@ -4,3 +4,4 @@ export { default as RegisterScreen } from './RegisterScreen';
 export { default as ResetPasswordScreen } from './ResetPasswordScreen';
 export { default as Dashboard } from './Dashboard';
 export { default as ObservationsScreen } from './ObservationsScreen';
+export { default as AlertsScreen } from './AlertsScreen';

@@ -10,11 +10,11 @@ Nutritional Values,Weight (kg);Height (cm)
 
 const parseCsv = (csv) => {
   const lines = csv.trim().split('\n');
-  return lines.map(line => {
+  return lines.map((line) => {
     const [title, codes] = line.split(',');
     return {
       title,
-      codes: codes.split(';')
+      codes: codes.split(';'),
     };
   });
 };
@@ -29,7 +29,9 @@ export default function ObservationsScreen() {
 
       bundle.entry.forEach((entry) => {
         const observation = entry.resource;
-        const date = new Date(observation.effectiveDateTime).toLocaleDateString();
+        const date = new Date(
+          observation.effectiveDateTime
+        ).toLocaleDateString();
         const code = observation.code.text;
         const value = observation.valueQuantity?.value;
         const unit = observation.valueQuantity?.unit;
@@ -56,7 +58,9 @@ export default function ObservationsScreen() {
       <View style={styles.tableRow}>
         <Text style={[styles.tableHeader, styles.tableCell]}>Date</Text>
         {codes.map((code) => (
-          <Text key={code} style={[styles.tableHeader, styles.tableCell]}>{code}</Text>
+          <Text key={code} style={[styles.tableHeader, styles.tableCell]}>
+            {code}
+          </Text>
         ))}
       </View>
     );

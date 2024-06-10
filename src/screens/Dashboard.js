@@ -40,7 +40,7 @@ export default function Dashboard({ navigation }) {
 
         <TouchableOpacity
           style={[styles.card, { width: cardWidth }]}
-          onPress={() => navigation.navigate('Alerts')}
+          onPress={() => navigation.navigate('AlertsScreen')}
         >
           <Text style={styles.cardText}>Alerts & Reminders</Text>
         </TouchableOpacity>
