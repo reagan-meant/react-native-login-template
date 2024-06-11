@@ -10,7 +10,7 @@ import {
   Platform,
 } from 'react-native';
 import DateTimePicker from '@react-native-community/datetimepicker';
-import * as Notifications from "expo-notifications";
+import * as Notifications from 'expo-notifications';
 
 export default function AlertsScreen() {
   const [alerts, setAlerts] = useState([]);
@@ -66,8 +66,6 @@ export default function AlertsScreen() {
   };
 
   const onDateChange = (event, selectedDate) => {
-    console.log('called here');
-
     if (selectedDate !== undefined) {
       const currentDate = selectedDate || date;
       setDate(currentDate);
@@ -93,17 +91,17 @@ export default function AlertsScreen() {
     }
   };
 
-// Send the notification [TODO: You can move this to a separate file or export it as a function to be called from anywhere]
-async function schedulePushNotification() {
-  await Notifications.scheduleNotificationAsync({
-    content: {
-      title: "You've got notification! 🔔",
-      body: "Here is the notification body",
-      data: { data: "goes here" },
-    },
-    trigger: { seconds: 2 }, // You can change this to any time interval you want
-  });
-}
+  // Send the notification [TODO: You can move this to a separate file or export it as a function to be called from anywhere]
+  async function schedulePushNotification() {
+    await Notifications.scheduleNotificationAsync({
+      content: {
+        title: "You've got notification! 🔔",
+        body: 'Here is the notification body',
+        data: { data: 'goes here' },
+      },
+      trigger: { seconds: 2 }, // You can change this to any time interval you want
+    });
+  }
 
   return (
     <View style={styles.container}>
@@ -153,11 +151,11 @@ async function schedulePushNotification() {
           onPress={addAlert}
         />
         <Button
-                title="Send Notification"
-                onPress={async () => {
-                  await schedulePushNotification();
-                }}
-              />
+          title="Send Notification"
+          onPress={async () => {
+            await schedulePushNotification();
+          }}
+        />
       </View>
       <FlatList
         data={alerts}

@@ -27,7 +27,7 @@ export default function Dashboard({ navigation }) {
         </TouchableOpacity>
         <TouchableOpacity
           style={[styles.card, { width: cardWidth }]}
-          onPress={() => navigation.navigate('SymptomTracking')}
+          onPress={() => navigation.navigate('CaptureObservationsScreen')}
         >
           <Text style={styles.cardText}>Track Symptoms</Text>
         </TouchableOpacity>

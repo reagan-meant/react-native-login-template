@@ -14,6 +14,7 @@ import {
   Dashboard,
   ObservationsScreen,
   AlertsScreen,
+  CaptureObservationsScreen,
 } from './src/screens'
 import { Button, Platform, StyleSheet, Text, View } from "react-native";
 
@@ -62,8 +63,7 @@ export async function registerForPushNotificationsAsync() {
           projectId: Constants.easConfig.projectId, // you can hard code project id if you dont want to use expo Constants
         })
       ).data;
-      console.log(token);
-    }
+     }
   } else {
     alert("Must use physical device for Push Notifications");
   }
@@ -104,6 +104,7 @@ export default function App() {
           <Stack.Screen name="Dashboard" component={Dashboard} />
           <Stack.Screen name="ObservationsScreen" component={ObservationsScreen} />
           <Stack.Screen name="AlertsScreen" component={AlertsScreen} />
+          <Stack.Screen name="CaptureObservationsScreen" component={CaptureObservationsScreen} />
 
           <Stack.Screen
             name="ResetPasswordScreen"
