@@ -10,9 +10,7 @@ import {
   Alert,
 } from 'react-native';
 import RNPickerSelect from 'react-native-picker-select';
-//import { parse, usePapaParse } from 'papaparse';
 import Papa from 'papaparse';
-
 import axios from 'axios';
 
 // Mock CSV content, replace with actual CSV loading logic if necessary
@@ -27,8 +25,7 @@ weight,Weight (kg),kg
 height,Height (cm),cm`;
 
 const parseCSV = (csv) => {
-  return Papa.parse(csv).data;
-  //return Papa.parse(csv, ({ header: true, skipEmptyLines: true})).data;
+  return Papa.parse(csv, { header: true, skipEmptyLines: true }).data;
 };
 
 export default function CaptureObservationsScreen() {
@@ -44,7 +41,6 @@ export default function CaptureObservationsScreen() {
   useEffect(() => {
     const loadCSV = async () => {
       const parsedData = await parseCSV(csvContent);
-
       setOptions(parsedData);
     };
     loadCSV();
@@ -57,8 +53,12 @@ export default function CaptureObservationsScreen() {
     ]);
   };
 
+  const removeInputGroup = (id) => {
+    setInputGroups(inputGroups.filter((group) => group.id !== id));
+  };
+
   const submitObservations = async () => {
-    generateBundles(inputGroups);
+    await generateBundles(inputGroups);
 
     try {
       const response = await axios.post('YOUR_API_ENDPOINT', inputGroups);
@@ -76,12 +76,12 @@ export default function CaptureObservationsScreen() {
     }
   };
 
-  const generateBundles = (inputGroups) => {
+  const generateBundles = async (inputGroups) => {
     const newBundles = inputGroups.map((group) =>
       createObservationBundle(group)
     );
     setBundles(newBundles);
-    Alert.alert('Bundles Generated', 'Check the console for the output');
+    return newBundles;
   };
 
   // Function to create the observation bundle
@@ -116,10 +116,10 @@ export default function CaptureObservationsScreen() {
     newInputGroups[index][key] = value;
 
     if (key === 'code') {
-      const selectedOption = options.find((option) => option[0] === value);
+      const selectedOption = options.find((option) => option.code === value);
       if (selectedOption) {
-        newInputGroups[index].displayName = selectedOption[1];
-        newInputGroups[index].unit = selectedOption[2];
+        newInputGroups[index].displayName = selectedOption.displayName;
+        newInputGroups[index].unit = selectedOption.unit;
       }
     }
     setInputGroups(newInputGroups);
@@ -135,8 +135,8 @@ export default function CaptureObservationsScreen() {
             onValueChange={(value) => updateInputGroup(index, 'code', value)}
             items={options.map((option, idx) => ({
               key: idx.toString(),
-              label: option[1],
-              value: option[0],
+              label: option.displayName,
+              value: option.code,
             }))}
             placeholder={{ label: 'Select an observation', value: null }}
           />
@@ -147,6 +147,7 @@ export default function CaptureObservationsScreen() {
             onChangeText={(text) => updateInputGroup(index, 'value', text)}
             keyboardType="numeric"
           />
+          <Button title="Remove" onPress={() => removeInputGroup(group.id)} />
         </View>
       ))}
       <TouchableOpacity style={styles.addButton} onPress={addInputGroup}>
