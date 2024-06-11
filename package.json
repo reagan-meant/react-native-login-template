@@ -26,7 +26,10 @@
     "react-native-screens": "3.31.1",
     "react-native-status-bar-height": "^2.6.0",
     "react-native-web": "~0.19.10",
-    "styled-components": "^6.1.11"
+    "styled-components": "^6.1.11",
+    "expo-notifications": "~0.28.8",
+    "expo-device": "~6.0.2",
+    "expo-constants": "~16.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.24.0",

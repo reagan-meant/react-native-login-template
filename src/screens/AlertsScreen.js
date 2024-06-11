@@ -10,6 +10,7 @@ import {
   Platform,
 } from 'react-native';
 import DateTimePicker from '@react-native-community/datetimepicker';
+import * as Notifications from "expo-notifications";
 
 export default function AlertsScreen() {
   const [alerts, setAlerts] = useState([]);
@@ -92,6 +93,18 @@ export default function AlertsScreen() {
     }
   };
 
+// Send the notification [TODO: You can move this to a separate file or export it as a function to be called from anywhere]
+async function schedulePushNotification() {
+  await Notifications.scheduleNotificationAsync({
+    content: {
+      title: "You've got notification! 🔔",
+      body: "Here is the notification body",
+      data: { data: "goes here" },
+    },
+    trigger: { seconds: 2 }, // You can change this to any time interval you want
+  });
+}
+
   return (
     <View style={styles.container}>
       <Text style={styles.header}>Alerts and Reminders</Text>
@@ -139,6 +152,12 @@ export default function AlertsScreen() {
           title={editIndex !== null ? 'Update' : 'Add'}
           onPress={addAlert}
         />
+        <Button
+                title="Send Notification"
+                onPress={async () => {
+                  await schedulePushNotification();
+                }}
+              />
       </View>
       <FlatList
         data={alerts}
