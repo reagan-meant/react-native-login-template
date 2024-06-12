@@ -56,7 +56,7 @@ export default function ObservationsScreen() {
   const renderTableHeader = (codes) => {
     return (
       <View style={styles.tableRow}>
-        <Text style={[styles.tableHeader, styles.tableCell]}>Date</Text>
+        <Text style={[styles.tableCell, styles.tableHeader]}>Date</Text>
         {codes.map((code) => (
           <Text key={code} style={[styles.tableHeader, styles.tableCell]}>
             {code}
@@ -69,7 +69,7 @@ export default function ObservationsScreen() {
   const renderTableRows = (codes) => {
     return Object.keys(observations).map((date) => (
       <View key={date} style={styles.tableRow}>
-        <Text style={styles.tableCell}>{date}</Text>
+        <Text style={[styles.tableCell, styles.tableHeader]}>{date}</Text>
         {codes.map((code) => (
           <Text key={code} style={styles.tableCell}>
             {observations[date][code] || 'N/A'}
@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
-    backgroundColor: '#f5f5f5',
+    backgroundColor: '#bde5dd',
   },
   tableContainer: {
     marginBottom: 20,
@@ -117,7 +117,7 @@ const styles = StyleSheet.create({
   },
   tableHeader: {
     fontWeight: 'bold',
-    backgroundColor: '#f0f0f0',
+    backgroundColor: '#aeccd4',
   },
   tableCell: {
     width: 150, // Fixed width for all cells
@@ -126,5 +126,6 @@ const styles = StyleSheet.create({
     borderColor: '#ccc',
     paddingVertical: 10,
     paddingHorizontal: 5,
+    backgroundColor: '#a8c7c7',
   },
 });

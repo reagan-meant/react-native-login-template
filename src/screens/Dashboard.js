@@ -16,10 +16,12 @@ const cardWidth = width * 0.7;
 export default function Dashboard({ navigation }) {
   return (
     <Background>
-      <Header>Let’s start</Header>
+      <Header>SCD mHealth</Header>
 
-      <ScrollView contentContainerStyle={styles.cardContainer}
-      showsVerticalScrollIndicator={false}>
+      <ScrollView
+        contentContainerStyle={styles.cardContainer}
+        showsVerticalScrollIndicator={false}
+      >
         <TouchableOpacity
           style={[styles.card, { width: cardWidth }]}
           onPress={() => navigation.navigate('ObservationsScreen')}

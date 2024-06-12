@@ -10,9 +10,7 @@ export default function StartScreen({ navigation }) {
     <Background>
       <Logo />
       <Header>SCD mHealth</Header>
-      <Paragraph>
-        Monitoring SCD made easy
-      </Paragraph>
+      <Paragraph>Monitoring SCD made easy</Paragraph>
       <Button
         mode="contained"
         onPress={() => navigation.navigate('LoginScreen')}
@@ -20,7 +18,7 @@ export default function StartScreen({ navigation }) {
         Login
       </Button>
       <Button
-      style={{ display: 'none'}}
+        style={{ display: 'none' }}
         mode="outlined"
         onPress={() => navigation.navigate('RegisterScreen')}
       >
