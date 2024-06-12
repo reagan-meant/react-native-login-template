@@ -3,18 +3,30 @@ import { View, Text, ScrollView, StyleSheet } from 'react-native';
 import patientBundle from '../assets/obsdata.json';
 
 const csvData = `
-Vital Signs,Temperature;Diastolic blood pressure;Systolic blood pressure
-Lab Values,Arterial blood oxygen saturation (pulse oximeter);Pulse;Respiratory rate
-Nutritional Values,Weight (kg);Height (cm)
+Vital Signs,Temperature:T;Diastolic blood pressure:DBP;Systolic blood pressure:SBP
+Lab Values,Arterial blood oxygen saturation (pulse oximeter):OxySAt;Pulse:P;Respiratory rate:RR
+Nutritional Values,Weight (kg):W;Height (cm):H
+Medication,CQ:CQ;Mebendazole:M
+
 `;
 
 const parseCsv = (csv) => {
   const lines = csv.trim().split('\n');
   return lines.map((line) => {
     const [title, codes] = line.split(',');
+    const parts = codes.split(';');
+
+    const parsedCodes = parts.map((part) => {
+      const indparts = part.split(':'); // Split the string at ':'
+      return {
+        displayName: indparts[0], // The first part is the display name
+        alias: indparts[1], // The second part is the alias
+      };
+    });
+
     return {
       title,
-      codes: codes.split(';'),
+      codes: parsedCodes,
     };
   });
 };
@@ -58,8 +70,11 @@ export default function ObservationsScreen() {
       <View style={styles.tableRow}>
         <Text style={[styles.tableCell, styles.tableHeader]}>Date</Text>
         {codes.map((code) => (
-          <Text key={code} style={[styles.tableHeader, styles.tableCell]}>
-            {code}
+          <Text
+            key={code.displayName}
+            style={[styles.tableHeader, styles.tableCell]}
+          >
+            {code.alias || code.displayName}
           </Text>
         ))}
       </View>
@@ -71,8 +86,8 @@ export default function ObservationsScreen() {
       <View key={date} style={styles.tableRow}>
         <Text style={[styles.tableCell, styles.tableHeader]}>{date}</Text>
         {codes.map((code) => (
-          <Text key={code} style={styles.tableCell}>
-            {observations[date][code] || 'N/A'}
+          <Text key={code.displayName} style={styles.tableCell}>
+            {observations[date][code.displayName] || ''}
           </Text>
         ))}
       </View>
@@ -120,7 +135,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#aeccd4',
   },
   tableCell: {
-    width: 150, // Fixed width for all cells
+    width: 85, // Fixed width for all cells
     textAlign: 'center',
     borderWidth: 1,
     borderColor: '#ccc',
