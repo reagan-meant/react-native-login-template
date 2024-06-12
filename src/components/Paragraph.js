@@ -12,5 +12,7 @@ const styles = StyleSheet.create({
     lineHeight: 21,
     textAlign: 'center',
     marginBottom: 12,
+        fontWeight: 'bold',  // Add this line to make the text bold
+
   },
 });

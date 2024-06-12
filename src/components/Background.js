@@ -3,16 +3,18 @@ import {
   ImageBackground,
   StyleSheet,
   KeyboardAvoidingView,
+  View,
 } from 'react-native';
 import { theme } from '../core/theme';
 
 export default function Background({ children }) {
   return (
     <ImageBackground
-      source={require('../assets/background_dot.png')}
+      source={require('../assets/medical_bg.jpeg')}
       resizeMode="repeat"
       style={styles.background}
     >
+      <View style={styles.overlay} />
       <KeyboardAvoidingView style={styles.container} behavior="padding">
         {children}
       </KeyboardAvoidingView>
@@ -25,6 +27,10 @@ const styles = StyleSheet.create({
     flex: 1,
     width: '100%',
     backgroundColor: theme.colors.surface,
+  },
+  overlay: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: 'rgba(255, 255, 255, 0.7)', // Adjust the alpha value to control the lightness
   },
   container: {
     flex: 1,
