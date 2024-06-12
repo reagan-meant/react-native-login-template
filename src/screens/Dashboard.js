@@ -11,14 +11,15 @@ import Header from '../components/Header';
 import Button from '../components/Button';
 
 const { width } = Dimensions.get('window');
-const cardWidth = width * 0.9;
+const cardWidth = width * 0.7;
 
 export default function Dashboard({ navigation }) {
   return (
     <Background>
       <Header>Let’s start</Header>
 
-      <ScrollView contentContainerStyle={styles.cardContainer}>
+      <ScrollView contentContainerStyle={styles.cardContainer}
+      showsVerticalScrollIndicator={false}>
         <TouchableOpacity
           style={[styles.card, { width: cardWidth }]}
           onPress={() => navigation.navigate('ObservationsScreen')}
@@ -52,7 +53,7 @@ export default function Dashboard({ navigation }) {
         </TouchableOpacity>
       </ScrollView>
       <Button
-        style={[styles.logoutButton, { width: cardWidth }]}
+        style={[styles.logoutButton, { width: cardWidth, display: 'none' }]}
         mode="outlined"
         onPress={() =>
           navigation.reset({
@@ -69,15 +70,16 @@ export default function Dashboard({ navigation }) {
 
 const styles = StyleSheet.create({
   cardContainer: {
-    flexGrow: 1,
+    //flexGrow: 1,
     alignItems: 'center',
     paddingVertical: 20,
+    width: 340,
   },
   card: {
     backgroundColor: '#fff',
     padding: 40,
     marginVertical: 10,
-    borderRadius: 10,
+    borderRadius: 20,
     alignItems: 'center',
     shadowColor: '#000',
     shadowOffset: {
