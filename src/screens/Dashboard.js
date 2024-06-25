@@ -48,7 +48,7 @@ export default function Dashboard({ navigation }) {
           <Text style={styles.cardText}>Alerts & Reminders</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          style={[styles.card, { width: cardWidth }]}
+          style={[styles.card, { width: cardWidth, display: 'none'  }]}
           onPress={() => navigation.navigate('Appointments')}
         >
           <Text style={styles.cardText}>Manage Appointments</Text>

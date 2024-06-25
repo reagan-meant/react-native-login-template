@@ -1,0 +1,5182 @@
+{
+  "resourceType": "Bundle",
+  "id": "2ff37545-992a-4cbd-93a5-fe4abe86ea52",
+  "meta": {
+    "lastUpdated": "2024-06-25T09:27:26.877+00:00",
+    "tag": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "SUBSETTED",
+        "display": "Resource encoded in summary mode"
+      }
+    ]
+  },
+  "type": "searchset",
+  "total": 61,
+  "link": [
+    {
+      "relation": "self",
+      "url": "https://80-openmrs-openmrsdistrore-eocvxb8hrdg.ws-eu114.gitpod.io/openmrs/ws/fhir2/R4/Observation?_count=200&_summary=data&code=5087AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%2C5242AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%2C5b13405b-823a-4780-83e6-b32448cf6a27%2C5090AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%2C5089AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%2C5085AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%2C5086AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%2C21AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%2C1022AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%2C678AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%2C851AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%2C729AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%2C57546f95-6b79-478c-a90b-d8f989d82f99%2C857AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%2C324a21b0-4548-433a-be13-13c97651eada%2C703AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%2C3d77542e-dca9-457c-af77-9b7888353bb5%2C03e8f465-1e79-46cb-84ef-48ef77219756%2C461d7dcd-ef35-4e83-973f-55195a885735%2C8bf322eb-4041-42bf-aaa7-de9eb7bf1e0f%2C63edc8fb-00d1-40fc-93af-caad921436da%2Cc3e63462-68d4-41f3-a4e3-705181f5b9c9&subject=1a280518-9aa2-41f1-8c64-8960ebe008c0"
+    }
+  ],
+  "entry": [
+    {
+      "fullUrl": "https://80-openmrs-openmrsdistrore-eocvxb8hrdg.ws-eu114.gitpod.io/openmrs/ws/fhir2/R4/Observation/38838f82-9d0d-4098-b374-c2544177f4df",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "38838f82-9d0d-4098-b374-c2544177f4df",
+        "meta": {
+          "versionId": "1718315449000",
+          "lastUpdated": "2024-06-13T21:50:49.000+00:00",
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+              "code": "SUBSETTED",
+              "display": "Resource encoded in summary mode"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "5b13405b-823a-4780-83e6-b32448cf6a27",
+              "display": "Left MUAC"
+            }
+          ],
+          "text": "Left MUAC"
+        },
+        "subject": {
+          "reference": "Patient/1a280518-9aa2-41f1-8c64-8960ebe008c0",
+          "type": "Patient",
+          "display": "Wod Pachua (OpenMRS ID: 10001PE)"
+        },
+        "encounter": {
+          "reference": "Encounter/a2bed908-f5dc-4514-9a5f-8d1fa15ddee4",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2024-06-13T21:50:28+00:00",
+        "issued": "2024-06-13T21:50:49.000+00:00",
+        "valueQuantity": {
+          "value": 15.0,
+          "unit": "cm",
+          "system": "http://unitsofmeasure.org",
+          "code": "cm"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 124.0
+            },
+            "high": {
+              "value": 125.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                  "code": "normal"
+                }
+              ]
+            }
+          },
+          {
+            "low": {
+              "value": 110.0
+            },
+            "high": {
+              "value": 135.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                  "code": "treatment"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://80-openmrs-openmrsdistrore-eocvxb8hrdg.ws-eu114.gitpod.io/openmrs/ws/fhir2/R4/Observation/da37cd8d-c84e-432f-98a3-317e40983262",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "da37cd8d-c84e-432f-98a3-317e40983262",
+        "meta": {
+          "versionId": "1718315449000",
+          "lastUpdated": "2024-06-13T21:50:49.000+00:00",
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+              "code": "SUBSETTED",
+              "display": "Resource encoded in summary mode"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "5090AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "display": "Height (cm)"
+            },
+            {
+              "system": "https://cielterminology.org",
+              "code": "5090"
+            }
+          ],
+          "text": "Height (cm)"
+        },
+        "subject": {
+          "reference": "Patient/1a280518-9aa2-41f1-8c64-8960ebe008c0",
+          "type": "Patient",
+          "display": "Wod Pachua (OpenMRS ID: 10001PE)"
+        },
+        "encounter": {
+          "reference": "Encounter/a2bed908-f5dc-4514-9a5f-8d1fa15ddee4",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2024-06-13T21:50:28+00:00",
+        "issued": "2024-06-13T21:50:49.000+00:00",
+        "valueQuantity": {
+          "value": 170.0,
+          "unit": "cm",
+          "system": "http://unitsofmeasure.org",
+          "code": "cm"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 10.0
+            },
+            "high": {
+              "value": 272.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://fhir.openmrs.org/ext/obs/reference-range",
+                  "code": "absolute"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://80-openmrs-openmrsdistrore-eocvxb8hrdg.ws-eu114.gitpod.io/openmrs/ws/fhir2/R4/Observation/167bb4ba-e769-4f9d-a04e-84fb8b3a82f0",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "167bb4ba-e769-4f9d-a04e-84fb8b3a82f0",
+        "meta": {
+          "versionId": "1718315449000",
+          "lastUpdated": "2024-06-13T21:50:49.000+00:00",
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+              "code": "SUBSETTED",
+              "display": "Resource encoded in summary mode"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "5089AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "display": "Weight (kg)"
+            },
+            {
+              "system": "https://cielterminology.org",
+              "code": "5089"
+            }
+          ],
+          "text": "Weight (kg)"
+        },
+        "subject": {
+          "reference": "Patient/1a280518-9aa2-41f1-8c64-8960ebe008c0",
+          "type": "Patient",
+          "display": "Wod Pachua (OpenMRS ID: 10001PE)"
+        },
+        "encounter": {
+          "reference": "Encounter/a2bed908-f5dc-4514-9a5f-8d1fa15ddee4",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2024-06-13T21:50:28+00:00",
+        "issued": "2024-06-13T21:50:49.000+00:00",
+        "valueQuantity": {
+          "value": 70.0,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 0.0
+            },
+            "high": {
+              "value": 250.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://fhir.openmrs.org/ext/obs/reference-range",
+                  "code": "absolute"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://80-openmrs-openmrsdistrore-eocvxb8hrdg.ws-eu114.gitpod.io/openmrs/ws/fhir2/R4/Observation/174783b1-67f3-4c43-9e32-eae5665db7c2",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "174783b1-67f3-4c43-9e32-eae5665db7c2",
+        "meta": {
+          "versionId": "1718315473000",
+          "lastUpdated": "2024-06-13T21:51:13.000+00:00",
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+              "code": "SUBSETTED",
+              "display": "Resource encoded in summary mode"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "5090AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "display": "Height (cm)"
+            },
+            {
+              "system": "https://cielterminology.org",
+              "code": "5090"
+            }
+          ],
+          "text": "Height (cm)"
+        },
+        "subject": {
+          "reference": "Patient/1a280518-9aa2-41f1-8c64-8960ebe008c0",
+          "type": "Patient",
+          "display": "Wod Pachua (OpenMRS ID: 10001PE)"
+        },
+        "encounter": {
+          "reference": "Encounter/2c2f27e4-3753-4a9a-9d2e-db6601c7613a",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2024-06-13T21:51:02+00:00",
+        "issued": "2024-06-13T21:51:13.000+00:00",
+        "valueQuantity": {
+          "value": 170.0,
+          "unit": "cm",
+          "system": "http://unitsofmeasure.org",
+          "code": "cm"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 10.0
+            },
+            "high": {
+              "value": 272.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://fhir.openmrs.org/ext/obs/reference-range",
+                  "code": "absolute"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://80-openmrs-openmrsdistrore-eocvxb8hrdg.ws-eu114.gitpod.io/openmrs/ws/fhir2/R4/Observation/27366aa9-2802-4f5f-98d8-e57cae74aecf",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "27366aa9-2802-4f5f-98d8-e57cae74aecf",
+        "meta": {
+          "versionId": "1718315487000",
+          "lastUpdated": "2024-06-13T21:51:27.000+00:00",
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+              "code": "SUBSETTED",
+              "display": "Resource encoded in summary mode"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "5090AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "display": "Height (cm)"
+            },
+            {
+              "system": "https://cielterminology.org",
+              "code": "5090"
+            }
+          ],
+          "text": "Height (cm)"
+        },
+        "subject": {
+          "reference": "Patient/1a280518-9aa2-41f1-8c64-8960ebe008c0",
+          "type": "Patient",
+          "display": "Wod Pachua (OpenMRS ID: 10001PE)"
+        },
+        "encounter": {
+          "reference": "Encounter/f2a7be6a-ac55-4afd-aa5d-acf43ce64054",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2024-06-13T21:51:17+00:00",
+        "issued": "2024-06-13T21:51:27.000+00:00",
+        "valueQuantity": {
+          "value": 170.0,
+          "unit": "cm",
+          "system": "http://unitsofmeasure.org",
+          "code": "cm"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 10.0
+            },
+            "high": {
+              "value": 272.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://fhir.openmrs.org/ext/obs/reference-range",
+                  "code": "absolute"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://80-openmrs-openmrsdistrore-eocvxb8hrdg.ws-eu114.gitpod.io/openmrs/ws/fhir2/R4/Observation/ef03a4ee-7c0c-47b5-8dd6-5fde1e0afc26",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "ef03a4ee-7c0c-47b5-8dd6-5fde1e0afc26",
+        "meta": {
+          "versionId": "1718315487000",
+          "lastUpdated": "2024-06-13T21:51:27.000+00:00",
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+              "code": "SUBSETTED",
+              "display": "Resource encoded in summary mode"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "5089AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "display": "Weight (kg)"
+            },
+            {
+              "system": "https://cielterminology.org",
+              "code": "5089"
+            }
+          ],
+          "text": "Weight (kg)"
+        },
+        "subject": {
+          "reference": "Patient/1a280518-9aa2-41f1-8c64-8960ebe008c0",
+          "type": "Patient",
+          "display": "Wod Pachua (OpenMRS ID: 10001PE)"
+        },
+        "encounter": {
+          "reference": "Encounter/f2a7be6a-ac55-4afd-aa5d-acf43ce64054",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2024-06-13T21:51:17+00:00",
+        "issued": "2024-06-13T21:51:27.000+00:00",
+        "valueQuantity": {
+          "value": 67.0,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 0.0
+            },
+            "high": {
+              "value": 250.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://fhir.openmrs.org/ext/obs/reference-range",
+                  "code": "absolute"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://80-openmrs-openmrsdistrore-eocvxb8hrdg.ws-eu114.gitpod.io/openmrs/ws/fhir2/R4/Observation/e8fed03c-ed4f-4d9e-bd8a-ccb6dfc6ffbe",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "e8fed03c-ed4f-4d9e-bd8a-ccb6dfc6ffbe",
+        "meta": {
+          "versionId": "1718315510000",
+          "lastUpdated": "2024-06-13T21:51:50.000+00:00",
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+              "code": "SUBSETTED",
+              "display": "Resource encoded in summary mode"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "5090AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "display": "Height (cm)"
+            },
+            {
+              "system": "https://cielterminology.org",
+              "code": "5090"
+            }
+          ],
+          "text": "Height (cm)"
+        },
+        "subject": {
+          "reference": "Patient/1a280518-9aa2-41f1-8c64-8960ebe008c0",
+          "type": "Patient",
+          "display": "Wod Pachua (OpenMRS ID: 10001PE)"
+        },
+        "encounter": {
+          "reference": "Encounter/f97a34b2-4bb5-4330-83e6-eefcdea039d7",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2024-06-13T21:51:31+00:00",
+        "issued": "2024-06-13T21:51:50.000+00:00",
+        "valueQuantity": {
+          "value": 170.0,
+          "unit": "cm",
+          "system": "http://unitsofmeasure.org",
+          "code": "cm"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 10.0
+            },
+            "high": {
+              "value": 272.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://fhir.openmrs.org/ext/obs/reference-range",
+                  "code": "absolute"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://80-openmrs-openmrsdistrore-eocvxb8hrdg.ws-eu114.gitpod.io/openmrs/ws/fhir2/R4/Observation/f74581bd-5ac2-48cc-a79c-ab13c49ebc43",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "f74581bd-5ac2-48cc-a79c-ab13c49ebc43",
+        "meta": {
+          "versionId": "1718315510000",
+          "lastUpdated": "2024-06-13T21:51:50.000+00:00",
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+              "code": "SUBSETTED",
+              "display": "Resource encoded in summary mode"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "5089AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "display": "Weight (kg)"
+            },
+            {
+              "system": "https://cielterminology.org",
+              "code": "5089"
+            }
+          ],
+          "text": "Weight (kg)"
+        },
+        "subject": {
+          "reference": "Patient/1a280518-9aa2-41f1-8c64-8960ebe008c0",
+          "type": "Patient",
+          "display": "Wod Pachua (OpenMRS ID: 10001PE)"
+        },
+        "encounter": {
+          "reference": "Encounter/f97a34b2-4bb5-4330-83e6-eefcdea039d7",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2024-06-13T21:51:31+00:00",
+        "issued": "2024-06-13T21:51:50.000+00:00",
+        "valueQuantity": {
+          "value": 78.0,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 0.0
+            },
+            "high": {
+              "value": 250.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://fhir.openmrs.org/ext/obs/reference-range",
+                  "code": "absolute"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://80-openmrs-openmrsdistrore-eocvxb8hrdg.ws-eu114.gitpod.io/openmrs/ws/fhir2/R4/Observation/5e1e721c-23c8-498a-860f-181781833f8b",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "5e1e721c-23c8-498a-860f-181781833f8b",
+        "meta": {
+          "versionId": "1718315510000",
+          "lastUpdated": "2024-06-13T21:51:50.000+00:00",
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+              "code": "SUBSETTED",
+              "display": "Resource encoded in summary mode"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "5b13405b-823a-4780-83e6-b32448cf6a27",
+              "display": "Left MUAC"
+            }
+          ],
+          "text": "Left MUAC"
+        },
+        "subject": {
+          "reference": "Patient/1a280518-9aa2-41f1-8c64-8960ebe008c0",
+          "type": "Patient",
+          "display": "Wod Pachua (OpenMRS ID: 10001PE)"
+        },
+        "encounter": {
+          "reference": "Encounter/f97a34b2-4bb5-4330-83e6-eefcdea039d7",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2024-06-13T21:51:31+00:00",
+        "issued": "2024-06-13T21:51:50.000+00:00",
+        "valueQuantity": {
+          "value": 15.0,
+          "unit": "cm",
+          "system": "http://unitsofmeasure.org",
+          "code": "cm"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 124.0
+            },
+            "high": {
+              "value": 125.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                  "code": "normal"
+                }
+              ]
+            }
+          },
+          {
+            "low": {
+              "value": 110.0
+            },
+            "high": {
+              "value": 135.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                  "code": "treatment"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://80-openmrs-openmrsdistrore-eocvxb8hrdg.ws-eu114.gitpod.io/openmrs/ws/fhir2/R4/Observation/efdd357e-efcc-45e0-a1aa-23c07b54af5a",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "efdd357e-efcc-45e0-a1aa-23c07b54af5a",
+        "meta": {
+          "versionId": "1718315567000",
+          "lastUpdated": "2024-06-13T21:52:47.000+00:00",
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+              "code": "SUBSETTED",
+              "display": "Resource encoded in summary mode"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "5089AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "display": "Weight (kg)"
+            },
+            {
+              "system": "https://cielterminology.org",
+              "code": "5089"
+            }
+          ],
+          "text": "Weight (kg)"
+        },
+        "subject": {
+          "reference": "Patient/1a280518-9aa2-41f1-8c64-8960ebe008c0",
+          "type": "Patient",
+          "display": "Wod Pachua (OpenMRS ID: 10001PE)"
+        },
+        "encounter": {
+          "reference": "Encounter/62a814b5-08ad-450c-b033-741d34d9a64e",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2024-06-13T21:51:55+00:00",
+        "issued": "2024-06-13T21:52:47.000+00:00",
+        "valueQuantity": {
+          "value": 77.0,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 0.0
+            },
+            "high": {
+              "value": 250.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://fhir.openmrs.org/ext/obs/reference-range",
+                  "code": "absolute"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://80-openmrs-openmrsdistrore-eocvxb8hrdg.ws-eu114.gitpod.io/openmrs/ws/fhir2/R4/Observation/df062aaa-9207-47e4-ae6b-b53b10407696",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "df062aaa-9207-47e4-ae6b-b53b10407696",
+        "meta": {
+          "versionId": "1718315567000",
+          "lastUpdated": "2024-06-13T21:52:47.000+00:00",
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+              "code": "SUBSETTED",
+              "display": "Resource encoded in summary mode"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "5087AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "display": "Pulse"
+            },
+            {
+              "system": "https://cielterminology.org",
+              "code": "5087"
+            },
+            {
+              "system": "http://snomed.info/sct/",
+              "code": "78564009"
+            }
+          ],
+          "text": "Pulse"
+        },
+        "subject": {
+          "reference": "Patient/1a280518-9aa2-41f1-8c64-8960ebe008c0",
+          "type": "Patient",
+          "display": "Wod Pachua (OpenMRS ID: 10001PE)"
+        },
+        "encounter": {
+          "reference": "Encounter/62a814b5-08ad-450c-b033-741d34d9a64e",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2024-06-13T21:51:55+00:00",
+        "issued": "2024-06-13T21:52:47.000+00:00",
+        "valueQuantity": {
+          "value": 70.0,
+          "unit": "beats/min"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 55.0
+            },
+            "high": {
+              "value": 100.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                  "code": "normal"
+                }
+              ]
+            }
+          },
+          {
+            "low": {
+              "value": 49.0
+            },
+            "high": {
+              "value": 130.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                  "code": "treatment"
+                }
+              ]
+            }
+          },
+          {
+            "low": {
+              "value": 0.0
+            },
+            "high": {
+              "value": 230.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://fhir.openmrs.org/ext/obs/reference-range",
+                  "code": "absolute"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://80-openmrs-openmrsdistrore-eocvxb8hrdg.ws-eu114.gitpod.io/openmrs/ws/fhir2/R4/Observation/82fbd9db-a02c-4d61-85d1-7eaee8da7e40",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "82fbd9db-a02c-4d61-85d1-7eaee8da7e40",
+        "meta": {
+          "versionId": "1718315567000",
+          "lastUpdated": "2024-06-13T21:52:47.000+00:00",
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+              "code": "SUBSETTED",
+              "display": "Resource encoded in summary mode"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "5085AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "display": "Systolic blood pressure"
+            },
+            {
+              "system": "https://cielterminology.org",
+              "code": "5085"
+            },
+            {
+              "system": "http://snomed.info/sct/",
+              "code": "271649006"
+            }
+          ],
+          "text": "Systolic blood pressure"
+        },
+        "subject": {
+          "reference": "Patient/1a280518-9aa2-41f1-8c64-8960ebe008c0",
+          "type": "Patient",
+          "display": "Wod Pachua (OpenMRS ID: 10001PE)"
+        },
+        "encounter": {
+          "reference": "Encounter/62a814b5-08ad-450c-b033-741d34d9a64e",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2024-06-13T21:51:55+00:00",
+        "issued": "2024-06-13T21:52:47.000+00:00",
+        "valueQuantity": {
+          "value": 100.0,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mmHg"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 100.0
+            },
+            "high": {
+              "value": 140.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                  "code": "normal"
+                }
+              ]
+            }
+          },
+          {
+            "low": {
+              "value": 85.0
+            },
+            "high": {
+              "value": 180.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                  "code": "treatment"
+                }
+              ]
+            }
+          },
+          {
+            "low": {
+              "value": 0.0
+            },
+            "high": {
+              "value": 250.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://fhir.openmrs.org/ext/obs/reference-range",
+                  "code": "absolute"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://80-openmrs-openmrsdistrore-eocvxb8hrdg.ws-eu114.gitpod.io/openmrs/ws/fhir2/R4/Observation/72404d9c-f4da-41ba-8f01-225a693f792a",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "72404d9c-f4da-41ba-8f01-225a693f792a",
+        "meta": {
+          "versionId": "1718315567000",
+          "lastUpdated": "2024-06-13T21:52:47.000+00:00",
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+              "code": "SUBSETTED",
+              "display": "Resource encoded in summary mode"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "5242AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "display": "Respiratory rate"
+            },
+            {
+              "system": "https://cielterminology.org",
+              "code": "5242"
+            },
+            {
+              "system": "http://snomed.info/sct/",
+              "code": "86290005"
+            }
+          ],
+          "text": "Respiratory rate"
+        },
+        "subject": {
+          "reference": "Patient/1a280518-9aa2-41f1-8c64-8960ebe008c0",
+          "type": "Patient",
+          "display": "Wod Pachua (OpenMRS ID: 10001PE)"
+        },
+        "encounter": {
+          "reference": "Encounter/62a814b5-08ad-450c-b033-741d34d9a64e",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2024-06-13T21:51:55+00:00",
+        "issued": "2024-06-13T21:52:47.000+00:00",
+        "valueQuantity": {
+          "value": 18.0,
+          "unit": "breaths/min"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 12.0
+            },
+            "high": {
+              "value": 18.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                  "code": "normal"
+                }
+              ]
+            }
+          },
+          {
+            "low": {
+              "value": 8.0
+            },
+            "high": {
+              "value": 26.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                  "code": "treatment"
+                }
+              ]
+            }
+          },
+          {
+            "low": {
+              "value": 0.0
+            },
+            "high": {
+              "value": 999.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://fhir.openmrs.org/ext/obs/reference-range",
+                  "code": "absolute"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://80-openmrs-openmrsdistrore-eocvxb8hrdg.ws-eu114.gitpod.io/openmrs/ws/fhir2/R4/Observation/97020ec7-c8aa-4746-9ccc-daaca9667f47",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "97020ec7-c8aa-4746-9ccc-daaca9667f47",
+        "meta": {
+          "versionId": "1718315567000",
+          "lastUpdated": "2024-06-13T21:52:47.000+00:00",
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+              "code": "SUBSETTED",
+              "display": "Resource encoded in summary mode"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "5b13405b-823a-4780-83e6-b32448cf6a27",
+              "display": "Left MUAC"
+            }
+          ],
+          "text": "Left MUAC"
+        },
+        "subject": {
+          "reference": "Patient/1a280518-9aa2-41f1-8c64-8960ebe008c0",
+          "type": "Patient",
+          "display": "Wod Pachua (OpenMRS ID: 10001PE)"
+        },
+        "encounter": {
+          "reference": "Encounter/62a814b5-08ad-450c-b033-741d34d9a64e",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2024-06-13T21:51:55+00:00",
+        "issued": "2024-06-13T21:52:47.000+00:00",
+        "valueQuantity": {
+          "value": 15.0,
+          "unit": "cm",
+          "system": "http://unitsofmeasure.org",
+          "code": "cm"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 124.0
+            },
+            "high": {
+              "value": 125.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                  "code": "normal"
+                }
+              ]
+            }
+          },
+          {
+            "low": {
+              "value": 110.0
+            },
+            "high": {
+              "value": 135.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                  "code": "treatment"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://80-openmrs-openmrsdistrore-eocvxb8hrdg.ws-eu114.gitpod.io/openmrs/ws/fhir2/R4/Observation/ff14fb5c-be18-4a83-b9bc-1e9ed82ce05a",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "ff14fb5c-be18-4a83-b9bc-1e9ed82ce05a",
+        "meta": {
+          "versionId": "1718315567000",
+          "lastUpdated": "2024-06-13T21:52:47.000+00:00",
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+              "code": "SUBSETTED",
+              "display": "Resource encoded in summary mode"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "5090AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "display": "Height (cm)"
+            },
+            {
+              "system": "https://cielterminology.org",
+              "code": "5090"
+            }
+          ],
+          "text": "Height (cm)"
+        },
+        "subject": {
+          "reference": "Patient/1a280518-9aa2-41f1-8c64-8960ebe008c0",
+          "type": "Patient",
+          "display": "Wod Pachua (OpenMRS ID: 10001PE)"
+        },
+        "encounter": {
+          "reference": "Encounter/62a814b5-08ad-450c-b033-741d34d9a64e",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2024-06-13T21:51:55+00:00",
+        "issued": "2024-06-13T21:52:47.000+00:00",
+        "valueQuantity": {
+          "value": 170.0,
+          "unit": "cm",
+          "system": "http://unitsofmeasure.org",
+          "code": "cm"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 10.0
+            },
+            "high": {
+              "value": 272.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://fhir.openmrs.org/ext/obs/reference-range",
+                  "code": "absolute"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://80-openmrs-openmrsdistrore-eocvxb8hrdg.ws-eu114.gitpod.io/openmrs/ws/fhir2/R4/Observation/1aa75dd7-09b9-4e84-a46e-5fe65190a0a6",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "1aa75dd7-09b9-4e84-a46e-5fe65190a0a6",
+        "meta": {
+          "versionId": "1718315567000",
+          "lastUpdated": "2024-06-13T21:52:47.000+00:00",
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+              "code": "SUBSETTED",
+              "display": "Resource encoded in summary mode"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "5086AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "display": "Diastolic blood pressure"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "35094-2"
+            },
+            {
+              "system": "https://cielterminology.org",
+              "code": "5086"
+            },
+            {
+              "system": "http://snomed.info/sct/",
+              "code": "271650006"
+            }
+          ],
+          "text": "Diastolic blood pressure"
+        },
+        "subject": {
+          "reference": "Patient/1a280518-9aa2-41f1-8c64-8960ebe008c0",
+          "type": "Patient",
+          "display": "Wod Pachua (OpenMRS ID: 10001PE)"
+        },
+        "encounter": {
+          "reference": "Encounter/62a814b5-08ad-450c-b033-741d34d9a64e",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2024-06-13T21:51:55+00:00",
+        "issued": "2024-06-13T21:52:47.000+00:00",
+        "valueQuantity": {
+          "value": 80.0,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mmHg"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 55.0
+            },
+            "high": {
+              "value": 90.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                  "code": "normal"
+                }
+              ]
+            }
+          },
+          {
+            "low": {
+              "value": 40.0
+            },
+            "high": {
+              "value": 120.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                  "code": "treatment"
+                }
+              ]
+            }
+          },
+          {
+            "low": {
+              "value": 0.0
+            },
+            "high": {
+              "value": 150.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://fhir.openmrs.org/ext/obs/reference-range",
+                  "code": "absolute"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://80-openmrs-openmrsdistrore-eocvxb8hrdg.ws-eu114.gitpod.io/openmrs/ws/fhir2/R4/Observation/af9e5cd5-e64b-4986-9a0b-5ff1be36e8ff",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "af9e5cd5-e64b-4986-9a0b-5ff1be36e8ff",
+        "meta": {
+          "versionId": "1718537473000",
+          "lastUpdated": "2024-06-16T11:31:13.000+00:00",
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+              "code": "SUBSETTED",
+              "display": "Resource encoded in summary mode"
+            }
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "code": "63edc8fb-00d1-40fc-93af-caad921436da",
+              "display": "Anti-malarials (treatment)"
+            }
+          ],
+          "text": "Anti-malarials (treatment)"
+        },
+        "subject": {
+          "reference": "Patient/1a280518-9aa2-41f1-8c64-8960ebe008c0",
+          "type": "Patient",
+          "display": "Wod Pachua (OpenMRS ID: 10001PE)"
+        },
+        "encounter": {
+          "reference": "Encounter/6d3e2701-664a-4fd4-80bd-766225d63c14",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2024-06-16T11:27:19+00:00",
+        "issued": "2024-06-16T11:31:13.000+00:00",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "7c1591a9-48cd-4492-88d3-3368d33b61a6",
+              "display": "2 Coartem tabs BID X 3days (15-24kg)"
+            }
+          ],
+          "text": "2 Coartem tabs BID X 3days (15-24kg)"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://80-openmrs-openmrsdistrore-eocvxb8hrdg.ws-eu114.gitpod.io/openmrs/ws/fhir2/R4/Observation/afa9ee42-738a-45b7-b122-15223dc51ed7",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "afa9ee42-738a-45b7-b122-15223dc51ed7",
+        "meta": {
+          "versionId": "1718537473000",
+          "lastUpdated": "2024-06-16T11:31:13.000+00:00",
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+              "code": "SUBSETTED",
+              "display": "Resource encoded in summary mode"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "21AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "display": "Haemoglobin"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "718-7"
+            },
+            {
+              "system": "https://cielterminology.org",
+              "code": "21"
+            },
+            {
+              "system": "http://snomed.info/sct/",
+              "code": "441689006"
+            }
+          ],
+          "text": "Haemoglobin"
+        },
+        "subject": {
+          "reference": "Patient/1a280518-9aa2-41f1-8c64-8960ebe008c0",
+          "type": "Patient",
+          "display": "Wod Pachua (OpenMRS ID: 10001PE)"
+        },
+        "encounter": {
+          "reference": "Encounter/6d3e2701-664a-4fd4-80bd-766225d63c14",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2024-06-16T11:27:19+00:00",
+        "issued": "2024-06-16T11:31:13.000+00:00",
+        "valueQuantity": {
+          "value": 67.0,
+          "unit": "g/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "g/dL"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 10.4
+            },
+            "high": {
+              "value": 17.8
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                  "code": "normal"
+                }
+              ]
+            }
+          },
+          {
+            "low": {
+              "value": 7.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                  "code": "treatment"
+                }
+              ]
+            }
+          },
+          {
+            "low": {
+              "value": 0.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://fhir.openmrs.org/ext/obs/reference-range",
+                  "code": "absolute"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://80-openmrs-openmrsdistrore-eocvxb8hrdg.ws-eu114.gitpod.io/openmrs/ws/fhir2/R4/Observation/ffb2e9a0-96fe-4633-a939-1cf3d60470a6",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "ffb2e9a0-96fe-4633-a939-1cf3d60470a6",
+        "meta": {
+          "versionId": "1718537473000",
+          "lastUpdated": "2024-06-16T11:31:13.000+00:00",
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+              "code": "SUBSETTED",
+              "display": "Resource encoded in summary mode"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "5089AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "display": "Weight (kg)"
+            },
+            {
+              "system": "https://cielterminology.org",
+              "code": "5089"
+            }
+          ],
+          "text": "Weight (kg)"
+        },
+        "subject": {
+          "reference": "Patient/1a280518-9aa2-41f1-8c64-8960ebe008c0",
+          "type": "Patient",
+          "display": "Wod Pachua (OpenMRS ID: 10001PE)"
+        },
+        "encounter": {
+          "reference": "Encounter/6d3e2701-664a-4fd4-80bd-766225d63c14",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2024-06-16T11:27:19+00:00",
+        "issued": "2024-06-16T11:31:13.000+00:00",
+        "valueQuantity": {
+          "value": 87.0,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 0.0
+            },
+            "high": {
+              "value": 250.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://fhir.openmrs.org/ext/obs/reference-range",
+                  "code": "absolute"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://80-openmrs-openmrsdistrore-eocvxb8hrdg.ws-eu114.gitpod.io/openmrs/ws/fhir2/R4/Observation/1a4f5500-eb7f-4f69-a222-9c9552757d68",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "1a4f5500-eb7f-4f69-a222-9c9552757d68",
+        "meta": {
+          "versionId": "1718537473000",
+          "lastUpdated": "2024-06-16T11:31:13.000+00:00",
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+              "code": "SUBSETTED",
+              "display": "Resource encoded in summary mode"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "5242AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "display": "Respiratory rate"
+            },
+            {
+              "system": "https://cielterminology.org",
+              "code": "5242"
+            },
+            {
+              "system": "http://snomed.info/sct/",
+              "code": "86290005"
+            }
+          ],
+          "text": "Respiratory rate"
+        },
+        "subject": {
+          "reference": "Patient/1a280518-9aa2-41f1-8c64-8960ebe008c0",
+          "type": "Patient",
+          "display": "Wod Pachua (OpenMRS ID: 10001PE)"
+        },
+        "encounter": {
+          "reference": "Encounter/6d3e2701-664a-4fd4-80bd-766225d63c14",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2024-06-16T11:27:19+00:00",
+        "issued": "2024-06-16T11:31:13.000+00:00",
+        "valueQuantity": {
+          "value": 23.0,
+          "unit": "breaths/min"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 12.0
+            },
+            "high": {
+              "value": 18.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                  "code": "normal"
+                }
+              ]
+            }
+          },
+          {
+            "low": {
+              "value": 8.0
+            },
+            "high": {
+              "value": 26.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                  "code": "treatment"
+                }
+              ]
+            }
+          },
+          {
+            "low": {
+              "value": 0.0
+            },
+            "high": {
+              "value": 999.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://fhir.openmrs.org/ext/obs/reference-range",
+                  "code": "absolute"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://80-openmrs-openmrsdistrore-eocvxb8hrdg.ws-eu114.gitpod.io/openmrs/ws/fhir2/R4/Observation/ab114684-f70a-4da4-a2b2-200044d4c7e6",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "ab114684-f70a-4da4-a2b2-200044d4c7e6",
+        "meta": {
+          "versionId": "1718537473000",
+          "lastUpdated": "2024-06-16T11:31:13.000+00:00",
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+              "code": "SUBSETTED",
+              "display": "Resource encoded in summary mode"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "3d77542e-dca9-457c-af77-9b7888353bb5",
+              "display": "Folic Acid Usage"
+            }
+          ],
+          "text": "Folic Acid Usage"
+        },
+        "subject": {
+          "reference": "Patient/1a280518-9aa2-41f1-8c64-8960ebe008c0",
+          "type": "Patient",
+          "display": "Wod Pachua (OpenMRS ID: 10001PE)"
+        },
+        "encounter": {
+          "reference": "Encounter/6d3e2701-664a-4fd4-80bd-766225d63c14",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2024-06-16T11:27:19+00:00",
+        "issued": "2024-06-16T11:31:13.000+00:00",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "display": "Yes"
+            },
+            {
+              "system": "https://cielterminology.org",
+              "code": "1065"
+            },
+            {
+              "system": "http://snomed.info/sct/",
+              "code": "373066001"
+            }
+          ],
+          "text": "Yes"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://80-openmrs-openmrsdistrore-eocvxb8hrdg.ws-eu114.gitpod.io/openmrs/ws/fhir2/R4/Observation/d19a2695-a641-49cb-a23d-0b39c8d979d2",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "d19a2695-a641-49cb-a23d-0b39c8d979d2",
+        "meta": {
+          "versionId": "1718537473000",
+          "lastUpdated": "2024-06-16T11:31:13.000+00:00",
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+              "code": "SUBSETTED",
+              "display": "Resource encoded in summary mode"
+            }
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "code": "03e8f465-1e79-46cb-84ef-48ef77219756",
+              "display": "Malaria Prophylaxis"
+            }
+          ],
+          "text": "Malaria Prophylaxis"
+        },
+        "subject": {
+          "reference": "Patient/1a280518-9aa2-41f1-8c64-8960ebe008c0",
+          "type": "Patient",
+          "display": "Wod Pachua (OpenMRS ID: 10001PE)"
+        },
+        "encounter": {
+          "reference": "Encounter/6d3e2701-664a-4fd4-80bd-766225d63c14",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2024-06-16T11:27:19+00:00",
+        "issued": "2024-06-16T11:31:13.000+00:00",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "9d985dcf-97ef-4dbf-94a1-459c7127c91c",
+              "display": "1 CQ tab/wk/ 3-12yr"
+            }
+          ],
+          "text": "1 CQ tab/wk/ 3-12yr"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://80-openmrs-openmrsdistrore-eocvxb8hrdg.ws-eu114.gitpod.io/openmrs/ws/fhir2/R4/Observation/7ef364a5-1b80-4709-ba3f-283b5c8eabc0",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "7ef364a5-1b80-4709-ba3f-283b5c8eabc0",
+        "meta": {
+          "versionId": "1718537473000",
+          "lastUpdated": "2024-06-16T11:31:13.000+00:00",
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+              "code": "SUBSETTED",
+              "display": "Resource encoded in summary mode"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "5087AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "display": "Pulse"
+            },
+            {
+              "system": "https://cielterminology.org",
+              "code": "5087"
+            },
+            {
+              "system": "http://snomed.info/sct/",
+              "code": "78564009"
+            }
+          ],
+          "text": "Pulse"
+        },
+        "subject": {
+          "reference": "Patient/1a280518-9aa2-41f1-8c64-8960ebe008c0",
+          "type": "Patient",
+          "display": "Wod Pachua (OpenMRS ID: 10001PE)"
+        },
+        "encounter": {
+          "reference": "Encounter/6d3e2701-664a-4fd4-80bd-766225d63c14",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2024-06-16T11:27:19+00:00",
+        "issued": "2024-06-16T11:31:13.000+00:00",
+        "valueQuantity": {
+          "value": 67.0,
+          "unit": "beats/min"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 55.0
+            },
+            "high": {
+              "value": 100.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                  "code": "normal"
+                }
+              ]
+            }
+          },
+          {
+            "low": {
+              "value": 49.0
+            },
+            "high": {
+              "value": 130.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                  "code": "treatment"
+                }
+              ]
+            }
+          },
+          {
+            "low": {
+              "value": 0.0
+            },
+            "high": {
+              "value": 230.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://fhir.openmrs.org/ext/obs/reference-range",
+                  "code": "absolute"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://80-openmrs-openmrsdistrore-eocvxb8hrdg.ws-eu114.gitpod.io/openmrs/ws/fhir2/R4/Observation/031eb5a6-5ab1-49d3-8fb0-2fced60dee29",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "031eb5a6-5ab1-49d3-8fb0-2fced60dee29",
+        "meta": {
+          "versionId": "1718537473000",
+          "lastUpdated": "2024-06-16T11:31:13.000+00:00",
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+              "code": "SUBSETTED",
+              "display": "Resource encoded in summary mode"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "678AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "display": "White blood cells"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "53225-9"
+            },
+            {
+              "system": "https://cielterminology.org",
+              "code": "678"
+            },
+            {
+              "system": "http://snomed.info/sct/",
+              "code": "391558003"
+            }
+          ],
+          "text": "White blood cells"
+        },
+        "subject": {
+          "reference": "Patient/1a280518-9aa2-41f1-8c64-8960ebe008c0",
+          "type": "Patient",
+          "display": "Wod Pachua (OpenMRS ID: 10001PE)"
+        },
+        "encounter": {
+          "reference": "Encounter/6d3e2701-664a-4fd4-80bd-766225d63c14",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2024-06-16T11:27:19+00:00",
+        "issued": "2024-06-16T11:31:13.000+00:00",
+        "valueQuantity": {
+          "value": 98.0,
+          "unit": "10^3/uL",
+          "system": "http://unitsofmeasure.org",
+          "code": "10^3/uL"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 4.0
+            },
+            "high": {
+              "value": 11.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                  "code": "normal"
+                }
+              ]
+            }
+          },
+          {
+            "low": {
+              "value": 1.4
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                  "code": "treatment"
+                }
+              ]
+            }
+          },
+          {
+            "low": {
+              "value": 0.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://fhir.openmrs.org/ext/obs/reference-range",
+                  "code": "absolute"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://80-openmrs-openmrsdistrore-eocvxb8hrdg.ws-eu114.gitpod.io/openmrs/ws/fhir2/R4/Observation/a43ce0c3-c2d0-453a-9527-5d6ff2834343",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "a43ce0c3-c2d0-453a-9527-5d6ff2834343",
+        "meta": {
+          "versionId": "1718537473000",
+          "lastUpdated": "2024-06-16T11:31:13.000+00:00",
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+              "code": "SUBSETTED",
+              "display": "Resource encoded in summary mode"
+            }
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "code": "8bf322eb-4041-42bf-aaa7-de9eb7bf1e0f",
+              "display": "Analgesics"
+            }
+          ],
+          "text": "Analgesics"
+        },
+        "subject": {
+          "reference": "Patient/1a280518-9aa2-41f1-8c64-8960ebe008c0",
+          "type": "Patient",
+          "display": "Wod Pachua (OpenMRS ID: 10001PE)"
+        },
+        "encounter": {
+          "reference": "Encounter/6d3e2701-664a-4fd4-80bd-766225d63c14",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2024-06-16T11:27:19+00:00",
+        "issued": "2024-06-16T11:31:13.000+00:00",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "42e97d8f-4524-40c6-8033-fd7c8fada826",
+              "display": "Acetaminophen max 90mg/kg/24hr"
+            }
+          ],
+          "text": "Acetaminophen max 90mg/kg/24hr"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://80-openmrs-openmrsdistrore-eocvxb8hrdg.ws-eu114.gitpod.io/openmrs/ws/fhir2/R4/Observation/ea1e6d58-396d-4352-8490-27bed4d427bd",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "ea1e6d58-396d-4352-8490-27bed4d427bd",
+        "meta": {
+          "versionId": "1718537473000",
+          "lastUpdated": "2024-06-16T11:31:13.000+00:00",
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+              "code": "SUBSETTED",
+              "display": "Resource encoded in summary mode"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "5090AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "display": "Height (cm)"
+            },
+            {
+              "system": "https://cielterminology.org",
+              "code": "5090"
+            }
+          ],
+          "text": "Height (cm)"
+        },
+        "subject": {
+          "reference": "Patient/1a280518-9aa2-41f1-8c64-8960ebe008c0",
+          "type": "Patient",
+          "display": "Wod Pachua (OpenMRS ID: 10001PE)"
+        },
+        "encounter": {
+          "reference": "Encounter/6d3e2701-664a-4fd4-80bd-766225d63c14",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2024-06-16T11:27:19+00:00",
+        "issued": "2024-06-16T11:31:13.000+00:00",
+        "valueQuantity": {
+          "value": 110.0,
+          "unit": "cm",
+          "system": "http://unitsofmeasure.org",
+          "code": "cm"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 10.0
+            },
+            "high": {
+              "value": 272.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://fhir.openmrs.org/ext/obs/reference-range",
+                  "code": "absolute"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://80-openmrs-openmrsdistrore-eocvxb8hrdg.ws-eu114.gitpod.io/openmrs/ws/fhir2/R4/Observation/3010ae63-149a-4401-9f07-b3119d7856ef",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "3010ae63-149a-4401-9f07-b3119d7856ef",
+        "meta": {
+          "versionId": "1718537473000",
+          "lastUpdated": "2024-06-16T11:31:13.000+00:00",
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+              "code": "SUBSETTED",
+              "display": "Resource encoded in summary mode"
+            }
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "code": "8bf322eb-4041-42bf-aaa7-de9eb7bf1e0f",
+              "display": "Analgesics"
+            }
+          ],
+          "text": "Analgesics"
+        },
+        "subject": {
+          "reference": "Patient/1a280518-9aa2-41f1-8c64-8960ebe008c0",
+          "type": "Patient",
+          "display": "Wod Pachua (OpenMRS ID: 10001PE)"
+        },
+        "encounter": {
+          "reference": "Encounter/6d3e2701-664a-4fd4-80bd-766225d63c14",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2024-06-16T11:27:19+00:00",
+        "issued": "2024-06-16T11:31:13.000+00:00",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "7eb00a2d-f959-4e04-bfc2-066285d599cc",
+              "display": "Ibuprofen 10-15mg/kg/dose q6-8hr"
+            }
+          ],
+          "text": "Ibuprofen 10-15mg/kg/dose q6-8hr"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://80-openmrs-openmrsdistrore-eocvxb8hrdg.ws-eu114.gitpod.io/openmrs/ws/fhir2/R4/Observation/bf847ec3-da3c-4074-b5d0-24b40672d48d",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "bf847ec3-da3c-4074-b5d0-24b40672d48d",
+        "meta": {
+          "versionId": "1718537473000",
+          "lastUpdated": "2024-06-16T11:31:13.000+00:00",
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+              "code": "SUBSETTED",
+              "display": "Resource encoded in summary mode"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "c3e63462-68d4-41f3-a4e3-705181f5b9c9",
+              "display": "Other OutPatientMedications"
+            }
+          ],
+          "text": "Other OutPatientMedications"
+        },
+        "subject": {
+          "reference": "Patient/1a280518-9aa2-41f1-8c64-8960ebe008c0",
+          "type": "Patient",
+          "display": "Wod Pachua (OpenMRS ID: 10001PE)"
+        },
+        "encounter": {
+          "reference": "Encounter/6d3e2701-664a-4fd4-80bd-766225d63c14",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2024-06-16T11:27:19+00:00",
+        "issued": "2024-06-16T11:31:13.000+00:00",
+        "valueString": "continue above treatement"
+      }
+    },
+    {
+      "fullUrl": "https://80-openmrs-openmrsdistrore-eocvxb8hrdg.ws-eu114.gitpod.io/openmrs/ws/fhir2/R4/Observation/cdc45145-0598-4065-8d26-3f8570ab60d3",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "cdc45145-0598-4065-8d26-3f8570ab60d3",
+        "meta": {
+          "versionId": "1718537473000",
+          "lastUpdated": "2024-06-16T11:31:13.000+00:00",
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+              "code": "SUBSETTED",
+              "display": "Resource encoded in summary mode"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "1022AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "display": "Neutrophils"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "770-8"
+            },
+            {
+              "system": "https://cielterminology.org",
+              "code": "1022"
+            },
+            {
+              "system": "http://snomed.info/sct/",
+              "code": "30630007"
+            }
+          ],
+          "text": "Neutrophils"
+        },
+        "subject": {
+          "reference": "Patient/1a280518-9aa2-41f1-8c64-8960ebe008c0",
+          "type": "Patient",
+          "display": "Wod Pachua (OpenMRS ID: 10001PE)"
+        },
+        "encounter": {
+          "reference": "Encounter/6d3e2701-664a-4fd4-80bd-766225d63c14",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2024-06-16T11:27:19+00:00",
+        "issued": "2024-06-16T11:31:13.000+00:00",
+        "valueQuantity": {
+          "value": 87.0,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 0.0
+            },
+            "high": {
+              "value": 100.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://fhir.openmrs.org/ext/obs/reference-range",
+                  "code": "absolute"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://80-openmrs-openmrsdistrore-eocvxb8hrdg.ws-eu114.gitpod.io/openmrs/ws/fhir2/R4/Observation/e218aed7-984b-4f60-be66-e019142608af",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "e218aed7-984b-4f60-be66-e019142608af",
+        "meta": {
+          "versionId": "1718537473000",
+          "lastUpdated": "2024-06-16T11:31:13.000+00:00",
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+              "code": "SUBSETTED",
+              "display": "Resource encoded in summary mode"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "857AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "display": "Blood urea nitrogen"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "14937-7"
+            },
+            {
+              "system": "https://cielterminology.org",
+              "code": "857"
+            },
+            {
+              "system": "http://snomed.info/sct/",
+              "code": "72341003"
+            }
+          ],
+          "text": "Blood urea nitrogen"
+        },
+        "subject": {
+          "reference": "Patient/1a280518-9aa2-41f1-8c64-8960ebe008c0",
+          "type": "Patient",
+          "display": "Wod Pachua (OpenMRS ID: 10001PE)"
+        },
+        "encounter": {
+          "reference": "Encounter/6d3e2701-664a-4fd4-80bd-766225d63c14",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2024-06-16T11:27:19+00:00",
+        "issued": "2024-06-16T11:31:13.000+00:00",
+        "valueQuantity": {
+          "value": 56.0,
+          "unit": "mmol/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mmol/L"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 0.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://fhir.openmrs.org/ext/obs/reference-range",
+                  "code": "absolute"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://80-openmrs-openmrsdistrore-eocvxb8hrdg.ws-eu114.gitpod.io/openmrs/ws/fhir2/R4/Observation/a2dc1e43-1c15-4be7-9721-29af95154c14",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "a2dc1e43-1c15-4be7-9721-29af95154c14",
+        "meta": {
+          "versionId": "1718537473000",
+          "lastUpdated": "2024-06-16T11:31:13.000+00:00",
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+              "code": "SUBSETTED",
+              "display": "Resource encoded in summary mode"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "5085AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "display": "Systolic blood pressure"
+            },
+            {
+              "system": "https://cielterminology.org",
+              "code": "5085"
+            },
+            {
+              "system": "http://snomed.info/sct/",
+              "code": "271649006"
+            }
+          ],
+          "text": "Systolic blood pressure"
+        },
+        "subject": {
+          "reference": "Patient/1a280518-9aa2-41f1-8c64-8960ebe008c0",
+          "type": "Patient",
+          "display": "Wod Pachua (OpenMRS ID: 10001PE)"
+        },
+        "encounter": {
+          "reference": "Encounter/6d3e2701-664a-4fd4-80bd-766225d63c14",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2024-06-16T11:27:19+00:00",
+        "issued": "2024-06-16T11:31:13.000+00:00",
+        "valueQuantity": {
+          "value": 145.0,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mmHg"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 100.0
+            },
+            "high": {
+              "value": 140.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                  "code": "normal"
+                }
+              ]
+            }
+          },
+          {
+            "low": {
+              "value": 85.0
+            },
+            "high": {
+              "value": 180.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                  "code": "treatment"
+                }
+              ]
+            }
+          },
+          {
+            "low": {
+              "value": 0.0
+            },
+            "high": {
+              "value": 250.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://fhir.openmrs.org/ext/obs/reference-range",
+                  "code": "absolute"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://80-openmrs-openmrsdistrore-eocvxb8hrdg.ws-eu114.gitpod.io/openmrs/ws/fhir2/R4/Observation/f2d40d7b-9171-46b0-9bfe-e6b66dbebf93",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "f2d40d7b-9171-46b0-9bfe-e6b66dbebf93",
+        "meta": {
+          "versionId": "1718537473000",
+          "lastUpdated": "2024-06-16T11:31:13.000+00:00",
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+              "code": "SUBSETTED",
+              "display": "Resource encoded in summary mode"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "57546f95-6b79-478c-a90b-d8f989d82f99",
+              "display": "Bili-Total/Direct"
+            }
+          ],
+          "text": "Bili-Total/Direct"
+        },
+        "subject": {
+          "reference": "Patient/1a280518-9aa2-41f1-8c64-8960ebe008c0",
+          "type": "Patient",
+          "display": "Wod Pachua (OpenMRS ID: 10001PE)"
+        },
+        "encounter": {
+          "reference": "Encounter/6d3e2701-664a-4fd4-80bd-766225d63c14",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2024-06-16T11:27:19+00:00",
+        "issued": "2024-06-16T11:31:13.000+00:00",
+        "valueQuantity": {
+          "value": 88.0,
+          "unit": "umol/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "umol/L"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 0.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://fhir.openmrs.org/ext/obs/reference-range",
+                  "code": "absolute"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://80-openmrs-openmrsdistrore-eocvxb8hrdg.ws-eu114.gitpod.io/openmrs/ws/fhir2/R4/Observation/b26cff46-3906-4bb3-b1b5-497e4d1f676b",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "b26cff46-3906-4bb3-b1b5-497e4d1f676b",
+        "meta": {
+          "versionId": "1718537473000",
+          "lastUpdated": "2024-06-16T11:31:13.000+00:00",
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+              "code": "SUBSETTED",
+              "display": "Resource encoded in summary mode"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "324a21b0-4548-433a-be13-13c97651eada",
+              "display": "AST/ALT"
+            }
+          ],
+          "text": "AST/ALT"
+        },
+        "subject": {
+          "reference": "Patient/1a280518-9aa2-41f1-8c64-8960ebe008c0",
+          "type": "Patient",
+          "display": "Wod Pachua (OpenMRS ID: 10001PE)"
+        },
+        "encounter": {
+          "reference": "Encounter/6d3e2701-664a-4fd4-80bd-766225d63c14",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2024-06-16T11:27:19+00:00",
+        "issued": "2024-06-16T11:31:13.000+00:00",
+        "valueQuantity": {
+          "value": 77.0,
+          "unit": "IU/L"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 25.0
+            },
+            "high": {
+              "value": 45.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                  "code": "normal"
+                }
+              ]
+            }
+          },
+          {
+            "low": {
+              "value": 0.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://fhir.openmrs.org/ext/obs/reference-range",
+                  "code": "absolute"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://80-openmrs-openmrsdistrore-eocvxb8hrdg.ws-eu114.gitpod.io/openmrs/ws/fhir2/R4/Observation/9a2ac8fd-efcf-49df-a96b-84d5863337bb",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "9a2ac8fd-efcf-49df-a96b-84d5863337bb",
+        "meta": {
+          "versionId": "1718537473000",
+          "lastUpdated": "2024-06-16T11:31:13.000+00:00",
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+              "code": "SUBSETTED",
+              "display": "Resource encoded in summary mode"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "729AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "display": "Platelets"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "26515-7"
+            },
+            {
+              "system": "https://cielterminology.org",
+              "code": "729"
+            },
+            {
+              "system": "http://snomed.info/sct/",
+              "code": "61928009"
+            }
+          ],
+          "text": "Platelets"
+        },
+        "subject": {
+          "reference": "Patient/1a280518-9aa2-41f1-8c64-8960ebe008c0",
+          "type": "Patient",
+          "display": "Wod Pachua (OpenMRS ID: 10001PE)"
+        },
+        "encounter": {
+          "reference": "Encounter/6d3e2701-664a-4fd4-80bd-766225d63c14",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2024-06-16T11:27:19+00:00",
+        "issued": "2024-06-16T11:31:13.000+00:00",
+        "valueQuantity": {
+          "value": 6.0,
+          "unit": "10^3/mL",
+          "system": "http://unitsofmeasure.org",
+          "code": "10^3/mL"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 134.0
+            },
+            "high": {
+              "value": 419.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                  "code": "normal"
+                }
+              ]
+            }
+          },
+          {
+            "low": {
+              "value": 49.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                  "code": "treatment"
+                }
+              ]
+            }
+          },
+          {
+            "low": {
+              "value": 0.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://fhir.openmrs.org/ext/obs/reference-range",
+                  "code": "absolute"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://80-openmrs-openmrsdistrore-eocvxb8hrdg.ws-eu114.gitpod.io/openmrs/ws/fhir2/R4/Observation/30d8a4c4-922a-4445-bd5a-fcc0f5ef9d1a",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "30d8a4c4-922a-4445-bd5a-fcc0f5ef9d1a",
+        "meta": {
+          "versionId": "1718537473000",
+          "lastUpdated": "2024-06-16T11:31:13.000+00:00",
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+              "code": "SUBSETTED",
+              "display": "Resource encoded in summary mode"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "5b13405b-823a-4780-83e6-b32448cf6a27",
+              "display": "Left MUAC"
+            }
+          ],
+          "text": "Left MUAC"
+        },
+        "subject": {
+          "reference": "Patient/1a280518-9aa2-41f1-8c64-8960ebe008c0",
+          "type": "Patient",
+          "display": "Wod Pachua (OpenMRS ID: 10001PE)"
+        },
+        "encounter": {
+          "reference": "Encounter/6d3e2701-664a-4fd4-80bd-766225d63c14",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2024-06-16T11:27:19+00:00",
+        "issued": "2024-06-16T11:31:13.000+00:00",
+        "valueQuantity": {
+          "value": 115.0,
+          "unit": "cm",
+          "system": "http://unitsofmeasure.org",
+          "code": "cm"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 124.0
+            },
+            "high": {
+              "value": 125.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                  "code": "normal"
+                }
+              ]
+            }
+          },
+          {
+            "low": {
+              "value": 110.0
+            },
+            "high": {
+              "value": 135.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                  "code": "treatment"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://80-openmrs-openmrsdistrore-eocvxb8hrdg.ws-eu114.gitpod.io/openmrs/ws/fhir2/R4/Observation/e4d10b2c-e502-46e1-8b5e-f0ce2c777618",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "e4d10b2c-e502-46e1-8b5e-f0ce2c777618",
+        "meta": {
+          "versionId": "1718537473000",
+          "lastUpdated": "2024-06-16T11:31:13.000+00:00",
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+              "code": "SUBSETTED",
+              "display": "Resource encoded in summary mode"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "851AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "display": "Mean corpuscular volume"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "787-2"
+            },
+            {
+              "system": "https://cielterminology.org",
+              "code": "851"
+            },
+            {
+              "system": "http://snomed.info/sct/",
+              "code": "104133003"
+            }
+          ],
+          "text": "Mean corpuscular volume"
+        },
+        "subject": {
+          "reference": "Patient/1a280518-9aa2-41f1-8c64-8960ebe008c0",
+          "type": "Patient",
+          "display": "Wod Pachua (OpenMRS ID: 10001PE)"
+        },
+        "encounter": {
+          "reference": "Encounter/6d3e2701-664a-4fd4-80bd-766225d63c14",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2024-06-16T11:27:19+00:00",
+        "issued": "2024-06-16T11:31:13.000+00:00",
+        "valueQuantity": {
+          "value": 45.0,
+          "unit": "fL",
+          "system": "http://unitsofmeasure.org",
+          "code": "fL"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 80.0
+            },
+            "high": {
+              "value": 100.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                  "code": "normal"
+                }
+              ]
+            }
+          },
+          {
+            "low": {
+              "value": 0.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://fhir.openmrs.org/ext/obs/reference-range",
+                  "code": "absolute"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://80-openmrs-openmrsdistrore-eocvxb8hrdg.ws-eu114.gitpod.io/openmrs/ws/fhir2/R4/Observation/85519768-a45d-4129-b9c6-7e79da715a46",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "85519768-a45d-4129-b9c6-7e79da715a46",
+        "meta": {
+          "versionId": "1718537473000",
+          "lastUpdated": "2024-06-16T11:31:13.000+00:00",
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+              "code": "SUBSETTED",
+              "display": "Resource encoded in summary mode"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "5086AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "display": "Diastolic blood pressure"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "35094-2"
+            },
+            {
+              "system": "https://cielterminology.org",
+              "code": "5086"
+            },
+            {
+              "system": "http://snomed.info/sct/",
+              "code": "271650006"
+            }
+          ],
+          "text": "Diastolic blood pressure"
+        },
+        "subject": {
+          "reference": "Patient/1a280518-9aa2-41f1-8c64-8960ebe008c0",
+          "type": "Patient",
+          "display": "Wod Pachua (OpenMRS ID: 10001PE)"
+        },
+        "encounter": {
+          "reference": "Encounter/6d3e2701-664a-4fd4-80bd-766225d63c14",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2024-06-16T11:27:19+00:00",
+        "issued": "2024-06-16T11:31:13.000+00:00",
+        "valueQuantity": {
+          "value": 86.0,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mmHg"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 55.0
+            },
+            "high": {
+              "value": 90.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                  "code": "normal"
+                }
+              ]
+            }
+          },
+          {
+            "low": {
+              "value": 40.0
+            },
+            "high": {
+              "value": 120.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                  "code": "treatment"
+                }
+              ]
+            }
+          },
+          {
+            "low": {
+              "value": 0.0
+            },
+            "high": {
+              "value": 150.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://fhir.openmrs.org/ext/obs/reference-range",
+                  "code": "absolute"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://80-openmrs-openmrsdistrore-eocvxb8hrdg.ws-eu114.gitpod.io/openmrs/ws/fhir2/R4/Observation/3a5d28f4-7a0e-434f-a260-fbe3eb54daab",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "3a5d28f4-7a0e-434f-a260-fbe3eb54daab",
+        "meta": {
+          "versionId": "1718537473000",
+          "lastUpdated": "2024-06-16T11:31:13.000+00:00",
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+              "code": "SUBSETTED",
+              "display": "Resource encoded in summary mode"
+            }
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "code": "461d7dcd-ef35-4e83-973f-55195a885735",
+              "display": "Pneumococcal Prophylaxis"
+            }
+          ],
+          "text": "Pneumococcal Prophylaxis"
+        },
+        "subject": {
+          "reference": "Patient/1a280518-9aa2-41f1-8c64-8960ebe008c0",
+          "type": "Patient",
+          "display": "Wod Pachua (OpenMRS ID: 10001PE)"
+        },
+        "encounter": {
+          "reference": "Encounter/6d3e2701-664a-4fd4-80bd-766225d63c14",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2024-06-16T11:27:19+00:00",
+        "issued": "2024-06-16T11:31:13.000+00:00",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "a75a5f8c-395c-426d-9cfb-d5f0173bdd48",
+              "display": "Pen Vee <3yr 125mg BID"
+            }
+          ],
+          "text": "Pen Vee <3yr 125mg BID"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://80-openmrs-openmrsdistrore-eocvxb8hrdg.ws-eu114.gitpod.io/openmrs/ws/fhir2/R4/Observation/2c1da8f0-3837-4567-aa2d-2f31769fbebc",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "2c1da8f0-3837-4567-aa2d-2f31769fbebc",
+        "meta": {
+          "versionId": "1719247052000",
+          "lastUpdated": "2024-06-24T16:37:32.000+00:00",
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+              "code": "SUBSETTED",
+              "display": "Resource encoded in summary mode"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "5b13405b-823a-4780-83e6-b32448cf6a27",
+              "display": "Left MUAC"
+            }
+          ],
+          "text": "Left MUAC"
+        },
+        "subject": {
+          "reference": "Patient/1a280518-9aa2-41f1-8c64-8960ebe008c0",
+          "type": "Patient",
+          "display": "Wod Pachua (OpenMRS ID: 10001PE)"
+        },
+        "encounter": {
+          "reference": "Encounter/ca4a7d3e-345b-451e-a300-67fbd3af0de0",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2024-06-24T16:32:25+00:00",
+        "issued": "2024-06-24T16:37:32.000+00:00",
+        "valueQuantity": {
+          "value": 56.0,
+          "unit": "cm",
+          "system": "http://unitsofmeasure.org",
+          "code": "cm"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 124.0
+            },
+            "high": {
+              "value": 125.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                  "code": "normal"
+                }
+              ]
+            }
+          },
+          {
+            "low": {
+              "value": 110.0
+            },
+            "high": {
+              "value": 135.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                  "code": "treatment"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://80-openmrs-openmrsdistrore-eocvxb8hrdg.ws-eu114.gitpod.io/openmrs/ws/fhir2/R4/Observation/3843c9ae-038a-4630-a212-9581b43dc28e",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "3843c9ae-038a-4630-a212-9581b43dc28e",
+        "meta": {
+          "versionId": "1719307594000",
+          "lastUpdated": "2024-06-25T09:26:34.000+00:00",
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+              "code": "SUBSETTED",
+              "display": "Resource encoded in summary mode"
+            }
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "code": "03e8f465-1e79-46cb-84ef-48ef77219756",
+              "display": "Malaria Prophylaxis"
+            }
+          ],
+          "text": "Malaria Prophylaxis"
+        },
+        "subject": {
+          "reference": "Patient/1a280518-9aa2-41f1-8c64-8960ebe008c0",
+          "type": "Patient",
+          "display": "Wod Pachua (OpenMRS ID: 10001PE)"
+        },
+        "encounter": {
+          "reference": "Encounter/65aa1045-aad0-454a-8d41-7dda57ae1854",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2024-06-25T09:24:24+00:00",
+        "issued": "2024-06-25T09:26:34.000+00:00",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "51dafb87-ecf0-4e29-b1b9-bd9f6d03c5c6",
+              "display": "2 CQ tab/wk/ 12yr"
+            }
+          ],
+          "text": "2 CQ tab/wk/ 12yr"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://80-openmrs-openmrsdistrore-eocvxb8hrdg.ws-eu114.gitpod.io/openmrs/ws/fhir2/R4/Observation/5665165a-91e9-458a-b3b5-2c7a095babb7",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "5665165a-91e9-458a-b3b5-2c7a095babb7",
+        "meta": {
+          "versionId": "1719307594000",
+          "lastUpdated": "2024-06-25T09:26:34.000+00:00",
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+              "code": "SUBSETTED",
+              "display": "Resource encoded in summary mode"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "21AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "display": "Haemoglobin"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "718-7"
+            },
+            {
+              "system": "https://cielterminology.org",
+              "code": "21"
+            },
+            {
+              "system": "http://snomed.info/sct/",
+              "code": "441689006"
+            }
+          ],
+          "text": "Haemoglobin"
+        },
+        "subject": {
+          "reference": "Patient/1a280518-9aa2-41f1-8c64-8960ebe008c0",
+          "type": "Patient",
+          "display": "Wod Pachua (OpenMRS ID: 10001PE)"
+        },
+        "encounter": {
+          "reference": "Encounter/65aa1045-aad0-454a-8d41-7dda57ae1854",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2024-06-25T09:24:24+00:00",
+        "issued": "2024-06-25T09:26:34.000+00:00",
+        "valueQuantity": {
+          "value": 34.0,
+          "unit": "g/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "g/dL"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 10.4
+            },
+            "high": {
+              "value": 17.8
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                  "code": "normal"
+                }
+              ]
+            }
+          },
+          {
+            "low": {
+              "value": 7.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                  "code": "treatment"
+                }
+              ]
+            }
+          },
+          {
+            "low": {
+              "value": 0.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://fhir.openmrs.org/ext/obs/reference-range",
+                  "code": "absolute"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://80-openmrs-openmrsdistrore-eocvxb8hrdg.ws-eu114.gitpod.io/openmrs/ws/fhir2/R4/Observation/81de253b-87ec-4973-a5d1-02d332e8a211",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "81de253b-87ec-4973-a5d1-02d332e8a211",
+        "meta": {
+          "versionId": "1719307594000",
+          "lastUpdated": "2024-06-25T09:26:34.000+00:00",
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+              "code": "SUBSETTED",
+              "display": "Resource encoded in summary mode"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "3d77542e-dca9-457c-af77-9b7888353bb5",
+              "display": "Folic Acid Usage"
+            }
+          ],
+          "text": "Folic Acid Usage"
+        },
+        "subject": {
+          "reference": "Patient/1a280518-9aa2-41f1-8c64-8960ebe008c0",
+          "type": "Patient",
+          "display": "Wod Pachua (OpenMRS ID: 10001PE)"
+        },
+        "encounter": {
+          "reference": "Encounter/65aa1045-aad0-454a-8d41-7dda57ae1854",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2024-06-25T09:24:24+00:00",
+        "issued": "2024-06-25T09:26:34.000+00:00",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "display": "Yes"
+            },
+            {
+              "system": "https://cielterminology.org",
+              "code": "1065"
+            },
+            {
+              "system": "http://snomed.info/sct/",
+              "code": "373066001"
+            }
+          ],
+          "text": "Yes"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://80-openmrs-openmrsdistrore-eocvxb8hrdg.ws-eu114.gitpod.io/openmrs/ws/fhir2/R4/Observation/8eb7bff9-debf-4b22-92ff-5295b3bf4cdf",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "8eb7bff9-debf-4b22-92ff-5295b3bf4cdf",
+        "meta": {
+          "versionId": "1719307594000",
+          "lastUpdated": "2024-06-25T09:26:34.000+00:00",
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+              "code": "SUBSETTED",
+              "display": "Resource encoded in summary mode"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "324a21b0-4548-433a-be13-13c97651eada",
+              "display": "AST/ALT"
+            }
+          ],
+          "text": "AST/ALT"
+        },
+        "subject": {
+          "reference": "Patient/1a280518-9aa2-41f1-8c64-8960ebe008c0",
+          "type": "Patient",
+          "display": "Wod Pachua (OpenMRS ID: 10001PE)"
+        },
+        "encounter": {
+          "reference": "Encounter/65aa1045-aad0-454a-8d41-7dda57ae1854",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2024-06-25T09:24:24+00:00",
+        "issued": "2024-06-25T09:26:34.000+00:00",
+        "valueQuantity": {
+          "value": 66.0,
+          "unit": "IU/L"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 25.0
+            },
+            "high": {
+              "value": 45.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                  "code": "normal"
+                }
+              ]
+            }
+          },
+          {
+            "low": {
+              "value": 0.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://fhir.openmrs.org/ext/obs/reference-range",
+                  "code": "absolute"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://80-openmrs-openmrsdistrore-eocvxb8hrdg.ws-eu114.gitpod.io/openmrs/ws/fhir2/R4/Observation/75131ab0-db97-4cfe-a78b-3f99e309b1b8",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "75131ab0-db97-4cfe-a78b-3f99e309b1b8",
+        "meta": {
+          "versionId": "1719307594000",
+          "lastUpdated": "2024-06-25T09:26:34.000+00:00",
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+              "code": "SUBSETTED",
+              "display": "Resource encoded in summary mode"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "678AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "display": "White blood cells"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "53225-9"
+            },
+            {
+              "system": "https://cielterminology.org",
+              "code": "678"
+            },
+            {
+              "system": "http://snomed.info/sct/",
+              "code": "391558003"
+            }
+          ],
+          "text": "White blood cells"
+        },
+        "subject": {
+          "reference": "Patient/1a280518-9aa2-41f1-8c64-8960ebe008c0",
+          "type": "Patient",
+          "display": "Wod Pachua (OpenMRS ID: 10001PE)"
+        },
+        "encounter": {
+          "reference": "Encounter/65aa1045-aad0-454a-8d41-7dda57ae1854",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2024-06-25T09:24:24+00:00",
+        "issued": "2024-06-25T09:26:34.000+00:00",
+        "valueQuantity": {
+          "value": 23.0,
+          "unit": "10^3/uL",
+          "system": "http://unitsofmeasure.org",
+          "code": "10^3/uL"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 4.0
+            },
+            "high": {
+              "value": 11.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                  "code": "normal"
+                }
+              ]
+            }
+          },
+          {
+            "low": {
+              "value": 1.4
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                  "code": "treatment"
+                }
+              ]
+            }
+          },
+          {
+            "low": {
+              "value": 0.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://fhir.openmrs.org/ext/obs/reference-range",
+                  "code": "absolute"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://80-openmrs-openmrsdistrore-eocvxb8hrdg.ws-eu114.gitpod.io/openmrs/ws/fhir2/R4/Observation/f3e32198-242e-4dc3-9d63-2ff45915463d",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "f3e32198-242e-4dc3-9d63-2ff45915463d",
+        "meta": {
+          "versionId": "1719307594000",
+          "lastUpdated": "2024-06-25T09:26:34.000+00:00",
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+              "code": "SUBSETTED",
+              "display": "Resource encoded in summary mode"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "5090AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "display": "Height (cm)"
+            },
+            {
+              "system": "https://cielterminology.org",
+              "code": "5090"
+            }
+          ],
+          "text": "Height (cm)"
+        },
+        "subject": {
+          "reference": "Patient/1a280518-9aa2-41f1-8c64-8960ebe008c0",
+          "type": "Patient",
+          "display": "Wod Pachua (OpenMRS ID: 10001PE)"
+        },
+        "encounter": {
+          "reference": "Encounter/65aa1045-aad0-454a-8d41-7dda57ae1854",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2024-06-25T09:24:24+00:00",
+        "issued": "2024-06-25T09:26:34.000+00:00",
+        "valueQuantity": {
+          "value": 167.0,
+          "unit": "cm",
+          "system": "http://unitsofmeasure.org",
+          "code": "cm"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 10.0
+            },
+            "high": {
+              "value": 272.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://fhir.openmrs.org/ext/obs/reference-range",
+                  "code": "absolute"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://80-openmrs-openmrsdistrore-eocvxb8hrdg.ws-eu114.gitpod.io/openmrs/ws/fhir2/R4/Observation/eed63d4a-b540-48df-89e3-c2cd37139161",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "eed63d4a-b540-48df-89e3-c2cd37139161",
+        "meta": {
+          "versionId": "1719307594000",
+          "lastUpdated": "2024-06-25T09:26:34.000+00:00",
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+              "code": "SUBSETTED",
+              "display": "Resource encoded in summary mode"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "c3e63462-68d4-41f3-a4e3-705181f5b9c9",
+              "display": "Other OutPatientMedications"
+            }
+          ],
+          "text": "Other OutPatientMedications"
+        },
+        "subject": {
+          "reference": "Patient/1a280518-9aa2-41f1-8c64-8960ebe008c0",
+          "type": "Patient",
+          "display": "Wod Pachua (OpenMRS ID: 10001PE)"
+        },
+        "encounter": {
+          "reference": "Encounter/65aa1045-aad0-454a-8d41-7dda57ae1854",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2024-06-25T09:24:24+00:00",
+        "issued": "2024-06-25T09:26:34.000+00:00",
+        "valueString": "sEFWE"
+      }
+    },
+    {
+      "fullUrl": "https://80-openmrs-openmrsdistrore-eocvxb8hrdg.ws-eu114.gitpod.io/openmrs/ws/fhir2/R4/Observation/8cc824fb-ac50-4cdc-9ae8-808c1ffaa070",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "8cc824fb-ac50-4cdc-9ae8-808c1ffaa070",
+        "meta": {
+          "versionId": "1719307594000",
+          "lastUpdated": "2024-06-25T09:26:34.000+00:00",
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+              "code": "SUBSETTED",
+              "display": "Resource encoded in summary mode"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "5b13405b-823a-4780-83e6-b32448cf6a27",
+              "display": "Left MUAC"
+            }
+          ],
+          "text": "Left MUAC"
+        },
+        "subject": {
+          "reference": "Patient/1a280518-9aa2-41f1-8c64-8960ebe008c0",
+          "type": "Patient",
+          "display": "Wod Pachua (OpenMRS ID: 10001PE)"
+        },
+        "encounter": {
+          "reference": "Encounter/65aa1045-aad0-454a-8d41-7dda57ae1854",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2024-06-25T09:24:24+00:00",
+        "issued": "2024-06-25T09:26:34.000+00:00",
+        "valueQuantity": {
+          "value": 132.0,
+          "unit": "cm",
+          "system": "http://unitsofmeasure.org",
+          "code": "cm"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 124.0
+            },
+            "high": {
+              "value": 125.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                  "code": "normal"
+                }
+              ]
+            }
+          },
+          {
+            "low": {
+              "value": 110.0
+            },
+            "high": {
+              "value": 135.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                  "code": "treatment"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://80-openmrs-openmrsdistrore-eocvxb8hrdg.ws-eu114.gitpod.io/openmrs/ws/fhir2/R4/Observation/d73b0954-5f39-430c-9253-bb68020822ad",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "d73b0954-5f39-430c-9253-bb68020822ad",
+        "meta": {
+          "versionId": "1719307594000",
+          "lastUpdated": "2024-06-25T09:26:34.000+00:00",
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+              "code": "SUBSETTED",
+              "display": "Resource encoded in summary mode"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "1022AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "display": "Neutrophils"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "770-8"
+            },
+            {
+              "system": "https://cielterminology.org",
+              "code": "1022"
+            },
+            {
+              "system": "http://snomed.info/sct/",
+              "code": "30630007"
+            }
+          ],
+          "text": "Neutrophils"
+        },
+        "subject": {
+          "reference": "Patient/1a280518-9aa2-41f1-8c64-8960ebe008c0",
+          "type": "Patient",
+          "display": "Wod Pachua (OpenMRS ID: 10001PE)"
+        },
+        "encounter": {
+          "reference": "Encounter/65aa1045-aad0-454a-8d41-7dda57ae1854",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2024-06-25T09:24:24+00:00",
+        "issued": "2024-06-25T09:26:34.000+00:00",
+        "valueQuantity": {
+          "value": 55.0,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 0.0
+            },
+            "high": {
+              "value": 100.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://fhir.openmrs.org/ext/obs/reference-range",
+                  "code": "absolute"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://80-openmrs-openmrsdistrore-eocvxb8hrdg.ws-eu114.gitpod.io/openmrs/ws/fhir2/R4/Observation/a126a853-79b8-4fd7-b098-7a56017df9b9",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "a126a853-79b8-4fd7-b098-7a56017df9b9",
+        "meta": {
+          "versionId": "1719307594000",
+          "lastUpdated": "2024-06-25T09:26:34.000+00:00",
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+              "code": "SUBSETTED",
+              "display": "Resource encoded in summary mode"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "5242AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "display": "Respiratory rate"
+            },
+            {
+              "system": "https://cielterminology.org",
+              "code": "5242"
+            },
+            {
+              "system": "http://snomed.info/sct/",
+              "code": "86290005"
+            }
+          ],
+          "text": "Respiratory rate"
+        },
+        "subject": {
+          "reference": "Patient/1a280518-9aa2-41f1-8c64-8960ebe008c0",
+          "type": "Patient",
+          "display": "Wod Pachua (OpenMRS ID: 10001PE)"
+        },
+        "encounter": {
+          "reference": "Encounter/65aa1045-aad0-454a-8d41-7dda57ae1854",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2024-06-25T09:24:24+00:00",
+        "issued": "2024-06-25T09:26:34.000+00:00",
+        "valueQuantity": {
+          "value": 21.0,
+          "unit": "breaths/min"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 12.0
+            },
+            "high": {
+              "value": 18.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                  "code": "normal"
+                }
+              ]
+            }
+          },
+          {
+            "low": {
+              "value": 8.0
+            },
+            "high": {
+              "value": 26.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                  "code": "treatment"
+                }
+              ]
+            }
+          },
+          {
+            "low": {
+              "value": 0.0
+            },
+            "high": {
+              "value": 999.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://fhir.openmrs.org/ext/obs/reference-range",
+                  "code": "absolute"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://80-openmrs-openmrsdistrore-eocvxb8hrdg.ws-eu114.gitpod.io/openmrs/ws/fhir2/R4/Observation/ccd01f89-2619-4107-be4b-7d36f86399ed",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "ccd01f89-2619-4107-be4b-7d36f86399ed",
+        "meta": {
+          "versionId": "1719307594000",
+          "lastUpdated": "2024-06-25T09:26:34.000+00:00",
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+              "code": "SUBSETTED",
+              "display": "Resource encoded in summary mode"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "5086AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "display": "Diastolic blood pressure"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "35094-2"
+            },
+            {
+              "system": "https://cielterminology.org",
+              "code": "5086"
+            },
+            {
+              "system": "http://snomed.info/sct/",
+              "code": "271650006"
+            }
+          ],
+          "text": "Diastolic blood pressure"
+        },
+        "subject": {
+          "reference": "Patient/1a280518-9aa2-41f1-8c64-8960ebe008c0",
+          "type": "Patient",
+          "display": "Wod Pachua (OpenMRS ID: 10001PE)"
+        },
+        "encounter": {
+          "reference": "Encounter/65aa1045-aad0-454a-8d41-7dda57ae1854",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2024-06-25T09:24:24+00:00",
+        "issued": "2024-06-25T09:26:34.000+00:00",
+        "valueQuantity": {
+          "value": 87.0,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mmHg"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 55.0
+            },
+            "high": {
+              "value": 90.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                  "code": "normal"
+                }
+              ]
+            }
+          },
+          {
+            "low": {
+              "value": 40.0
+            },
+            "high": {
+              "value": 120.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                  "code": "treatment"
+                }
+              ]
+            }
+          },
+          {
+            "low": {
+              "value": 0.0
+            },
+            "high": {
+              "value": 150.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://fhir.openmrs.org/ext/obs/reference-range",
+                  "code": "absolute"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://80-openmrs-openmrsdistrore-eocvxb8hrdg.ws-eu114.gitpod.io/openmrs/ws/fhir2/R4/Observation/7fa7e0e2-5d7c-4ecc-a4de-8d14401bc1e1",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "7fa7e0e2-5d7c-4ecc-a4de-8d14401bc1e1",
+        "meta": {
+          "versionId": "1719307594000",
+          "lastUpdated": "2024-06-25T09:26:34.000+00:00",
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+              "code": "SUBSETTED",
+              "display": "Resource encoded in summary mode"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "5089AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "display": "Weight (kg)"
+            },
+            {
+              "system": "https://cielterminology.org",
+              "code": "5089"
+            }
+          ],
+          "text": "Weight (kg)"
+        },
+        "subject": {
+          "reference": "Patient/1a280518-9aa2-41f1-8c64-8960ebe008c0",
+          "type": "Patient",
+          "display": "Wod Pachua (OpenMRS ID: 10001PE)"
+        },
+        "encounter": {
+          "reference": "Encounter/65aa1045-aad0-454a-8d41-7dda57ae1854",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2024-06-25T09:24:24+00:00",
+        "issued": "2024-06-25T09:26:34.000+00:00",
+        "valueQuantity": {
+          "value": 98.0,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 0.0
+            },
+            "high": {
+              "value": 250.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://fhir.openmrs.org/ext/obs/reference-range",
+                  "code": "absolute"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://80-openmrs-openmrsdistrore-eocvxb8hrdg.ws-eu114.gitpod.io/openmrs/ws/fhir2/R4/Observation/b9ccaf59-0ea6-4085-8983-af425ebbb460",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "b9ccaf59-0ea6-4085-8983-af425ebbb460",
+        "meta": {
+          "versionId": "1719307594000",
+          "lastUpdated": "2024-06-25T09:26:34.000+00:00",
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+              "code": "SUBSETTED",
+              "display": "Resource encoded in summary mode"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "5087AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "display": "Pulse"
+            },
+            {
+              "system": "https://cielterminology.org",
+              "code": "5087"
+            },
+            {
+              "system": "http://snomed.info/sct/",
+              "code": "78564009"
+            }
+          ],
+          "text": "Pulse"
+        },
+        "subject": {
+          "reference": "Patient/1a280518-9aa2-41f1-8c64-8960ebe008c0",
+          "type": "Patient",
+          "display": "Wod Pachua (OpenMRS ID: 10001PE)"
+        },
+        "encounter": {
+          "reference": "Encounter/65aa1045-aad0-454a-8d41-7dda57ae1854",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2024-06-25T09:24:24+00:00",
+        "issued": "2024-06-25T09:26:34.000+00:00",
+        "valueQuantity": {
+          "value": 88.0,
+          "unit": "beats/min"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 55.0
+            },
+            "high": {
+              "value": 100.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                  "code": "normal"
+                }
+              ]
+            }
+          },
+          {
+            "low": {
+              "value": 49.0
+            },
+            "high": {
+              "value": 130.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                  "code": "treatment"
+                }
+              ]
+            }
+          },
+          {
+            "low": {
+              "value": 0.0
+            },
+            "high": {
+              "value": 230.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://fhir.openmrs.org/ext/obs/reference-range",
+                  "code": "absolute"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://80-openmrs-openmrsdistrore-eocvxb8hrdg.ws-eu114.gitpod.io/openmrs/ws/fhir2/R4/Observation/d3ebdade-7bea-4048-991b-3860b4b9c683",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "d3ebdade-7bea-4048-991b-3860b4b9c683",
+        "meta": {
+          "versionId": "1719307594000",
+          "lastUpdated": "2024-06-25T09:26:34.000+00:00",
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+              "code": "SUBSETTED",
+              "display": "Resource encoded in summary mode"
+            }
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "code": "461d7dcd-ef35-4e83-973f-55195a885735",
+              "display": "Pneumococcal Prophylaxis"
+            }
+          ],
+          "text": "Pneumococcal Prophylaxis"
+        },
+        "subject": {
+          "reference": "Patient/1a280518-9aa2-41f1-8c64-8960ebe008c0",
+          "type": "Patient",
+          "display": "Wod Pachua (OpenMRS ID: 10001PE)"
+        },
+        "encounter": {
+          "reference": "Encounter/65aa1045-aad0-454a-8d41-7dda57ae1854",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2024-06-25T09:24:24+00:00",
+        "issued": "2024-06-25T09:26:34.000+00:00",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "a75a5f8c-395c-426d-9cfb-d5f0173bdd48",
+              "display": "Pen Vee <3yr 125mg BID"
+            }
+          ],
+          "text": "Pen Vee <3yr 125mg BID"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://80-openmrs-openmrsdistrore-eocvxb8hrdg.ws-eu114.gitpod.io/openmrs/ws/fhir2/R4/Observation/f924d30b-db4f-4021-9100-7e0e45accabb",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "f924d30b-db4f-4021-9100-7e0e45accabb",
+        "meta": {
+          "versionId": "1719307594000",
+          "lastUpdated": "2024-06-25T09:26:34.000+00:00",
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+              "code": "SUBSETTED",
+              "display": "Resource encoded in summary mode"
+            }
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "code": "8bf322eb-4041-42bf-aaa7-de9eb7bf1e0f",
+              "display": "Analgesics"
+            }
+          ],
+          "text": "Analgesics"
+        },
+        "subject": {
+          "reference": "Patient/1a280518-9aa2-41f1-8c64-8960ebe008c0",
+          "type": "Patient",
+          "display": "Wod Pachua (OpenMRS ID: 10001PE)"
+        },
+        "encounter": {
+          "reference": "Encounter/65aa1045-aad0-454a-8d41-7dda57ae1854",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2024-06-25T09:24:24+00:00",
+        "issued": "2024-06-25T09:26:34.000+00:00",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "f9597132-58c6-41f6-8513-d0a4a27962b7",
+              "display": "Acetaminophen 10-15mg/kg/dose q4-6hr"
+            }
+          ],
+          "text": "Acetaminophen 10-15mg/kg/dose q4-6hr"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://80-openmrs-openmrsdistrore-eocvxb8hrdg.ws-eu114.gitpod.io/openmrs/ws/fhir2/R4/Observation/adf93031-2bcf-42a0-b327-88174b0cb525",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "adf93031-2bcf-42a0-b327-88174b0cb525",
+        "meta": {
+          "versionId": "1719307594000",
+          "lastUpdated": "2024-06-25T09:26:34.000+00:00",
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+              "code": "SUBSETTED",
+              "display": "Resource encoded in summary mode"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "729AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "display": "Platelets"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "26515-7"
+            },
+            {
+              "system": "https://cielterminology.org",
+              "code": "729"
+            },
+            {
+              "system": "http://snomed.info/sct/",
+              "code": "61928009"
+            }
+          ],
+          "text": "Platelets"
+        },
+        "subject": {
+          "reference": "Patient/1a280518-9aa2-41f1-8c64-8960ebe008c0",
+          "type": "Patient",
+          "display": "Wod Pachua (OpenMRS ID: 10001PE)"
+        },
+        "encounter": {
+          "reference": "Encounter/65aa1045-aad0-454a-8d41-7dda57ae1854",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2024-06-25T09:24:24+00:00",
+        "issued": "2024-06-25T09:26:34.000+00:00",
+        "valueQuantity": {
+          "value": 11.0,
+          "unit": "10^3/mL",
+          "system": "http://unitsofmeasure.org",
+          "code": "10^3/mL"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 134.0
+            },
+            "high": {
+              "value": 419.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                  "code": "normal"
+                }
+              ]
+            }
+          },
+          {
+            "low": {
+              "value": 49.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                  "code": "treatment"
+                }
+              ]
+            }
+          },
+          {
+            "low": {
+              "value": 0.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://fhir.openmrs.org/ext/obs/reference-range",
+                  "code": "absolute"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://80-openmrs-openmrsdistrore-eocvxb8hrdg.ws-eu114.gitpod.io/openmrs/ws/fhir2/R4/Observation/94002048-dd6b-47bf-b7da-9f25f5512d8e",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "94002048-dd6b-47bf-b7da-9f25f5512d8e",
+        "meta": {
+          "versionId": "1719307594000",
+          "lastUpdated": "2024-06-25T09:26:34.000+00:00",
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+              "code": "SUBSETTED",
+              "display": "Resource encoded in summary mode"
+            }
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "code": "63edc8fb-00d1-40fc-93af-caad921436da",
+              "display": "Anti-malarials (treatment)"
+            }
+          ],
+          "text": "Anti-malarials (treatment)"
+        },
+        "subject": {
+          "reference": "Patient/1a280518-9aa2-41f1-8c64-8960ebe008c0",
+          "type": "Patient",
+          "display": "Wod Pachua (OpenMRS ID: 10001PE)"
+        },
+        "encounter": {
+          "reference": "Encounter/65aa1045-aad0-454a-8d41-7dda57ae1854",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2024-06-25T09:24:24+00:00",
+        "issued": "2024-06-25T09:26:34.000+00:00",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "82024ef6-39bb-43c4-9960-9c7ae48097fb",
+              "display": "1 Coartem tablet BID X 3days (5-14kg)"
+            }
+          ],
+          "text": "1 Coartem tablet BID X 3days (5-14kg)"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://80-openmrs-openmrsdistrore-eocvxb8hrdg.ws-eu114.gitpod.io/openmrs/ws/fhir2/R4/Observation/90b3d606-db4a-4475-afcf-2b3782f6c24c",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90b3d606-db4a-4475-afcf-2b3782f6c24c",
+        "meta": {
+          "versionId": "1719307594000",
+          "lastUpdated": "2024-06-25T09:26:34.000+00:00",
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+              "code": "SUBSETTED",
+              "display": "Resource encoded in summary mode"
+            }
+          ]
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "code": "8bf322eb-4041-42bf-aaa7-de9eb7bf1e0f",
+              "display": "Analgesics"
+            }
+          ],
+          "text": "Analgesics"
+        },
+        "subject": {
+          "reference": "Patient/1a280518-9aa2-41f1-8c64-8960ebe008c0",
+          "type": "Patient",
+          "display": "Wod Pachua (OpenMRS ID: 10001PE)"
+        },
+        "encounter": {
+          "reference": "Encounter/65aa1045-aad0-454a-8d41-7dda57ae1854",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2024-06-25T09:24:24+00:00",
+        "issued": "2024-06-25T09:26:34.000+00:00",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "7eb00a2d-f959-4e04-bfc2-066285d599cc",
+              "display": "Ibuprofen 10-15mg/kg/dose q6-8hr"
+            }
+          ],
+          "text": "Ibuprofen 10-15mg/kg/dose q6-8hr"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://80-openmrs-openmrsdistrore-eocvxb8hrdg.ws-eu114.gitpod.io/openmrs/ws/fhir2/R4/Observation/b869c366-7676-42a8-b633-1747cf6cd58d",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "b869c366-7676-42a8-b633-1747cf6cd58d",
+        "meta": {
+          "versionId": "1719307594000",
+          "lastUpdated": "2024-06-25T09:26:34.000+00:00",
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+              "code": "SUBSETTED",
+              "display": "Resource encoded in summary mode"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "857AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "display": "Blood urea nitrogen"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "14937-7"
+            },
+            {
+              "system": "https://cielterminology.org",
+              "code": "857"
+            },
+            {
+              "system": "http://snomed.info/sct/",
+              "code": "72341003"
+            }
+          ],
+          "text": "Blood urea nitrogen"
+        },
+        "subject": {
+          "reference": "Patient/1a280518-9aa2-41f1-8c64-8960ebe008c0",
+          "type": "Patient",
+          "display": "Wod Pachua (OpenMRS ID: 10001PE)"
+        },
+        "encounter": {
+          "reference": "Encounter/65aa1045-aad0-454a-8d41-7dda57ae1854",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2024-06-25T09:24:24+00:00",
+        "issued": "2024-06-25T09:26:34.000+00:00",
+        "valueQuantity": {
+          "value": 34.0,
+          "unit": "mmol/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mmol/L"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 0.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://fhir.openmrs.org/ext/obs/reference-range",
+                  "code": "absolute"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://80-openmrs-openmrsdistrore-eocvxb8hrdg.ws-eu114.gitpod.io/openmrs/ws/fhir2/R4/Observation/deccfe17-b755-46b9-9904-88364f2ee765",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "deccfe17-b755-46b9-9904-88364f2ee765",
+        "meta": {
+          "versionId": "1719307594000",
+          "lastUpdated": "2024-06-25T09:26:34.000+00:00",
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+              "code": "SUBSETTED",
+              "display": "Resource encoded in summary mode"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "57546f95-6b79-478c-a90b-d8f989d82f99",
+              "display": "Bili-Total/Direct"
+            }
+          ],
+          "text": "Bili-Total/Direct"
+        },
+        "subject": {
+          "reference": "Patient/1a280518-9aa2-41f1-8c64-8960ebe008c0",
+          "type": "Patient",
+          "display": "Wod Pachua (OpenMRS ID: 10001PE)"
+        },
+        "encounter": {
+          "reference": "Encounter/65aa1045-aad0-454a-8d41-7dda57ae1854",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2024-06-25T09:24:24+00:00",
+        "issued": "2024-06-25T09:26:34.000+00:00",
+        "valueQuantity": {
+          "value": 23.0,
+          "unit": "umol/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "umol/L"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 0.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://fhir.openmrs.org/ext/obs/reference-range",
+                  "code": "absolute"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://80-openmrs-openmrsdistrore-eocvxb8hrdg.ws-eu114.gitpod.io/openmrs/ws/fhir2/R4/Observation/aa99cdd0-e07b-48f5-98db-5694e16784b2",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "aa99cdd0-e07b-48f5-98db-5694e16784b2",
+        "meta": {
+          "versionId": "1719307594000",
+          "lastUpdated": "2024-06-25T09:26:34.000+00:00",
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+              "code": "SUBSETTED",
+              "display": "Resource encoded in summary mode"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam",
+                "display": "Exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "5085AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "display": "Systolic blood pressure"
+            },
+            {
+              "system": "https://cielterminology.org",
+              "code": "5085"
+            },
+            {
+              "system": "http://snomed.info/sct/",
+              "code": "271649006"
+            }
+          ],
+          "text": "Systolic blood pressure"
+        },
+        "subject": {
+          "reference": "Patient/1a280518-9aa2-41f1-8c64-8960ebe008c0",
+          "type": "Patient",
+          "display": "Wod Pachua (OpenMRS ID: 10001PE)"
+        },
+        "encounter": {
+          "reference": "Encounter/65aa1045-aad0-454a-8d41-7dda57ae1854",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2024-06-25T09:24:24+00:00",
+        "issued": "2024-06-25T09:26:34.000+00:00",
+        "valueQuantity": {
+          "value": 155.0,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mmHg"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 100.0
+            },
+            "high": {
+              "value": 140.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                  "code": "normal"
+                }
+              ]
+            }
+          },
+          {
+            "low": {
+              "value": 85.0
+            },
+            "high": {
+              "value": 180.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                  "code": "treatment"
+                }
+              ]
+            }
+          },
+          {
+            "low": {
+              "value": 0.0
+            },
+            "high": {
+              "value": 250.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://fhir.openmrs.org/ext/obs/reference-range",
+                  "code": "absolute"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://80-openmrs-openmrsdistrore-eocvxb8hrdg.ws-eu114.gitpod.io/openmrs/ws/fhir2/R4/Observation/2cb93640-3c7e-4353-911a-53944112e1fa",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "2cb93640-3c7e-4353-911a-53944112e1fa",
+        "meta": {
+          "versionId": "1719307594000",
+          "lastUpdated": "2024-06-25T09:26:34.000+00:00",
+          "tag": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+              "code": "SUBSETTED",
+              "display": "Resource encoded in summary mode"
+            }
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "851AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "display": "Mean corpuscular volume"
+            },
+            {
+              "system": "http://loinc.org",
+              "code": "787-2"
+            },
+            {
+              "system": "https://cielterminology.org",
+              "code": "851"
+            },
+            {
+              "system": "http://snomed.info/sct/",
+              "code": "104133003"
+            }
+          ],
+          "text": "Mean corpuscular volume"
+        },
+        "subject": {
+          "reference": "Patient/1a280518-9aa2-41f1-8c64-8960ebe008c0",
+          "type": "Patient",
+          "display": "Wod Pachua (OpenMRS ID: 10001PE)"
+        },
+        "encounter": {
+          "reference": "Encounter/65aa1045-aad0-454a-8d41-7dda57ae1854",
+          "type": "Encounter"
+        },
+        "effectiveDateTime": "2024-06-25T09:24:24+00:00",
+        "issued": "2024-06-25T09:26:34.000+00:00",
+        "valueQuantity": {
+          "value": 65.0,
+          "unit": "fL",
+          "system": "http://unitsofmeasure.org",
+          "code": "fL"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 80.0
+            },
+            "high": {
+              "value": 100.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                  "code": "normal"
+                }
+              ]
+            }
+          },
+          {
+            "low": {
+              "value": 0.0
+            },
+            "type": {
+              "coding": [
+                {
+                  "system": "http://fhir.openmrs.org/ext/obs/reference-range",
+                  "code": "absolute"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

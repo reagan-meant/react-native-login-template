@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, ScrollView, StyleSheet } from 'react-native';
-import patientBundle from '../assets/obsdata.json';
+//import patientBundle from '../assets/obsdata.json';
+import patientBundle from '../assets/obsdata2.json';
 
 const csvData = `
-Vital Signs,Temperature:T;Diastolic blood pressure:DBP;Systolic blood pressure:SBP
-Lab Values,Arterial blood oxygen saturation (pulse oximeter):OxySAt;Pulse:P;Respiratory rate:RR
-Nutritional Values,Weight (kg):W;Height (cm):H
-Medication,CQ:CQ;Mebendazole:M
-
+Nutritional Values,Left MUAC:MUAC;Weight (kg):W;Height (cm):H
+Vital Signs,Pulse:P;Respiratory rate:RR;Diastolic blood pressure:DBP;Systolic blood pressure:SBP
+Lab Values,Haemoglobin:Hb;Neutrophils:Neu;White blood cells:WBC;Platelets:Pt;Bili-Total/Direct:Bili;Blood urea nitrogen:BUN;AST/ALT:AST/ALT;RDT:RDT
+Medication,Folic Acid Usage:FA;Malaria Prophylaxis:Malaria;Pneumococcal Prophylaxis:Pneumo Prophy;Analgesics:Analgesics;Anti-malarials (treatment):Anti Malaria;Other OutPatientMedications:Other Meds
 `;
 
 const parseCsv = (csv) => {
@@ -45,8 +45,13 @@ export default function ObservationsScreen() {
           observation.effectiveDateTime
         ).toLocaleDateString();
         const code = observation.code.text;
-        const value = observation.valueQuantity?.value;
-        const unit = observation.valueQuantity?.unit;
+        //const value = observation.valueQuantity?.value;
+        const value = observation.valueQuantity?.value
+                      ?? observation.valueCodeableConcept?.text?? observation.valueString;
+
+        //const unit = observation.valueQuantity?.unit;
+        const unit = observation.valueQuantity?.unit ?? '';
+
 
         if (!observationMap[date]) {
           observationMap[date] = {};
@@ -59,9 +64,12 @@ export default function ObservationsScreen() {
     };
 
     const parsedObservations = parseObservations(patientBundle);
+    //console.log(parsedObservations)
     setObservations(parsedObservations);
 
     const tablesData = parseCsv(csvData);
+            //console.log(tablesData);
+
     setTables(tablesData);
   }, []);
 
@@ -81,18 +89,24 @@ export default function ObservationsScreen() {
     );
   };
 
-  const renderTableRows = (codes) => {
-    return Object.keys(observations).map((date) => (
-      <View key={date} style={styles.tableRow}>
-        <Text style={[styles.tableCell, styles.tableHeader]}>{date}</Text>
-        {codes.map((code) => (
-          <Text key={code.displayName} style={styles.tableCell}>
-            {observations[date][code.displayName] || ''}
-          </Text>
-        ))}
-      </View>
-    ));
-  };
+const renderTableRows = (codes) => {
+  return Object.keys(observations).map((date) => {
+    const shouldRenderRow = codes.some((code) => observations[date][code.displayName] !== null && observations[date][code.displayName] !== undefined);
+    if (shouldRenderRow) {
+      return (
+        <View key={date} style={styles.tableRow}>
+          <Text style={[styles.tableCell, styles.tableHeader]}>{date}</Text>
+          {codes.map((code) => (
+            <Text key={code.displayName} style={styles.tableCell}>
+              {observations[date][code.displayName] || ''}
+            </Text>
+          ))}
+        </View>
+      );
+    }
+    return null;
+  });
+};
 
   return (
     <ScrollView style={styles.container}>
