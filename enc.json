@@ -1,0 +1,367 @@
+{
+    "results": [
+      {
+        "uuid": "a4b90215-2ef4-4a16-a978-39090b69075b",
+        "display": "Vitals 09/19/2021",
+        "links": [
+          {
+            "rel": "self",
+            "uri": "http://dev3.openmrs.org/openmrs/ws/rest/v1/encounter/a4b90215-2ef4-4a16-a978-39090b69075b",
+            "resourceAlias": "encounter"
+          }
+        ]
+      },
+      {
+        "uuid": "aa7ca535-94a9-4699-a553-73bb2619bed1",
+        "display": "Visit Note 09/19/2021",
+        "links": [
+          {
+            "rel": "self",
+            "uri": "http://dev3.openmrs.org/openmrs/ws/rest/v1/encounter/aa7ca535-94a9-4699-a553-73bb2619bed1",
+            "resourceAlias": "encounter"
+          }
+        ]
+      },
+      {
+        "uuid": "1127dd31-6e40-47b6-95b5-30e36985f139",
+        "display": "Lab Results 09/19/2021",
+        "links": [
+          {
+            "rel": "self",
+            "uri": "http://dev3.openmrs.org/openmrs/ws/rest/v1/encounter/1127dd31-6e40-47b6-95b5-30e36985f139",
+            "resourceAlias": "encounter"
+          }
+        ]
+      },
+      {
+        "uuid": "89143c12-db4d-471f-8428-772505070336",
+        "display": "Consultation 09/19/2021",
+        "links": [
+          {
+            "rel": "self",
+            "uri": "http://dev3.openmrs.org/openmrs/ws/rest/v1/encounter/89143c12-db4d-471f-8428-772505070336",
+            "resourceAlias": "encounter"
+          }
+        ]
+      },
+      {
+        "uuid": "9ab34b9a-7fae-4f00-9820-86c1d0dc1d6b",
+        "display": "Vitals 01/24/2022",
+        "links": [
+          {
+            "rel": "self",
+            "uri": "http://dev3.openmrs.org/openmrs/ws/rest/v1/encounter/9ab34b9a-7fae-4f00-9820-86c1d0dc1d6b",
+            "resourceAlias": "encounter"
+          }
+        ]
+      },
+      {
+        "uuid": "beaded58-a1ed-4577-bfe2-edbd7165e018",
+        "display": "Visit Note 01/24/2022",
+        "links": [
+          {
+            "rel": "self",
+            "uri": "http://dev3.openmrs.org/openmrs/ws/rest/v1/encounter/beaded58-a1ed-4577-bfe2-edbd7165e018",
+            "resourceAlias": "encounter"
+          }
+        ]
+      },
+      {
+        "uuid": "987b19d5-a43b-4a6d-98bc-cb7ee6597788",
+        "display": "Lab Results 01/24/2022",
+        "links": [
+          {
+            "rel": "self",
+            "uri": "http://dev3.openmrs.org/openmrs/ws/rest/v1/encounter/987b19d5-a43b-4a6d-98bc-cb7ee6597788",
+            "resourceAlias": "encounter"
+          }
+        ]
+      },
+      {
+        "uuid": "fd79a0ed-531a-410a-9f49-1ba08fa9c1b1",
+        "display": "Vitals 05/24/2022",
+        "links": [
+          {
+            "rel": "self",
+            "uri": "http://dev3.openmrs.org/openmrs/ws/rest/v1/encounter/fd79a0ed-531a-410a-9f49-1ba08fa9c1b1",
+            "resourceAlias": "encounter"
+          }
+        ]
+      },
+      {
+        "uuid": "face2538-82cf-4bf5-b960-6dfcd0e8c0b0",
+        "display": "Visit Note 05/24/2022",
+        "links": [
+          {
+            "rel": "self",
+            "uri": "http://dev3.openmrs.org/openmrs/ws/rest/v1/encounter/face2538-82cf-4bf5-b960-6dfcd0e8c0b0",
+            "resourceAlias": "encounter"
+          }
+        ]
+      },
+      {
+        "uuid": "3c37c33a-de33-4bc7-959b-b6f6b6616e7f",
+        "display": "Lab Results 05/24/2022",
+        "links": [
+          {
+            "rel": "self",
+            "uri": "http://dev3.openmrs.org/openmrs/ws/rest/v1/encounter/3c37c33a-de33-4bc7-959b-b6f6b6616e7f",
+            "resourceAlias": "encounter"
+          }
+        ]
+      },
+      {
+        "uuid": "d92b1bfd-8648-46b3-92ec-ae83bc4becfa",
+        "display": "Vitals 02/04/2023",
+        "links": [
+          {
+            "rel": "self",
+            "uri": "http://dev3.openmrs.org/openmrs/ws/rest/v1/encounter/d92b1bfd-8648-46b3-92ec-ae83bc4becfa",
+            "resourceAlias": "encounter"
+          }
+        ]
+      },
+      {
+        "uuid": "e4e805aa-53e6-4454-a9ff-3c13067a3f68",
+        "display": "Visit Note 02/04/2023",
+        "links": [
+          {
+            "rel": "self",
+            "uri": "http://dev3.openmrs.org/openmrs/ws/rest/v1/encounter/e4e805aa-53e6-4454-a9ff-3c13067a3f68",
+            "resourceAlias": "encounter"
+          }
+        ]
+      },
+      {
+        "uuid": "c3bdd380-cf3f-4040-99ff-98ebcea54d89",
+        "display": "Consultation 02/04/2023",
+        "links": [
+          {
+            "rel": "self",
+            "uri": "http://dev3.openmrs.org/openmrs/ws/rest/v1/encounter/c3bdd380-cf3f-4040-99ff-98ebcea54d89",
+            "resourceAlias": "encounter"
+          }
+        ]
+      },
+      {
+        "uuid": "a0d5b9f3-5678-44ff-9567-486bab285fa5",
+        "display": "Lab Results 02/04/2023",
+        "links": [
+          {
+            "rel": "self",
+            "uri": "http://dev3.openmrs.org/openmrs/ws/rest/v1/encounter/a0d5b9f3-5678-44ff-9567-486bab285fa5",
+            "resourceAlias": "encounter"
+          }
+        ]
+      },
+      {
+        "uuid": "07b7430f-8fd7-48ef-ba32-1b756d048ab9",
+        "display": "Vitals 02/18/2023",
+        "links": [
+          {
+            "rel": "self",
+            "uri": "http://dev3.openmrs.org/openmrs/ws/rest/v1/encounter/07b7430f-8fd7-48ef-ba32-1b756d048ab9",
+            "resourceAlias": "encounter"
+          }
+        ]
+      },
+      {
+        "uuid": "8ac36bad-5835-47f4-9dc3-fb10ae048ed4",
+        "display": "Visit Note 02/18/2023",
+        "links": [
+          {
+            "rel": "self",
+            "uri": "http://dev3.openmrs.org/openmrs/ws/rest/v1/encounter/8ac36bad-5835-47f4-9dc3-fb10ae048ed4",
+            "resourceAlias": "encounter"
+          }
+        ]
+      },
+      {
+        "uuid": "552c63f1-d12c-4122-a690-6c9cb22d7ce8",
+        "display": "Consultation 02/18/2023",
+        "links": [
+          {
+            "rel": "self",
+            "uri": "http://dev3.openmrs.org/openmrs/ws/rest/v1/encounter/552c63f1-d12c-4122-a690-6c9cb22d7ce8",
+            "resourceAlias": "encounter"
+          }
+        ]
+      },
+      {
+        "uuid": "c7b378f5-97f8-4b88-b151-22b1c020076f",
+        "display": "Lab Results 02/18/2023",
+        "links": [
+          {
+            "rel": "self",
+            "uri": "http://dev3.openmrs.org/openmrs/ws/rest/v1/encounter/c7b378f5-97f8-4b88-b151-22b1c020076f",
+            "resourceAlias": "encounter"
+          }
+        ]
+      },
+      {
+        "uuid": "15359e4c-60d4-439c-99e6-a816148e1c58",
+        "display": "Vitals 05/22/2023",
+        "links": [
+          {
+            "rel": "self",
+            "uri": "http://dev3.openmrs.org/openmrs/ws/rest/v1/encounter/15359e4c-60d4-439c-99e6-a816148e1c58",
+            "resourceAlias": "encounter"
+          }
+        ]
+      },
+      {
+        "uuid": "fbe99839-03ac-4341-9104-7c9a89e354c5",
+        "display": "Visit Note 05/22/2023",
+        "links": [
+          {
+            "rel": "self",
+            "uri": "http://dev3.openmrs.org/openmrs/ws/rest/v1/encounter/fbe99839-03ac-4341-9104-7c9a89e354c5",
+            "resourceAlias": "encounter"
+          }
+        ]
+      },
+      {
+        "uuid": "bfb78427-2a4d-47e8-b456-2ca97537228c",
+        "display": "Lab Results 05/22/2023",
+        "links": [
+          {
+            "rel": "self",
+            "uri": "http://dev3.openmrs.org/openmrs/ws/rest/v1/encounter/bfb78427-2a4d-47e8-b456-2ca97537228c",
+            "resourceAlias": "encounter"
+          }
+        ]
+      },
+      {
+        "uuid": "471b6475-f432-47ad-aed0-b0f088cf1243",
+        "display": "Vitals 03/16/2024",
+        "links": [
+          {
+            "rel": "self",
+            "uri": "http://dev3.openmrs.org/openmrs/ws/rest/v1/encounter/471b6475-f432-47ad-aed0-b0f088cf1243",
+            "resourceAlias": "encounter"
+          }
+        ]
+      },
+      {
+        "uuid": "404166f0-d55d-4870-946c-707efa213c2d",
+        "display": "Visit Note 03/16/2024",
+        "links": [
+          {
+            "rel": "self",
+            "uri": "http://dev3.openmrs.org/openmrs/ws/rest/v1/encounter/404166f0-d55d-4870-946c-707efa213c2d",
+            "resourceAlias": "encounter"
+          }
+        ]
+      },
+      {
+        "uuid": "5251bdde-ceec-4a46-8942-c22e5392922a",
+        "display": "Admission 03/16/2024",
+        "links": [
+          {
+            "rel": "self",
+            "uri": "http://dev3.openmrs.org/openmrs/ws/rest/v1/encounter/5251bdde-ceec-4a46-8942-c22e5392922a",
+            "resourceAlias": "encounter"
+          }
+        ]
+      },
+      {
+        "uuid": "14304f5d-4a0b-4758-bfea-9f115861e6e9",
+        "display": "Vitals 03/18/2024",
+        "links": [
+          {
+            "rel": "self",
+            "uri": "http://dev3.openmrs.org/openmrs/ws/rest/v1/encounter/14304f5d-4a0b-4758-bfea-9f115861e6e9",
+            "resourceAlias": "encounter"
+          }
+        ]
+      },
+      {
+        "uuid": "61cebd5f-7896-4fb4-98de-9985f715de4b",
+        "display": "Visit Note 03/18/2024",
+        "links": [
+          {
+            "rel": "self",
+            "uri": "http://dev3.openmrs.org/openmrs/ws/rest/v1/encounter/61cebd5f-7896-4fb4-98de-9985f715de4b",
+            "resourceAlias": "encounter"
+          }
+        ]
+      },
+      {
+        "uuid": "678ed385-1444-4d04-bb65-2e9aeea46d66",
+        "display": "Lab Results 03/18/2024",
+        "links": [
+          {
+            "rel": "self",
+            "uri": "http://dev3.openmrs.org/openmrs/ws/rest/v1/encounter/678ed385-1444-4d04-bb65-2e9aeea46d66",
+            "resourceAlias": "encounter"
+          }
+        ]
+      },
+      {
+        "uuid": "707f5edc-d5c2-4558-a1e3-78415305d842",
+        "display": "Vitals 03/19/2024",
+        "links": [
+          {
+            "rel": "self",
+            "uri": "http://dev3.openmrs.org/openmrs/ws/rest/v1/encounter/707f5edc-d5c2-4558-a1e3-78415305d842",
+            "resourceAlias": "encounter"
+          }
+        ]
+      },
+      {
+        "uuid": "3e61d0e5-d62b-4137-815c-15a27f11a7e4",
+        "display": "Visit Note 03/19/2024",
+        "links": [
+          {
+            "rel": "self",
+            "uri": "http://dev3.openmrs.org/openmrs/ws/rest/v1/encounter/3e61d0e5-d62b-4137-815c-15a27f11a7e4",
+            "resourceAlias": "encounter"
+          }
+        ]
+      },
+      {
+        "uuid": "53198305-19e2-47d3-8a3d-19debdc92497",
+        "display": "Consultation 03/19/2024",
+        "links": [
+          {
+            "rel": "self",
+            "uri": "http://dev3.openmrs.org/openmrs/ws/rest/v1/encounter/53198305-19e2-47d3-8a3d-19debdc92497",
+            "resourceAlias": "encounter"
+          }
+        ]
+      },
+      {
+        "uuid": "009884f0-e3c4-46a6-89ad-44386bbac531",
+        "display": "Lab Results 03/19/2024",
+        "links": [
+          {
+            "rel": "self",
+            "uri": "http://dev3.openmrs.org/openmrs/ws/rest/v1/encounter/009884f0-e3c4-46a6-89ad-44386bbac531",
+            "resourceAlias": "encounter"
+          }
+        ]
+      },
+      {
+        "uuid": "5e64ddbc-2f2e-4b35-9fcd-bc1505e9fd87",
+        "display": "Discharge 03/19/2024",
+        "links": [
+          {
+            "rel": "self",
+            "uri": "http://dev3.openmrs.org/openmrs/ws/rest/v1/encounter/5e64ddbc-2f2e-4b35-9fcd-bc1505e9fd87",
+            "resourceAlias": "encounter"
+          }
+        ]
+      },
+      {
+        "uuid": "eda22816-1a5c-4533-b34c-e3b1964d5974",
+        "display": "Order 07/11/2024",
+        "links": [
+          {
+            "rel": "self",
+            "uri": "http://dev3.openmrs.org/openmrs/ws/rest/v1/encounter/eda22816-1a5c-4533-b34c-e3b1964d5974",
+            "resourceAlias": "encounter"
+          }
+        ]
+      }
+    ]
+  }

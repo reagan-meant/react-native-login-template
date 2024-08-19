@@ -46,12 +46,13 @@ export default function ObservationsScreen() {
         ).toLocaleDateString();
         const code = observation.code.text;
         //const value = observation.valueQuantity?.value;
-        const value = observation.valueQuantity?.value
-                      ?? observation.valueCodeableConcept?.text?? observation.valueString;
+        const value =
+          observation.valueQuantity?.value ??
+          observation.valueCodeableConcept?.text ??
+          observation.valueString;
 
         //const unit = observation.valueQuantity?.unit;
         const unit = observation.valueQuantity?.unit ?? '';
-
 
         if (!observationMap[date]) {
           observationMap[date] = {};
@@ -68,7 +69,7 @@ export default function ObservationsScreen() {
     setObservations(parsedObservations);
 
     const tablesData = parseCsv(csvData);
-            //console.log(tablesData);
+    //console.log(tablesData);
 
     setTables(tablesData);
   }, []);
@@ -89,24 +90,28 @@ export default function ObservationsScreen() {
     );
   };
 
-const renderTableRows = (codes) => {
-  return Object.keys(observations).map((date) => {
-    const shouldRenderRow = codes.some((code) => observations[date][code.displayName] !== null && observations[date][code.displayName] !== undefined);
-    if (shouldRenderRow) {
-      return (
-        <View key={date} style={styles.tableRow}>
-          <Text style={[styles.tableCell, styles.tableHeader]}>{date}</Text>
-          {codes.map((code) => (
-            <Text key={code.displayName} style={styles.tableCell}>
-              {observations[date][code.displayName] || ''}
-            </Text>
-          ))}
-        </View>
+  const renderTableRows = (codes) => {
+    return Object.keys(observations).map((date) => {
+      const shouldRenderRow = codes.some(
+        (code) =>
+          observations[date][code.displayName] !== null &&
+          observations[date][code.displayName] !== undefined
       );
-    }
-    return null;
-  });
-};
+      if (shouldRenderRow) {
+        return (
+          <View key={date} style={styles.tableRow}>
+            <Text style={[styles.tableCell, styles.tableHeader]}>{date}</Text>
+            {codes.map((code) => (
+              <Text key={code.displayName} style={styles.tableCell}>
+                {observations[date][code.displayName] || ''}
+              </Text>
+            ))}
+          </View>
+        );
+      }
+      return null;
+    });
+  };
 
   return (
     <ScrollView style={styles.container}>

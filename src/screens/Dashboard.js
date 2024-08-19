@@ -36,7 +36,7 @@ export default function Dashboard({ navigation }) {
         </TouchableOpacity>
         <TouchableOpacity
           style={[styles.card, { width: cardWidth }]}
-          onPress={() => navigation.navigate('MedicationTracking')}
+          onPress={() => navigation.navigate('MedicationScreen')}
         >
           <Text style={styles.cardText}>Track Medication</Text>
         </TouchableOpacity>
@@ -48,7 +48,7 @@ export default function Dashboard({ navigation }) {
           <Text style={styles.cardText}>Alerts & Reminders</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          style={[styles.card, { width: cardWidth, display: 'none'  }]}
+          style={[styles.card, { width: cardWidth, display: 'none' }]}
           onPress={() => navigation.navigate('Appointments')}
         >
           <Text style={styles.cardText}>Manage Appointments</Text>

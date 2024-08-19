@@ -15,6 +15,7 @@ import {
   ObservationsScreen,
   AlertsScreen,
   CaptureObservationsScreen,
+  MedicationScreen,
 } from './src/screens'
 import { Button, Platform, StyleSheet, Text, View } from "react-native";
 
@@ -105,6 +106,7 @@ export default function App() {
           <Stack.Screen name="ObservationsScreen" component={ObservationsScreen} />
           <Stack.Screen name="AlertsScreen" component={AlertsScreen} />
           <Stack.Screen name="CaptureObservationsScreen" component={CaptureObservationsScreen} />
+          <Stack.Screen name="MedicationScreen" component={MedicationScreen} />
 
           <Stack.Screen
             name="ResetPasswordScreen"

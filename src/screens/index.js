@@ -6,3 +6,4 @@ export { default as Dashboard } from './Dashboard';
 export { default as ObservationsScreen } from './ObservationsScreen';
 export { default as AlertsScreen } from './AlertsScreen';
 export { default as CaptureObservationsScreen } from './CaptureObservationsScreen';
+export { default as MedicationScreen } from './MedicationScreen';

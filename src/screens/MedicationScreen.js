@@ -15,20 +15,20 @@ import axios from 'axios';
 
 // Mock CSV content, replace with actual CSV loading logic if necessary
 const csvContent = `code,displayName,unit
-148901AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,Stomach Pain,
-140070AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,Headache Pain,
-dbp,Fever,
-148901AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,Leg Pain,
-140070AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,Chest Pain,
-dbp,Diarrhoea,
-148901AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,Loss of apetite,
-dbp,Other complaint,`;
+148901AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,Panadol,
+140070AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,Aspirin,
+dbp,Coartem,
+148901AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,Fansidar,
+140070AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,Quninine,
+dbp,Hydroxyurea,
+dbp,Other drugs,`;
+
 
 const parseCSV = (csv) => {
   return Papa.parse(csv, { header: true, skipEmptyLines: true }).data;
 };
 
-export default function CaptureObservationsScreen() {
+export default function MedicationScreen() {
   const [inputGroups, setInputGroups] = useState([
     { id: Date.now(), code: '', displayName: '', value: '', unit: '' },
   ]);
@@ -274,7 +274,7 @@ export default function CaptureObservationsScreen() {
 
   return (
     <ScrollView style={styles.container}>
-      <Text style={styles.header}>Capture Signs/Symptoms</Text>
+      <Text style={styles.header}>Medication taken</Text>
       {inputGroups.map((group, index) => (
         <View key={group.id} style={styles.inputGroup}>
           <RNPickerSelect
@@ -285,13 +285,13 @@ export default function CaptureObservationsScreen() {
               label: option.displayName,
               value: option.code,
             }))}
-            placeholder={{ label: 'Select Sign/Symptom', value: null }}
+            placeholder={{ label: 'Select Medicine', value: null }}
           />
           <Button title="Remove" onPress={() => removeInputGroup(group.id)} />
         </View>
       ))}
       <TouchableOpacity style={styles.addButton} onPress={addInputGroup}>
-        <Text style={styles.addButtonText}>+ Add Another Sign/Symptom</Text>
+        <Text style={styles.addButtonText}>+ Add Another Medicine</Text>
       </TouchableOpacity>
       <Button title="Submit" onPress={submitObservations} />
     </ScrollView>
