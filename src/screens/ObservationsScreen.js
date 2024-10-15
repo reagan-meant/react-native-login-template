@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { View, Text, ScrollView, StyleSheet } from 'react-native';
 //import patientBundle from '../assets/obsdata.json';
 import patientBundle from '../assets/obsdata2.json';
+import GlobalVariables from './GlobalVariables';
+import axios from 'axios';
+import { Alert } from 'react-native';
 
 const csvData = `
 Nutritional Values,Left MUAC:MUAC;Weight (kg):W;Height (cm):H
@@ -31,7 +34,7 @@ const parseCsv = (csv) => {
   });
 };
 
-export default function ObservationsScreen() {
+export default function ObservationsScreen({ navigation }) {
   const [observations, setObservations] = useState({});
   const [tables, setTables] = useState([]);
 
@@ -64,14 +67,96 @@ export default function ObservationsScreen() {
       return observationMap;
     };
 
-    const parsedObservations = parseObservations(patientBundle);
-    //console.log(parsedObservations)
-    setObservations(parsedObservations);
+    let onlinePatientBundle;
+    const fetchData = async () => {
+      try {
+        const API_URL =
+          'https://5001-reaganmeant-hiescdmulag-8yke8gpo3yw.ws-eu116.gitpod.io/openmrs/ws/fhir2/R4/';
+        const uuid = await GlobalVariables.getUuid();
+        const pw = await GlobalVariables.getPw();
+        const patientObsResponse = await axios.get(
+          API_URL + 'Observation?subject=' + uuid,
+          {
+            auth: {
+              username: uuid,
+              password: pw,
+            },
+            headers: {
+              'Content-Type': 'application/json',
+            },
+          }
+        );
 
-    const tablesData = parseCsv(csvData);
-    //console.log(tablesData);
+        if (patientObsResponse.status === 200) {
+          onlinePatientBundle = patientObsResponse.data;
 
-    setTables(tablesData);
+          GlobalVariables.setObservations(onlinePatientBundle);
+
+          const parsedObservations = parseObservations(onlinePatientBundle);
+
+          setObservations(parsedObservations);
+
+          const tablesData = parseCsv(csvData);
+
+          setTables(tablesData);
+        } else if (patientObsResponse.status === 401) {
+          Alert.alert('Error', 'Incorrect password or ID');
+          GlobalVariables.setLoggedIn(false);
+
+          navigation.reset({
+            index: 0,
+            routes: [{ name: 'LoginScreen' }],
+          });
+        } else {
+          const offlineObs = await GlobalVariables.getObservations();
+
+          if (offlineObs) {
+            const parsedObservations = parseObservations(offlineObs);
+
+            setObservations(parsedObservations);
+
+            const tablesData = parseCsv(csvData);
+
+            setTables(tablesData);
+          }
+        }
+      } catch (error) {
+        console.error(error);
+        console.error(error.response.status);
+
+        if (error.response.status === 401) {
+          //send to login
+          console.error(error.response.status);
+
+          Alert.alert('Error', 'User is unauthenticated');
+          console.error(error.response.status);
+          GlobalVariables.setLoggedIn(false);
+
+          navigation.reset({
+            index: 0,
+            routes: [{ name: 'LoginScreen' }],
+          });
+        } else {
+          Alert.alert(
+            'Error',
+            'An error occurred while trying to query records online...'
+          );
+          const offlineObs = await GlobalVariables.getObservations();
+
+          if (offlineObs) {
+            const parsedObservations = parseObservations(offlineObs);
+
+            setObservations(parsedObservations);
+
+            const tablesData = parseCsv(csvData);
+
+            setTables(tablesData);
+          }
+        }
+      }
+    };
+
+    fetchData();
   }, []);
 
   const renderTableHeader = (codes) => {

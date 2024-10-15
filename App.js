@@ -1,11 +1,11 @@
-import React from 'react'
+import React from 'react';
 import * as Device from 'expo-device';
 import * as Notifications from 'expo-notifications';
-import Constants from "expo-constants"; // Optional
-import { Provider } from 'react-native-paper'
-import { NavigationContainer } from '@react-navigation/native'
-import { createStackNavigator } from '@react-navigation/stack'
-import { theme } from './src/core/theme'
+import Constants from 'expo-constants'; // Optional
+import { Provider } from 'react-native-paper';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import { theme } from './src/core/theme';
 import {
   StartScreen,
   LoginScreen,
@@ -13,12 +13,12 @@ import {
   ResetPasswordScreen,
   Dashboard,
   ObservationsScreen,
+  PatientDetailsScreen,
   AlertsScreen,
   CaptureObservationsScreen,
-  MedicationScreen,
-} from './src/screens'
-import { Button, Platform, StyleSheet, Text, View } from "react-native";
-
+  CaptureMedicationScreen
+} from './src/screens';
+import { Button, Platform, StyleSheet, Text, View } from 'react-native';
 
 // Initialize the notification service
 Notifications.setNotificationHandler({
@@ -33,13 +33,13 @@ Notifications.setNotificationHandler({
 export async function registerForPushNotificationsAsync() {
   let token;
 
-  if (Platform.OS === "android") {
+  if (Platform.OS === 'android') {
     // Don't forget to import Platform from react-native
-    await Notifications.setNotificationChannelAsync("default", {
-      name: "default",
+    await Notifications.setNotificationChannelAsync('default', {
+      name: 'default',
       importance: Notifications.AndroidImportance.MAX,
       vibrationPattern: [0, 250, 250, 250],
-      lightColor: "#FF231F7C",
+      lightColor: '#FF231F7C',
     });
   }
 
@@ -47,12 +47,12 @@ export async function registerForPushNotificationsAsync() {
     const { status: existingStatus } =
       await Notifications.getPermissionsAsync();
     let finalStatus = existingStatus;
-    if (existingStatus !== "granted") {
+    if (existingStatus !== 'granted') {
       const { status } = await Notifications.requestPermissionsAsync();
       finalStatus = status;
     }
-    if (finalStatus !== "granted") {
-      alert("Failed to get push token for push notification!");
+    if (finalStatus !== 'granted') {
+      alert('Failed to get push token for push notification!');
       return;
     }
     // Learn more about projectId:
@@ -64,9 +64,9 @@ export async function registerForPushNotificationsAsync() {
           projectId: Constants.easConfig.projectId, // you can hard code project id if you dont want to use expo Constants
         })
       ).data;
-     }
+    }
   } else {
-    alert("Must use physical device for Push Notifications");
+    alert('Must use physical device for Push Notifications');
   }
 
   return token;
@@ -77,17 +77,14 @@ async function schedulePushNotification() {
   await Notifications.scheduleNotificationAsync({
     content: {
       title: "You've got notification! 🔔",
-      body: "Here is the notification body",
-      data: { data: "goes here" },
+      body: 'Here is the notification body',
+      data: { data: 'goes here' },
     },
     trigger: { seconds: 2 }, // You can change this to any time interval you want
   });
 }
 
-
-
-
-const Stack = createStackNavigator()
+const Stack = createStackNavigator();
 
 export default function App() {
   return (
@@ -103,10 +100,20 @@ export default function App() {
           <Stack.Screen name="LoginScreen" component={LoginScreen} />
           <Stack.Screen name="RegisterScreen" component={RegisterScreen} />
           <Stack.Screen name="Dashboard" component={Dashboard} />
-          <Stack.Screen name="ObservationsScreen" component={ObservationsScreen} />
+          <Stack.Screen
+            name="PatientDetailsScreen"
+            component={PatientDetailsScreen}
+          />
+          <Stack.Screen
+            name="ObservationsScreen"
+            component={ObservationsScreen}
+          />
           <Stack.Screen name="AlertsScreen" component={AlertsScreen} />
-          <Stack.Screen name="CaptureObservationsScreen" component={CaptureObservationsScreen} />
-          <Stack.Screen name="MedicationScreen" component={MedicationScreen} />
+          <Stack.Screen
+            name="CaptureObservationsScreen"
+            component={CaptureObservationsScreen}
+          />
+          <Stack.Screen name="CaptureMedicationScreen" component={CaptureMedicationScreen} />
 
           <Stack.Screen
             name="ResetPasswordScreen"
@@ -115,5 +122,5 @@ export default function App() {
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>
-  )
+  );
 }

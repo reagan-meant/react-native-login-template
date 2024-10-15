@@ -1,5 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, Button, StyleSheet, Alert, FlatList } from 'react-native';
+import {
+  View,
+  Text,
+  Button,
+  ScrollView,
+  StyleSheet,
+  Alert,
+  FlatList,
+} from 'react-native';
 import Papa from 'papaparse';
 import axios from 'axios';
 import MultiSelect from 'react-native-multiple-select';
@@ -11,21 +19,19 @@ import GlobalVariables from './GlobalVariables';
 
 // Mock CSV content, replace with actual CSV loading logic if necessary
 const csvContent = `code,displayName,unit
-138609AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,Stomach Pain,
-e2f633c6-9c78-435a-aa9d-ca7dc49ce4bb,Hand/Feet Swelling,
-867c163c-0302-4a2e-a543-110fd0c95091,Hand/Feet Pain,
-743085c6-df08-4e2d-b278-44e0953b42ac,Chest Pain,
-02e31a12-7b49-4536-8e6e-a48b5e902897,Stomach Pain,
-9292a0ea-cd28-436a-88c8-b0b938a7f55d,Tiredness,
-12f3c86e-f5e6-4d4b-948d-cdf6d64b6819,Difficulty Breathing,
-3d156cb0-7392-460e-92fb-b0da6ecb33cb,Fever,
-85507f2c-4111-4363-805a-402440652892,Cough/Flue,`;
+fd1c41e4-900a-412c-bd9c-f0abcbd997e8,Panadol,
+3d59b01e-86f1-4120-8ce2-aa3bc0212206,Aspirin,
+b26596cc-1ab7-4f6b-9f9a-bfcc22118c1d,Coartem,
+e99a8e95-4319-4133-a721-92fc3cb40fd6,Fansidar,
+d79d702a-2230-43cf-a290-e7c46af6b3ca,Quninine,
+a613a2b0-ebb5-4537-a7a3-93e8a177e12d,Hydroxyurea,
+a2bfebc9-a7d3-4ef2-8aa3-8b1b5a0845cf,Ibuprofen,`;
 
 const parseCSV = (csv) => {
   return Papa.parse(csv, { header: true, skipEmptyLines: true }).data;
 };
 
-export default function CaptureObservationsScreen() {
+export default function CaptureMedicationScreen() {
   /*  const [inputGroups, setInputGroups] = useState([
     { id: Date.now(), code: '', displayName: '', value: '', unit: '' },
   ]); */
@@ -73,7 +79,7 @@ export default function CaptureObservationsScreen() {
     const year = today.getFullYear();
     const month = String(today.getMonth() + 1).padStart(2, '0'); // Months are zero-based, so add 1 and pad with zero
     const day = String(today.getDate()).padStart(2, '0');
-    let formattedToday = `${year}-${month}-${day}`;
+    const formattedToday = `${year}-${month}-${day}`;
 
     // Calculate yesterday's date
     const yesterday = new Date(today);
@@ -204,10 +210,10 @@ export default function CaptureObservationsScreen() {
         );
 
         if (response.status === 201) {
-          console.log('Success', 'Observations submitted successfully');
-          Alert.alert('Success', 'Symptom(s)/Sign(s) saved successfully');
+          console.log('Success', 'Drugs submitted successfully');
+          Alert.alert('Success', 'Drug(s) saved successfully');
         } else {
-          Alert.alert('Error', 'Failed to submit observations');
+          Alert.alert('Error', 'Failed to submit Drugs');
         }
       }, Promise.resolve());
     } catch (error) {
@@ -238,8 +244,8 @@ export default function CaptureObservationsScreen() {
       code: {
         coding: [
           {
-            code: `464d8752-45f8-4a25-8972-772cbc52efbe`,
-            display: `Signs and Symptoms`,
+            code: `27069240-bc36-4b50-8795-2dc5cea2cfe5`,
+            display: `SCD OTC Drugs at Home`,
           },
         ],
       },

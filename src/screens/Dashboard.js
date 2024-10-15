@@ -9,11 +9,19 @@ import {
 import Background from '../components/Background';
 import Header from '../components/Header';
 import Button from '../components/Button';
+import GlobalVariables from './GlobalVariables';
 
 const { width } = Dimensions.get('window');
 const cardWidth = width * 0.7;
 
 export default function Dashboard({ navigation }) {
+  const logOut = async () => {
+    GlobalVariables.setLoggedIn(false);
+    navigation.reset({
+      index: 0,
+      routes: [{ name: 'LoginScreen' }],
+    });
+  };
   return (
     <Background>
       <Header>SCD mHealth</Header>
@@ -22,6 +30,12 @@ export default function Dashboard({ navigation }) {
         contentContainerStyle={styles.cardContainer}
         showsVerticalScrollIndicator={false}
       >
+        <TouchableOpacity
+          style={[styles.card, { width: cardWidth }]}
+          onPress={() => navigation.navigate('PatientDetailsScreen')}
+        >
+          <Text style={styles.cardText}>My Info</Text>
+        </TouchableOpacity>
         <TouchableOpacity
           style={[styles.card, { width: cardWidth }]}
           onPress={() => navigation.navigate('ObservationsScreen')}
@@ -36,7 +50,7 @@ export default function Dashboard({ navigation }) {
         </TouchableOpacity>
         <TouchableOpacity
           style={[styles.card, { width: cardWidth }]}
-          onPress={() => navigation.navigate('MedicationScreen')}
+          onPress={() => navigation.navigate('CaptureMedicationScreen')}
         >
           <Text style={styles.cardText}>Track Medication</Text>
         </TouchableOpacity>
@@ -46,6 +60,12 @@ export default function Dashboard({ navigation }) {
           onPress={() => navigation.navigate('AlertsScreen')}
         >
           <Text style={styles.cardText}>Alerts & Reminders</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={[styles.card, { width: cardWidth }]}
+          onPress={logOut}
+        >
+          <Text style={styles.cardText}>Log Out</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={[styles.card, { width: cardWidth, display: 'none' }]}
