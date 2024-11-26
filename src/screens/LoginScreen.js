@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { TouchableOpacity, StyleSheet, Alert, View } from 'react-native';
 import { Text } from 'react-native-paper';
-import { API_URL } from '@env';
+
+import { API_URL } from '../helpers/Constants';
+
 import axios from 'axios';
+import { Buffer } from 'buffer';
+import * as UUID from 'react-native-uuid';
 import Background from '../components/Background';
 import Logo from '../components/Logo';
 import Header from '../components/Header';
@@ -13,19 +17,36 @@ import { theme } from '../core/theme';
 import { emailValidator } from '../helpers/emailValidator';
 import { iDValidator } from '../helpers/iDValidator';
 import { passwordValidator } from '../helpers/passwordValidator';
-import GlobalVariables from './GlobalVariables';
+import GlobalVariables from '../helpers/GlobalVariables';
+import createEncounterData from '../helpers/createEncounterData';
+import useProcessBundles from '../helpers/ProcessBundles';
+import FormattedDates from '../helpers/FormattedDates';
+import configureBackgroundFetch from '../helpers/BackgroundWorker';
+import useNetworkConnectivity from '../helpers/Connectivity';
 
 export default function LoginScreen({ navigation }) {
   const [email, setEmail] = useState({ value: '', error: '' });
   const [id, setID] = useState({ value: '', error: '' });
 
   const [password, setPassword] = useState({ value: '', error: '' });
+  const { processBundles } = useProcessBundles();
+  const [isConnected, getConnectionStatus] = useNetworkConnectivity();
 
   useEffect(() => {
     const checkLoginStatus = async () => {
       const loggedIn = await GlobalVariables.isLoggedIn();
+      const postObs = await GlobalVariables.getPostObservations();
+      const hasPendingSync = await GlobalVariables.hasPendingSync();
+
       if (loggedIn) {
         console.log('User is logged in');
+        console.log(loggedIn);
+
+        console.log(postObs);
+        console.log(hasPendingSync);
+
+        console.log('Am callled immediately');
+
         navigation.reset({
           index: 0,
           routes: [{ name: 'Dashboard' }],
@@ -35,9 +56,18 @@ export default function LoginScreen({ navigation }) {
         // Redirect to login page
       }
     };
+    GlobalVariables.removeSynced();
 
     checkLoginStatus();
   }, []);
+
+  useEffect(() => {
+    if (isConnected) {
+      console.log('Am callled connected');
+
+      configureBackgroundFetch(processBundles);
+    }
+  }, [isConnected]);
 
   const onLoginPressed = async () => {
     const emailError = emailValidator(email.value);
@@ -49,28 +79,39 @@ export default function LoginScreen({ navigation }) {
       setPassword({ ...password, error: passwordError });
       return;
     }
+
     const person_uuid = id.value;
     const pw = password.value;
     //  set uuid here for patient
-    const uuid = await GlobalVariables.getUuid();
+    //const uuid = await GlobalVariables.getUuid();
 
     try {
-      API_URL =
-        'https://5001-reaganmeant-hiescdmulag-8yke8gpo3yw.ws-eu116.gitpod.io/openmrs/ws/fhir2/R4/';
-      console.log(API_URL + 'Patient/' + uuid);
-      const patientResponse = await axios.get(API_URL + 'Patient/' + uuid, {
-        auth: {
-          username: uuid,
-          password: pw,
-        },
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        timeout: 5000,
-      });
+      //const API_URL = 'https://test2.cihis.org/openhimcore/openmrs/ws/fhir2/R4/';
+      if (person_uuid === 'reagan'){
+      API_URL = 'https://test2.cihis.org/openhimcore/openmrs/ws/fhir2/R4/';
+      }
+            console.log(API_URL + 'Patient/' + person_uuid);
+// 7ed267ea-a12b-4e51-8606-1e2813529e76
+      const patientResponse = await axios.get(
+        API_URL + 'Patient/' + person_uuid,
+        {
+          auth: {
+            username: person_uuid,
+            password: pw,
+          },
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+          },
+          timeout: 10000,
+          validateStatus: (status) => status < 500,
+        }
+      );
 
       if (patientResponse.status === 200) {
         GlobalVariables.setPw(pw);
+        GlobalVariables.setUuid(person_uuid);
+
         GlobalVariables.setLoggedIn(true);
         GlobalVariables.setPatient(patientResponse.data);
 
@@ -85,10 +126,16 @@ export default function LoginScreen({ navigation }) {
       }
     } catch (error) {
       console.error('error');
+      //curl -v --location 'https://test2.cihis.org/openhimcore/openmrs/ws/fhir2/R4/Patient/7ed267ea-a12b-4e51-8606-1e2813529e76';
+      //curl -k --location 'https://mulagoscd.site:5000/openmrs/ws/fhir2/R4/Patient/7ed267ea-a12b-4e51-8606-1e2813529e76';
 
+      //console.error(error);
+      console.error(error?.response);
       console.error(error);
-      console.error(error.response);
-      console.error(error.response.data);
+      console.error('Error message:', error?.message); // Error message
+      console.error('Error code:', error?.code); // Error code (e.g., ECONNREFUSED, ECONNABORTED)
+
+      //console.error(error.response.data);
 
       if (error.response.status === 401) {
         Alert.alert('Error', 'Incorrect password or ID');
@@ -136,7 +183,7 @@ export default function LoginScreen({ navigation }) {
       <Button mode="contained" onPress={onLoginPressed}>
         Login
       </Button>
-      <View style={styles.row}>
+      <View style={[styles.row, { display: 'none' }]}>
         <Text>Don’t have an account? </Text>
         <TouchableOpacity onPress={() => navigation.replace('RegisterScreen')}>
           <Text style={styles.link}>Sign up</Text>
@@ -145,6 +192,7 @@ export default function LoginScreen({ navigation }) {
     </Background>
   );
 }
+//          style={[styles.card, { width: cardWidth, display: 'none' }]}
 
 const styles = StyleSheet.create({
   forgotPassword: {

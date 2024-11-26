@@ -11,30 +11,33 @@ import {
 import Papa from 'papaparse';
 import axios from 'axios';
 import MultiSelect from 'react-native-multiple-select';
-import { API_URL } from '@env';
 import * as UUID from 'react-native-uuid';
 import { Buffer } from 'buffer';
+import { API_URL } from '../helpers/Constants';
+import useNetworkConnectivity from '../helpers/Connectivity';
 
-import GlobalVariables from './GlobalVariables';
+import GlobalVariables from '../helpers/GlobalVariables';
+import createEncounterData from '../helpers/createEncounterData';
+import FormattedDates from '../helpers/FormattedDates';
+import useProcessBundles from '../helpers/ProcessBundles';
 
 // Mock CSV content, replace with actual CSV loading logic if necessary
 const csvContent = `code,displayName,unit
 fd1c41e4-900a-412c-bd9c-f0abcbd997e8,Panadol,
-3d59b01e-86f1-4120-8ce2-aa3bc0212206,Aspirin,
+71617AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,Aspirin,
 b26596cc-1ab7-4f6b-9f9a-bfcc22118c1d,Coartem,
 e99a8e95-4319-4133-a721-92fc3cb40fd6,Fansidar,
 d79d702a-2230-43cf-a290-e7c46af6b3ca,Quninine,
-a613a2b0-ebb5-4537-a7a3-93e8a177e12d,Hydroxyurea,
-a2bfebc9-a7d3-4ef2-8aa3-8b1b5a0845cf,Ibuprofen,`;
+ad56ef23-fe1a-4035-b233-95dae98f9079,Hydroxyurea,
+ff5cdb18-0258-4467-bf1f-35c7b6339767,Ibuprofen,`;
 
 const parseCSV = (csv) => {
   return Papa.parse(csv, { header: true, skipEmptyLines: true }).data;
 };
 
 export default function CaptureMedicationScreen() {
-  /*  const [inputGroups, setInputGroups] = useState([
-    { id: Date.now(), code: '', displayName: '', value: '', unit: '' },
-  ]); */
+  const [isConnected, getConnectionStatus] = useNetworkConnectivity();
+  const { processBundles } = useProcessBundles();
 
   const [inputGroups, setInputGroups] = useState([
     { id: Date.now(), code: [], displayName: [], value: '', unit: [] },
@@ -43,11 +46,6 @@ export default function CaptureMedicationScreen() {
   const [options, setOptions] = useState([]);
   const [bundles, setBundles] = useState([]);
 
-  //  const person_uuid = '26a9c5e4-45c0-4a2c-9a19-014883b77de4';
-  const person_uuid = 'fc6cbfa8-7091-484d-a723-1f7068287aff';
-
-  const username = 'admin';
-  const password = 'Admin123';
   useEffect(() => {
     const loadCSV = async () => {
       const parsedData = await parseCSV(csvContent);
@@ -56,8 +54,7 @@ export default function CaptureMedicationScreen() {
     loadCSV();
 
     if (bundles.length > 0) {
-      processBundles();
-
+      processBundles(bundles, null);
       setInputGroups([
         { id: Date.now(), code: [], displayName: [], value: '', unit: [] },
       ]);
@@ -75,132 +72,26 @@ export default function CaptureMedicationScreen() {
     const patientUuid = await GlobalVariables.getUuid();
     const patientPw = await GlobalVariables.getPw();
 
-    const today = new Date();
-    const year = today.getFullYear();
-    const month = String(today.getMonth() + 1).padStart(2, '0'); // Months are zero-based, so add 1 and pad with zero
-    const day = String(today.getDate()).padStart(2, '0');
-    const formattedToday = `${year}-${month}-${day}`;
+    const dateToday = new Date();
+    const formattedDates = FormattedDates(dateToday);
 
-    // Calculate yesterday's date
-    const yesterday = new Date(today);
-    yesterday.setDate(today.getDate() - 1);
+    const newUUIDObs = UUID.default.v4();
 
-    // Format yesterday's date as YYYY-MM-DD
-    const yesterdayYear = yesterday.getFullYear();
-    const yesterdayMonth = String(yesterday.getMonth() + 1).padStart(2, '0');
-    const yesterdayDay = String(yesterday.getDate()).padStart(2, '0');
-    const formattedYesterday = `${yesterdayYear}-${yesterdayMonth}-${yesterdayDay}`;
-
-    // Calculate tomorrow's date
-    const tomorrow = new Date(today);
-    tomorrow.setDate(today.getDate() + 1);
-    // Format tomorrow's date as YYYY-MM-DD
-    const tomorrowYear = tomorrow.getFullYear();
-    const tomorrowMonth = String(tomorrow.getMonth() + 1).padStart(2, '0');
-    const tomorrowDay = String(tomorrow.getDate()).padStart(2, '0');
-    const formattedTomorrow = `${tomorrowYear}-${tomorrowMonth}-${tomorrowDay}`;
-
-    const uuidObs = UUID.default.v4();
-
-    const data = JSON.stringify({
-      resourceType: 'Encounter',
-      id: uuidObs,
-      meta: {
-        tag: [
-          {
-            system: 'http://fhir.openmrs.org/ext/encounter-tag',
-            code: 'encounter',
-            display: 'Encounter',
-          },
-        ],
-      },
-      status: 'unknown',
-      class: {
-        system: 'http://terminology.hl7.org/CodeSystem/v3-ActCode',
-        code: 'AMB',
-      },
-      type: [
-        {
-          coding: [
-            {
-              system: 'http://fhir.openmrs.org/code-system/encounter-type',
-              code: 'ca3aed11-1aa4-42a1-b85c-8332fc8001fc',
-              display: 'Check In',
-            },
-          ],
-        },
-      ],
-      subject: {
-        reference: `Patient/${person_uuid}`,
-        type: 'Patient',
-      },
-      period: {
-        start: formattedYesterday,
-        end: formattedTomorrow,
-      },
-      location: [
-        {
-          location: {
-            reference: 'Location/44c3efb0-2583-4c80-a79e-1f756a03c0a1',
-          },
-        },
-      ],
-    });
+    const encounterData = createEncounterData(
+      newUUIDObs,
+      patientUuid,
+      formattedDates
+    );
 
     try {
-      const encodedAuth = Buffer.from(`${patientUuid}:${patientPw}`).toString(
-        'base64'
-      );
-
-      /*       const encounterResponse = await axios.post(`${API_URL}Encounter/`, data, {
-        auth: {
-          patientUuid,
-          patientPw,
-        },
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      }); */
-
-      const encounterResponse = await axios.post(`${API_URL}Encounter/`, data, {
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Basic ${encodedAuth}`,
-        },
-      });
-
-      if (encounterResponse.status === 201) {
-        await generateBundles(inputGroups, encounterResponse.data.id);
-      } else {
-        Alert.alert('Error', 'Failed to create Encounter');
-      }
-    } catch (error) {
-      console.error(error);
-
-      Alert.alert('Error', 'An error occurred while submitting observations');
-    }
-  };
-
-  const processBundles = async () => {
-    const patientUuid = await GlobalVariables.getUuid();
-    const patientPw = await GlobalVariables.getPw();
-
-    try {
-      await bundles.reduce(async (previousPromise, bundle) => {
-        // Wait for the previous item to complete
-        await previousPromise;
-
-        // Process the current bundle
-        const bundleString = JSON.stringify(bundle, null, 2);
-
+      if (isConnected) {
         const encodedAuth = Buffer.from(`${patientUuid}:${patientPw}`).toString(
           'base64'
         );
-        console.log(`${API_URL}Observation/`);
 
-        const response = await axios.post(
-          `${API_URL}Observation/`,
-          bundleString,
+        const encounterResponse = await axios.post(
+          `${API_URL}Encounter/`,
+          encounterData,
           {
             headers: {
               'Content-Type': 'application/json',
@@ -209,25 +100,35 @@ export default function CaptureMedicationScreen() {
           }
         );
 
-        if (response.status === 201) {
-          console.log('Success', 'Drugs submitted successfully');
-          Alert.alert('Success', 'Drug(s) saved successfully');
+        if (encounterResponse.status === 201) {
+          await generateBundles(inputGroups, encounterResponse.data.id);
         } else {
-          Alert.alert('Error', 'Failed to submit Drugs');
+          Alert.alert('Error', 'Failed to save record');
         }
-      }, Promise.resolve());
+      } else {
+        await generateBundles(inputGroups, 'placeHolderEncounterID');
+
+        Alert.alert(
+          'Saved Offline',
+          'Your drug(s) will be synchronized when internet connection is restored'
+        );
+      }
     } catch (error) {
-      console.error('Error posting bundles:', error);
-      Alert.alert('Error', 'Failed to process bundles');
+      console.error(error);
+
+      Alert.alert('Error', 'An error occurred while submitting drug(s)');
     }
   };
 
   const generateBundles = async (inputGroupz, encounterId) => {
+    const patientUuid = await GlobalVariables.getUuid();
+
     const newBundles = inputGroupz.flatMap((group) =>
       group.code.map((code, idx) =>
         createObservationBundle(
           { code, displayName: group.displayName[idx], unit: group.unit[idx] },
-          encounterId
+          encounterId,
+          patientUuid
         )
       )
     );
@@ -237,7 +138,7 @@ export default function CaptureMedicationScreen() {
   };
 
   // Function to create the observation bundle
-  const createObservationBundle = (group, encounterId) => {
+  const createObservationBundle = (group, encounterId, patientUuid) => {
     return {
       resourceType: 'Observation',
       status: 'preliminary',
@@ -250,7 +151,7 @@ export default function CaptureMedicationScreen() {
         ],
       },
       subject: {
-        reference: `Patient/${person_uuid}`,
+        reference: `Patient/${patientUuid}`,
       },
       encounter: {
         reference: `Encounter/${encounterId}`,
@@ -287,7 +188,7 @@ export default function CaptureMedicationScreen() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.header}>Capture Signs/Symptoms</Text>
+      <Text style={styles.header}>Enter Drugs</Text>
       <FlatList
         data={inputGroups}
         keyExtractor={(item) => item.id.toString()}
@@ -303,7 +204,7 @@ export default function CaptureMedicationScreen() {
                 updateInputGroup(index, selectedItems)
               }
               selectedItems={item.code}
-              selectText="Select Signs/Symptoms"
+              selectText="Select Drugs"
               searchInputPlaceholderText="Search..."
               tagRemoveIconColor="#CCC"
               tagBorderColor="#CCC"

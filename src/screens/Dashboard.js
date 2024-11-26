@@ -9,7 +9,7 @@ import {
 import Background from '../components/Background';
 import Header from '../components/Header';
 import Button from '../components/Button';
-import GlobalVariables from './GlobalVariables';
+import GlobalVariables from '../helpers/GlobalVariables';
 
 const { width } = Dimensions.get('window');
 const cardWidth = width * 0.7;
@@ -52,11 +52,11 @@ export default function Dashboard({ navigation }) {
           style={[styles.card, { width: cardWidth }]}
           onPress={() => navigation.navigate('CaptureMedicationScreen')}
         >
-          <Text style={styles.cardText}>Track Medication</Text>
+          <Text style={styles.cardText}>Track Drugs</Text>
         </TouchableOpacity>
 
         <TouchableOpacity
-          style={[styles.card, { width: cardWidth }]}
+          style={[styles.card, { width: cardWidth, display: 'none' }]}
           onPress={() => navigation.navigate('AlertsScreen')}
         >
           <Text style={styles.cardText}>Alerts & Reminders</Text>

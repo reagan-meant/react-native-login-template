@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, ScrollView, StyleSheet, Alert } from 'react-native';
-import GlobalVariables from './GlobalVariables';
+import GlobalVariables from '../helpers/GlobalVariables';
 
 export default function PatientDetailsScreen() {
   const [patientDetails, setPatientDetails] = useState(null);

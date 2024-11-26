@@ -4,24 +4,27 @@
     "slug": "mHealth",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/health.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/health.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/health.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.meant.mHealth"
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -31,6 +34,39 @@
         "projectId": "59917d86-484f-40a9-8681-23f09e119f10"
       }
     },
+    "plugins": [
+      [
+        "expo-background-fetch",
+        {
+          "startOnBoot": true
+        }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "permissions": [
+              "INTERNET",
+              "ACCESS_NETWORK_STATE"
+            ],
+            "useCleartextTraffic": true,
+            "networkSecurityConfig": {
+              "cleartextTrafficPermitted": true,
+              "certificates": [
+                {
+                  "source": "system",
+                  "overridePins": true
+                },
+                {
+                  "source": "user",
+                  "overridePins": true
+                }
+              ]
+            }
+          }
+        }
+      ]
+    ],
     "owner": "meant"
   }
 }

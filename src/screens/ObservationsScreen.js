@@ -1,10 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, ScrollView, StyleSheet } from 'react-native';
+import {
+  View,
+  Text,
+  ScrollView,
+  StyleSheet,
+  ActivityIndicator,
+} from 'react-native';
+
 //import patientBundle from '../assets/obsdata.json';
 import patientBundle from '../assets/obsdata2.json';
-import GlobalVariables from './GlobalVariables';
+import GlobalVariables from '../helpers/GlobalVariables';
 import axios from 'axios';
 import { Alert } from 'react-native';
+import useNetworkConnectivity from '../helpers/Connectivity';
 
 const csvData = `
 Nutritional Values,Left MUAC:MUAC;Weight (kg):W;Height (cm):H
@@ -37,6 +45,9 @@ const parseCsv = (csv) => {
 export default function ObservationsScreen({ navigation }) {
   const [observations, setObservations] = useState({});
   const [tables, setTables] = useState([]);
+  const [isConnected, getConnectionStatus] = useNetworkConnectivity();
+  //setIsLoading(true); // Add this state to your component:
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const parseObservations = (bundle) => {
@@ -70,8 +81,7 @@ export default function ObservationsScreen({ navigation }) {
     let onlinePatientBundle;
     const fetchData = async () => {
       try {
-        const API_URL =
-          'https://5001-reaganmeant-hiescdmulag-8yke8gpo3yw.ws-eu116.gitpod.io/openmrs/ws/fhir2/R4/';
+        const API_URL = 'https://test2.cihis.org/openhimcore/openmrs/ws/fhir2/R4/';
         const uuid = await GlobalVariables.getUuid();
         const pw = await GlobalVariables.getPw();
         const patientObsResponse = await axios.get(
@@ -86,8 +96,12 @@ export default function ObservationsScreen({ navigation }) {
             },
           }
         );
+console.log(patientObsResponse.data)
+console.log(patientObsResponse.status)
 
         if (patientObsResponse.status === 200) {
+          setIsLoading(false);
+
           onlinePatientBundle = patientObsResponse.data;
 
           GlobalVariables.setObservations(onlinePatientBundle);
@@ -95,6 +109,7 @@ export default function ObservationsScreen({ navigation }) {
           const parsedObservations = parseObservations(onlinePatientBundle);
 
           setObservations(parsedObservations);
+          console.log(parsedObservations)
 
           const tablesData = parseCsv(csvData);
 
@@ -111,6 +126,8 @@ export default function ObservationsScreen({ navigation }) {
           const offlineObs = await GlobalVariables.getObservations();
 
           if (offlineObs) {
+            setIsLoading(false);
+
             const parsedObservations = parseObservations(offlineObs);
 
             setObservations(parsedObservations);
@@ -119,6 +136,11 @@ export default function ObservationsScreen({ navigation }) {
 
             setTables(tablesData);
           }
+
+          /*           Alert.alert(
+            'Error',
+            'An error occurred while trying to get results online. Check internet connection'
+          ); */
         }
       } catch (error) {
         console.error(error);
@@ -137,13 +159,10 @@ export default function ObservationsScreen({ navigation }) {
             routes: [{ name: 'LoginScreen' }],
           });
         } else {
-          Alert.alert(
-            'Error',
-            'An error occurred while trying to query records online...'
-          );
           const offlineObs = await GlobalVariables.getObservations();
 
           if (offlineObs) {
+            setIsLoading(false);
             const parsedObservations = parseObservations(offlineObs);
 
             setObservations(parsedObservations);
@@ -151,13 +170,42 @@ export default function ObservationsScreen({ navigation }) {
             const tablesData = parseCsv(csvData);
 
             setTables(tablesData);
+          } else {
+            Alert.alert(
+              'Error',
+              'An error occurred while trying to get results online. Check internet connection'
+            );
           }
         }
       }
     };
 
-    fetchData();
-  }, []);
+    const offlineData = async () => {
+      const offlineObs = await GlobalVariables.getObservations();
+
+      if (offlineObs) {
+        setIsLoading(false);
+
+        const parsedObservations = parseObservations(offlineObs);
+
+        setObservations(parsedObservations);
+
+        const tablesData = parseCsv(csvData);
+
+        setTables(tablesData);
+      } else {
+        setIsLoading(false);
+
+        Alert.alert('Alert', 'Connect to internet to get Information');
+      }
+    };
+
+    if (isConnected) {
+      fetchData();
+    } else {
+      offlineData();
+    }
+  }, [isConnected]);
 
   const renderTableHeader = (codes) => {
     return (
@@ -200,17 +248,29 @@ export default function ObservationsScreen({ navigation }) {
 
   return (
     <ScrollView style={styles.container}>
-      {tables.map((table, index) => (
-        <View key={index} style={styles.tableContainer}>
-          <Text style={styles.tableTitle}>{table.title}</Text>
-          <ScrollView horizontal>
-            <View>
-              {renderTableHeader(table.codes)}
-              {renderTableRows(table.codes)}
-            </View>
-          </ScrollView>
+      {isLoading ? (
+        <View
+          style={{
+            flex: 1,
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
+        >
+          <ActivityIndicator size="large" color="#0000ff" />
         </View>
-      ))}
+      ) : (
+        tables.map((table, index) => (
+          <View key={index} style={styles.tableContainer}>
+            <Text style={styles.tableTitle}>{table.title}</Text>
+            <ScrollView horizontal>
+              <View>
+                {renderTableHeader(table.codes)}
+                {renderTableRows(table.codes)}
+              </View>
+            </ScrollView>
+          </View>
+        ))
+      )}
     </ScrollView>
   );
 }
